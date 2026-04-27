@@ -274,7 +274,15 @@ function getPanelResults($patientId, $panelCode) {
 }
 function getDrugAnalysis($patientId, $drugName = null) {
     $pdo = getConnection();
-    $sql = "SELECT dg.*, pg.genotype as patient_genotype, pr.status, pr.phenotype FROM pgx_drug_genes dg LEFT JOIN patient_genotypes pg ON pg.rsid = dg.rsid AND pg.patient_id = ? LEFT JOIN patient_pgx_results pr ON pr.rsid = dg.rsid AND pr.patient_id = ? WHERE dg.is_active = 1";
+    $sql = "SELECT dg.drug_name, dg.drug_class, dg.gene_symbol, dg.rsid, dg.interaction_type, dg.effect_description,
+            dg.recommendation_normal, dg.recommendation_het, dg.recommendation_risk,
+            COALESCE(pr.patient_genotype, pg.genotype, 'N/D') as patient_genotype,
+            COALESCE(pr.status, 'unknown') as status,
+            COALESCE(pr.phenotype, '') as phenotype
+            FROM pgx_drug_genes dg
+            LEFT JOIN patient_pgx_results pr ON pr.rsid = dg.rsid AND pr.patient_id = ?
+            LEFT JOIN patient_genotypes pg ON pg.rsid = dg.rsid AND pg.patient_id = ?
+            WHERE dg.is_active = 1";
     $params = [$patientId, $patientId];
     if ($drugName) { $sql .= " AND dg.drug_name = ?"; $params[] = $drugName; }
     $stmt = $pdo->prepare($sql . " ORDER BY dg.drug_name"); $stmt->execute($params);
