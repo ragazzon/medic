@@ -122,13 +122,10 @@ function importGenomicCSV($patientId, $filePath, $fileName, $userId) {
             if (empty($rsid) || empty($genotype) || $genotype === '--' || $genotype === '00') continue;
             if (strpos($rsid, 'rs') !== 0 && strpos($rsid, 'i') !== 0) continue;
             
-            $batch[] = sprintf("(%d,'%s','%s',%d,'%s')",
-                $patientId,
-                $pdo->quote($rsid)[1], // Remove outer quotes from quote()
-                $pdo->quote($chr)[1],
-                $pos,
-                $pdo->quote($genotype)[1]
-            );
+            $rsidSafe = addslashes($rsid);
+            $chrSafe = addslashes($chr);
+            $genoSafe = addslashes($genotype);
+            $batch[] = "($patientId,'$rsidSafe','$chrSafe',$pos,'$genoSafe')";
             
             if (count($batch) >= $batchSize) {
                 // Use prepared statement approach for safety
