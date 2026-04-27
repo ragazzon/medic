@@ -51,6 +51,8 @@ function detectGenomicFormat($firstLines) {
  * Returns array with status and counts
  */
 function importGenomicCSV($patientId, $filePath, $fileName, $userId) {
+    @set_time_limit(600); // 10 minutes
+    @ini_set('max_execution_time', 600);
     $pdo = getConnection();
     
     // Create import log
@@ -68,6 +70,9 @@ function importGenomicCSV($patientId, $filePath, $fileName, $userId) {
             $firstLines[] = fgets($handle);
         }
         fclose($handle);
+        $pdo->exec("COMMIT");
+        $pdo->exec("SET autocommit=1");
+        $pdo->exec("SET unique_checks=1");
         
         $format = detectGenomicFormat($firstLines);
         
@@ -88,9 +93,11 @@ function importGenomicCSV($patientId, $filePath, $fileName, $userId) {
         $totalLines = 0;
         $imported = 0;
         $batch = [];
-        $batchSize = 5000;
+        $batchSize = 2000; // Smaller batches for shared hosting
         
         // Prepare batch insert statement
+        $pdo->exec("SET autocommit=0");
+        $pdo->exec("SET unique_checks=0");
         $insertSQL = "INSERT IGNORE INTO patient_genotypes (patient_id, rsid, chromosome, position, genotype) VALUES ";
         
         while (($line = fgets($handle)) !== false) {

@@ -109,7 +109,7 @@ $parentDir = basename(dirname($_SERVER['PHP_SELF']));
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link <?= $parentDir === 'genomic' ? 'active' : '' ?>" href="<?= baseUrl('pages/genomic/index.php') ?>" title="Analise genômica">
-                    <i class="bi bi-dna"></i>
+                    <i class="bi bi-card-checklist"></i>
                     <span>Genômica</span>
                 </a>
             </li>
