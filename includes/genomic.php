@@ -216,10 +216,18 @@ function runGenomicAnalysis($patientId) {
         $hetGenos = array_map('trim', explode(',', $rule['het_genotypes']));
         $riskGenos = array_map('trim', explode(',', $rule['risk_genotypes']));
         
-        // Also check reverse complement (AG = GA)
+        // Check original, reversed, and strand complement
         $genoReverse = strlen($geno) == 2 ? $geno[1].$geno[0] : $geno;
+        // Strand complement: A<->T, C<->G
+        $comp = strtr($geno, 'ATCG', 'TAGC');
+        $compReverse = strlen($comp) == 2 ? $comp[1].$comp[0] : $comp;
+        $allVariants = array_unique([$geno, $genoReverse, $comp, $compReverse]);
         
-        if (in_array($geno, $riskGenos) || in_array($genoReverse, $riskGenos)) {
+        $isRisk = !empty(array_intersect($allVariants, $riskGenos));
+        $isHet = !empty(array_intersect($allVariants, $hetGenos));
+        $isRef = !empty(array_intersect($allVariants, $refGenos));
+        
+        if ($isRisk) {
             $status = 'risk';
             $phenotype = $rule['phenotype_risk'];
         } elseif (in_array($geno, $hetGenos) || in_array($genoReverse, $hetGenos)) {
