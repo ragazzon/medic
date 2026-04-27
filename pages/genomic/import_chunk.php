@@ -1,5 +1,5 @@
 <?php
-error_reporting(0); // Suppress PHP errors in JSON output
+error_reporting(0);
 require_once __DIR__.'/../../includes/auth.php';
 require_once __DIR__.'/../../includes/genomic.php';
 requireLogin();
@@ -9,58 +9,53 @@ header('Content-Type: application/json');
 
 try {
 $patientId=intval($_POST['patient_id']??0);
-$offset=intval($_POST['offset']??0);
-$limit=intval($_POST['limit']??50000);
-$fileName=$_POST['file_name']??'';
-$action=$_POST['action']??'chunk';
-
-if(!$patientId||!canAccessPatient($patientId)){
-    echo json_encode(['error'=>'Access denied']);exit;
-}
+$action=$_POST['action']??'';
+if(!$patientId||!canAccessPatient($patientId)){echo json_encode(['error'=>'Acesso negado']);exit;}
 $pdo=getConnection();
+
+// Use same upload dir pattern as rest of system
 $uploadDir=__DIR__.'/../../uploads/genomic/';
-if(!is_dir($uploadDir)){@mkdir($uploadDir,0777,true);}
-$filePath=$uploadDir.preg_replace('/[^a-zA-Z0-9._-]/','',basename($fileName));
+if(!is_dir($uploadDir))@mkdir($uploadDir,0755,true);
 
 if($action==='upload'){
     if(!isset($_FILES['file'])||$_FILES['file']['error']!==UPLOAD_ERR_OK){
-        echo json_encode(['error'=>'Upload error: '.($_FILES['file']['error']??'no file')]);exit;
+        $errs=[0=>'OK',1=>'Arquivo muito grande (php.ini)',2=>'Arquivo muito grande (form)',3=>'Upload parcial',4=>'Nenhum arquivo',6=>'Sem pasta temp',7=>'Falha escrita'];
+        echo json_encode(['error'=>'Upload: '.($errs[$_FILES['file']['error']??4]??'Erro '.$_FILES['file']['error'])]);exit;
     }
-    $safeName='genomic_'.time().'_'.$patientId.'.csv';
-    $filePath=$uploadDir.$safeName;
-    if(!move_uploaded_file($_FILES['file']['tmp_name'],$filePath)){
-        echo json_encode(['error'=>'Failed to save file to '.$uploadDir]);exit;
+    $safeName='gen_'.$patientId.'_'.time().'.csv';
+    $dest=$uploadDir.$safeName;
+    if(!move_uploaded_file($_FILES['file']['tmp_name'],$dest)){
+        // Try alternate location
+        $altDir=sys_get_temp_dir().'/';
+        $dest=$altDir.$safeName;
+        if(!move_uploaded_file($_FILES['file']['tmp_name'],$dest)){
+            echo json_encode(['error'=>'Nao conseguiu salvar. uploadDir='.$uploadDir.' altDir='.$altDir]);exit;
+        }
     }
-    $lines=0;$h=fopen($filePath,'r');
-    while(fgets($h)!==false)$lines++;
-    fclose($h);
-    try{
-        $s=$pdo->prepare("INSERT INTO genomic_imports (patient_id,file_name,status,imported_by) VALUES (?,?,'processing',?)");
-        $s->execute([$patientId,$_FILES['file']['name'],getCurrentUserId()]);
-    }catch(Exception $e){}
-    try{
-        $pdo->prepare("DELETE FROM patient_genotypes WHERE patient_id=?")->execute([$patientId]);
-        $pdo->prepare("DELETE FROM patient_pgx_results WHERE patient_id=?")->execute([$patientId]);
-    }catch(Exception $e){}
-    echo json_encode(['ok'=>true,'total_lines'=>$lines,'saved_as'=>$safeName]);
-    exit;
+    $lines=0;$h=fopen($dest,'r');while(fgets($h)!==false)$lines++;fclose($h);
+    try{$pdo->prepare("INSERT INTO genomic_imports (patient_id,file_name,status,imported_by) VALUES (?,?,'processing',?)")->execute([$patientId,$_FILES['file']['name'],getCurrentUserId()]);}catch(Exception $e){}
+    try{$pdo->prepare("DELETE FROM patient_genotypes WHERE patient_id=?")->execute([$patientId]);
+        $pdo->prepare("DELETE FROM patient_pgx_results WHERE patient_id=?")->execute([$patientId]);}catch(Exception $e){}
+    echo json_encode(['ok'=>true,'total_lines'=>$lines,'saved_as'=>$safeName,'path'=>$dest]);exit;
 }
 
+$fileName=$_POST['file_name']??'';
+$filePath=$uploadDir.preg_replace('/[^a-zA-Z0-9._-]/','',basename($fileName));
+// Also check temp dir
+if(!file_exists($filePath))$filePath=sys_get_temp_dir().'/'.basename($fileName);
+
 if($action==='chunk'){
-    if(!file_exists($filePath)){
-        echo json_encode(['error'=>'File not found. Try re-uploading.']);exit;
-    }
-    $h=fopen($filePath,'r');
-    $lineNum=0;$imported=0;$batch=[];
+    $offset=intval($_POST['offset']??0);
+    $limit=intval($_POST['limit']??50000);
+    if(!file_exists($filePath)){echo json_encode(['error'=>'Arquivo nao encontrado: '.basename($fileName)]);exit;}
+    $h=fopen($filePath,'r');$lineNum=0;$imported=0;$batch=[];
     $sql="INSERT IGNORE INTO patient_genotypes (patient_id,rsid,chromosome,position,genotype) VALUES ";
-    try{$pdo->exec("SET autocommit=0");}catch(Exception $e){}
     while(($line=fgets($h))!==false){
         $lineNum++;
         if($lineNum<=$offset)continue;
         if($lineNum>$offset+$limit)break;
         $line=trim($line);
-        if(empty($line)||$line[0]==='#')continue;
-        if(stripos($line,'rsid')===0)continue;
+        if(empty($line)||$line[0]==='#'||stripos($line,'rsid')===0)continue;
         $cols=str_getcsv($line);
         if(count($cols)<4)continue;
         $rsid=trim($cols[0]);$chr=trim($cols[1]);$pos=intval($cols[2]);$geno=trim($cols[3]);
@@ -73,10 +68,8 @@ if($action==='chunk'){
         }
     }
     if(!empty($batch)){try{$pdo->exec($sql.implode(',',$batch));}catch(Exception $e){}$imported+=count($batch);}
-    try{$pdo->exec("COMMIT");$pdo->exec("SET autocommit=1");}catch(Exception $e){}
     fclose($h);
-    echo json_encode(['ok'=>true,'offset'=>$offset,'imported'=>$imported]);
-    exit;
+    echo json_encode(['ok'=>true,'offset'=>$offset,'imported'=>$imported]);exit;
 }
 
 if($action==='analyze'){
@@ -85,10 +78,7 @@ if($action==='analyze'){
     try{$pdo->prepare("UPDATE genomic_imports SET status='completed',imported_snps=? WHERE patient_id=? ORDER BY imported_at DESC LIMIT 1")->execute([$total,$patientId]);}catch(Exception $e){}
     runGenomicAnalysis($patientId);
     if(file_exists($filePath))@unlink($filePath);
-    echo json_encode(['ok'=>true,'total_snps'=>intval($total)]);
-    exit;
+    echo json_encode(['ok'=>true,'total_snps'=>intval($total)]);exit;
 }
-echo json_encode(['error'=>'Unknown action: '.$action]);
-}catch(Exception $e){
-    echo json_encode(['error'=>$e->getMessage()]);
-}
+echo json_encode(['error'=>'Acao desconhecida: '.$action]);
+}catch(Exception $e){echo json_encode(['error'=>$e->getMessage()]);}

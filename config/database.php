@@ -15,9 +15,10 @@ define('DB_CHARSET', 'utf8mb4');
 // Configurações do sistema
 define('SITE_NAME', 'MEDIC');
 define('SITE_URL', '/');
-define('UPLOAD_MAX_SIZE', 10 * 1024 * 1024); // 10MB
+define('UPLOAD_MAX_SIZE', 50 * 1024 * 1024); // 10MB
 define('ALLOWED_IMAGE_TYPES', ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp']);
 define('ALLOWED_DOC_TYPES', [
+    'text/csv', 'text/plain', 'text/tab-separated-values', 'application/csv',
     'application/pdf',
     'application/msword',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
