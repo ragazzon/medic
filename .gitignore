@@ -1,0 +1,23 @@
+# Uploads (user-generated content)
+uploads/*
+!uploads/.htaccess
+
+# Database config with credentials
+config/database_local.php
+
+# ZIP backups
+*.zip
+
+# Test files
+test_*.php
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,15 @@
+# Permitir apenas imagens e PDFs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Bloquear execução de PHP em uploads
+    RewriteRule \.php$ - [F,L]
+</IfModule>
+
+# Bloquear listagem de diretório
+Options -Indexes
+
+# Permitir apenas tipos seguros
+<FilesMatch "\.(?i:php|phtml|php3|php4|php5|phps)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

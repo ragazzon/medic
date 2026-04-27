@@ -1,0 +1,50 @@
+# Medic - Sistema de Prontuários Médicos
+# Proteger arquivos sensíveis
+
+# Bloquear acesso direto a arquivos de configuração
+<FilesMatch "\.(sql|md|json|lock)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Proteger diretórios sensíveis
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Bloquear acesso direto a includes e config
+    RewriteRule ^config/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+    RewriteRule ^sql/ - [F,L]
+</IfModule>
+
+# Configurações de PHP (mod_php)
+<IfModule mod_php.c>
+    php_value upload_max_filesize 50M
+    php_value post_max_size 200M
+    php_value max_execution_time 600
+    php_value max_input_time 600
+    php_value max_file_uploads 50
+    php_value memory_limit 256M
+</IfModule>
+
+# Configurações de PHP (mod_php para PHP 8.x)
+<IfModule mod_php8.c>
+    php_value upload_max_filesize 50M
+    php_value post_max_size 200M
+    php_value max_execution_time 600
+    php_value max_input_time 600
+    php_value max_file_uploads 50
+    php_value memory_limit 256M
+</IfModule>
+
+# Segurança
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
