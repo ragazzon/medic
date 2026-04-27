@@ -259,4 +259,32 @@ function getGenomicSummary($patientId) {
             SUM(CASE WHEN pr.status = 'risk' THEN 1 ELSE 0 END) as risk_count,
             SUM(CASE WHEN pr.status = 'unknown' THEN 1 ELSE 0 END) as unknown_count
             FROM pgx_panels p
-            JOIN pgx_rules
+            JOIN pgx_rules r ON r.panel_id = p.id LEFT JOIN patient_pgx_results pr ON pr.rule_id = r.id AND pr.patient_id = ? WHERE p.is_active = 1 GROUP BY p.id ORDER BY p.sort_order";
+    $stmt = $pdo->prepare($sql); $stmt->execute([$patientId]);
+    return ['import' => $importInfo, 'panels' => $stmt->fetchAll(), 'has_data' => true];
+}
+function getPanelResults($patientId, $panelCode) {
+    $pdo = getConnection();
+    $stmt = $pdo->prepare("SELECT r.*, pr.patient_genotype, pr.status, pr.phenotype, pr.interpretation, g.name as gene_name, g.description as gene_desc FROM pgx_rules r JOIN pgx_panels p ON r.panel_id = p.id LEFT JOIN patient_pgx_results pr ON pr.rule_id = r.id AND pr.patient_id = ? LEFT JOIN pgx_genes g ON g.symbol = r.gene_symbol AND g.panel_id = p.id WHERE p.code = ? AND r.is_active = 1 ORDER BY r.gene_symbol");
+    $stmt->execute([$patientId, $panelCode]); return $stmt->fetchAll();
+}
+function getDrugAnalysis($patientId, $drugName = null) {
+    $pdo = getConnection();
+    $sql = "SELECT dg.*, pg.genotype as patient_genotype, pr.status, pr.phenotype FROM pgx_drug_genes dg LEFT JOIN patient_genotypes pg ON pg.rsid = dg.rsid AND pg.patient_id = ? LEFT JOIN patient_pgx_results pr ON pr.rsid = dg.rsid AND pr.patient_id = ? WHERE dg.is_active = 1";
+    $params = [$patientId, $patientId];
+    if ($drugName) { $sql .= " AND dg.drug_name = ?"; $params[] = $drugName; }
+    $stmt = $pdo->prepare($sql . " ORDER BY dg.drug_name"); $stmt->execute($params);
+    $drugs = [];
+    foreach ($stmt->fetchAll() as $row) {
+        $n = $row['drug_name'];
+        if (!isset($drugs[$n])) $drugs[$n] = ['name'=>$n,'class'=>$row['drug_class'],'genes'=>[],'worst_status'=>'normal'];
+        $drugs[$n]['genes'][] = $row;
+        $s = $row['status'] ?? 'unknown';
+        $pri = ['risk'=>4,'attention'=>3,'info'=>2,'normal'=>1,'unknown'=>0];
+        if (($pri[$s]??0) > ($pri[$drugs[$n]['worst_status']]??0)) $drugs[$n]['worst_status'] = $s;
+    }
+    return $drugs;
+}
+function genomicStatusBadge($s) { $m=['normal'=>['bg-success','Normal'],'attention'=>['bg-warning text-dark','Atencao'],'risk'=>['bg-danger','Risco'],'info'=>['bg-info','Info'],'unknown'=>['bg-secondary','N/D']]; $x=$m[$s]??$m['unknown']; return '<span class="badge '.$x[0].'">'.$x[1].'</span>'; }
+function genomicStatusIcon($s) { return ['normal'=>'&#128994;','attention'=>'&#128993;','risk'=>'&#128308;','info'=>'&#128309;','unknown'=>'&#9898;'][$s] ?? '&#9898;'; }
+function hasGenomicData($pid) { $pdo=getConnection(); $s=$pdo->prepare("SELECT COUNT(*) FROM patient_genotypes WHERE patient_id=?"); $s->execute([$pid]); return $s->fetchColumn()>0; }
