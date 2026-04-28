@@ -182,7 +182,7 @@ function runGenomicAnalysis($patientId) {
     $pdo = getConnection();
     
     // Clear previous results
-    $pdo->prepare("DELETE FROM patient_pgx_results WHERE patient_id = ?")->execute([$patientId]);
+    $pdo->prepare("DELETE FROM patient_pgx_results WHERE patient_id = ? AND (is_locked = 0 OR is_locked IS NULL)")->execute([$patientId]);
     
     // Get all active rules
     $rules = $pdo->query("SELECT * FROM pgx_rules WHERE is_active = 1")->fetchAll();
