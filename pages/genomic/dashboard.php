@@ -41,6 +41,7 @@ require_once __DIR__ . '/../../includes/header.php';
 <div class="page-header">
     <h1><i class="bi bi-dna me-2"></i>Análise Genética — <?= sanitize($patient['name']) ?></h1>
     <div>
+        <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>" class="btn btn-primary btn-sm"><i class="bi bi-file-earmark-medical me-1"></i>Relatório Médico</a>
         <a href="<?= baseUrl('pages/genomic/ancestry.php?patient_id=' . $patientId) ?>" class="btn btn-outline-info btn-sm"><i class="bi bi-globe-americas me-1"></i>Ancestralidade</a>
         <a href="<?= baseUrl('pages/genomic/argue.php?patient_id=' . $patientId) ?>" class="btn btn-outline-danger btn-sm"><i class="bi bi-chat-left-quote me-1"></i>Argumente com o Médico</a>
         <a href="<?= baseUrl('pages/genomic/upload.php?patient_id=' . $patientId) ?>" class="btn btn-outline-secondary btn-sm"><i class="bi bi-upload me-1"></i>Re-importar</a>

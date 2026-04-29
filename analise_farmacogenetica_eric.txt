@@ -1,0 +1,460 @@
+================================================================================
+ANÁLISE FARMACOGENÉTICA PERSONALIZADA
+Paciente: Eric
+Data: 28/04/2026
+Ancestralidade predominante: Europeia (92% - Ibérica 51%, Italiana 13%)
+Fonte dos dados genéticos: Genera (GSA v3.0 / GRCh37)
+================================================================================
+
+IMPORTANTE: Nunca inicie, interrompa ou altere tratamentos sem orientação médica.
+Este relatório é informativo e deve ser discutido com seu médico.
+
+================================================================================
+1. VARFARINA (Marevan®, Marfarin®, Warfarin®)
+   Classe: Antitrombóticos / Anticoagulantes
+   Tipo de análise: Metabolismo + Resposta/Efeitos colaterais
+   Genes: VKORC1, CYP2C9, CYP4F2
+================================================================================
+
+SOBRE O MEDICAMENTO:
+A varfarina é um anticoagulante oral utilizado para prevenir e tratar tromboses
+venosas profundas, embolias pulmonares e para prevenção de acidente vascular
+cerebral em pacientes com fibrilação atrial ou próteses valvares cardíacas.
+Atua inibindo a vitamina K epóxido redutase (VKORC1), essencial para a
+ativação dos fatores de coagulação II, VII, IX e X. Efeitos adversos incluem
+sangramento, hematomas e necrose cutânea (rara). Nomes comerciais: Marevan®,
+Marfarin®, Coumadin®.
+
+DADOS GENÉTICOS:
+┌─────────┬──────────────┬──────────┬───────────────────────────────────────────┐
+│ SNP     │ Gene         │ Genótipo │ Interpretação                             │
+├─────────┼──────────────┼──────────┼───────────────────────────────────────────┤
+│rs9923231│ VKORC1       │ TT       │ Muito sensível à varfarina                │
+│rs1799853│ CYP2C9 (*2)  │ CC       │ Metabolizador normal                      │
+│rs1057910│ CYP2C9 (*3)  │ AA       │ Metabolizador normal                      │
+│rs2108622│ CYP4F2 (*3)  │ CT       │ Metabolismo vitamina K reduzido           │
+└─────────┴──────────────┴──────────┴───────────────────────────────────────────┘
+
+ENTENDENDO SEU RESULTADO:
+O gene VKORC1 (cromossomo 16) codifica a proteína-alvo da varfarina. Eric
+possui o genótipo TT no marcador rs9923231 (-1639G>A, sendo T=A na fita
+complementar), o que indica que ele é MUITO SENSÍVEL à varfarina. Pessoas
+com este genótipo necessitam de doses significativamente menores (25-50% da
+dose padrão) para atingir o efeito anticoagulante desejado.
+
+Quanto ao CYP2C9: Eric possui genótipo CC em rs1799853 (*2) e AA em rs1057910
+(*3), o que indica que é metabolizador NORMAL para CYP2C9. Isso significa que
+ele processa a varfarina em velocidade adequada pelo fígado.
+
+Quanto ao CYP4F2: Eric possui genótipo CT em rs2108622 (*3), indicando
+metabolismo intermediário da vitamina K. Isso pode exigir dose levemente
+maior para compensar.
+
+RESULTADO:
+- VKORC1 TT: ⚠️ ATENÇÃO - Sensibilidade muito aumentada à varfarina
+- CYP2C9: ✅ Normal - Metabolismo hepático adequado
+- CYP4F2 CT: ⚠️ ATENÇÃO - Metabolismo intermediário da vitamina K
+
+SUGESTÕES:
+Eric apresenta sensibilidade muito aumentada à varfarina pelo VKORC1 (TT).
+Se este medicamento for prescrito, a dose inicial deve ser significativamente
+reduzida (25-50% menor que a dose padrão). O efeito do CYP4F2 heterozigoto
+pode compensar parcialmente. Monitoramento frequente do INR é essencial.
+Considerar anticoagulantes diretos (DOACs) como alternativa.
+
+População de estudo: Europeia (frequência do alelo T em VKORC1: ~40% em europeus)
+
+
+================================================================================
+2. VENLAFAXINA (Efexor XR®, Venlift OD®, Alenthus XR®)
+   Classe: Antidepressivos (IRSN)
+   Tipo de análise: Metabolismo + Resposta/Efeitos colaterais
+   Genes: CYP2D6, FKBP5, ABCB1
+================================================================================
+
+SOBRE O MEDICAMENTO:
+A venlafaxina é um antidepressivo inibidor da recaptação de serotonina e
+noradrenalina (IRSN), utilizado no tratamento de depressão maior, transtorno
+de ansiedade generalizada, fobia social e transtorno do pânico. É metabolizada
+principalmente pelo CYP2D6 no fígado em seu metabólito ativo
+(O-desmetilvenlafaxina/desvenlafaxina). Efeitos adversos incluem náuseas,
+tontura, insônia, sudorese, hipertensão e síndrome de descontinuação.
+Nomes comerciais: Efexor XR®, Venlift OD®, Alenthus XR®, Venfax®.
+
+DADOS GENÉTICOS:
+┌─────────┬──────────────┬──────────┬───────────────────────────────────────────┐
+│ SNP     │ Gene         │ Genótipo │ Interpretação                             │
+├─────────┼──────────────┼──────────┼───────────────────────────────────────────┤
+│rs3892097│ CYP2D6 (*4)  │ N/D*     │ SNP não disponível no chip                │
+│rs1360780│ FKBP5        │ CC       │ Eixo HPA normal                           │
+│rs1045642│ ABCB1        │ N/D*     │ SNP não disponível no chip                │
+└─────────┴──────────────┴──────────┴───────────────────────────────────────────┘
+* Não coberto pelo chip de genotipagem GSA v3.0 da Genera.
+
+ENTENDENDO SEU RESULTADO:
+O principal SNP do CYP2D6 (*4, rs3892097) não está disponível no chip
+utilizado pela Genera. Isso significa que não podemos determinar com certeza
+o perfil de metabolização do CYP2D6 de Eric para este medicamento.
+
+Quanto ao FKBP5 (rs1360780): Eric possui genótipo CC, que é o genótipo de
+referência (normal). O gene FKBP5 regula o eixo hipotálamo-hipófise-adrenal
+(HPA), relacionado à resposta ao estresse. O genótipo CC indica regulação
+normal do eixo HPA, o que é favorável para resposta a antidepressivos.
+
+RESULTADO:
+- CYP2D6: ❓ Indeterminado - SNP principal não disponível
+- FKBP5 CC: ✅ Normal - Eixo HPA com regulação adequada
+- ABCB1: ❓ Indeterminado - SNP não disponível
+
+SUGESTÕES:
+Não é possível determinar completamente o perfil de metabolização da
+venlafaxina sem os dados do CYP2D6. O resultado favorável do FKBP5
+sugere boa regulação do eixo de estresse. Recomenda-se monitoramento
+clínico cuidadoso ao iniciar o tratamento. Para informação completa sobre
+CYP2D6, considerar teste farmacogenético específico (painel CYP2D6 completo).
+
+População de estudo: Europeia
+
+
+================================================================================
+3. VORICONAZOL (Vfend®, Veac®, Vori®, Velenaxol®)
+   Classe: Antifúngicos
+   Tipo de análise: Metabolismo
+   Genes: CYP2C19
+================================================================================
+
+SOBRE O MEDICAMENTO:
+O voriconazol é um antifúngico triazólico de amplo espectro utilizado no
+tratamento de infecções fúngicas invasivas graves, incluindo aspergilose
+invasiva, candidemia e infecções por Scedosporium e Fusarium. É metabolizado
+principalmente pelo CYP2C19 no fígado. Efeitos adversos incluem distúrbios
+visuais (fotopsia), hepatotoxicidade, reações cutâneas e neurotoxicidade.
+Nomes comerciais: Vfend®, Veac®, Vori®, Velenaxol®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs4244285 │ CYP2C19 (*2) │ GG       │ Metabolizador normal                     │
+│rs4986893 │ CYP2C19 (*3) │ GG       │ Metabolizador normal                     │
+│rs12248560│ CYP2C19 (*17)│ CT       │ Metabolizador rápido (ganho de função)   │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+
+ENTENDENDO SEU RESULTADO:
+O gene CYP2C19 (cromossomo 10) é a principal enzima responsável pelo
+metabolismo do voriconazol no fígado. Eric possui genótipo GG tanto em
+rs4244285 (*2) quanto em rs4986893 (*3), descartando os alelos de perda de
+função. Porém, possui genótipo CT em rs12248560 (*17), indicando que carrega
+UMA CÓPIA do alelo de ganho de função *17.
+
+Isso classifica Eric como METABOLIZADOR RÁPIDO (*1/*17). Ele metaboliza o
+voriconazol mais rapidamente que o normal, o que pode resultar em níveis
+plasmáticos 30-40% menores que o esperado para a dose padrão.
+
+RESULTADO:
+- CYP2C19 *2: ✅ Normal (sem perda de função)
+- CYP2C19 *3: ✅ Normal (sem perda de função)
+- CYP2C19 *17: ⚠️ ATENÇÃO - Metabolizador rápido (heterozigoto *1/*17)
+
+SUGESTÕES:
+Eric é metabolizador rápido do CYP2C19 (*1/*17). O voriconazol pode ser
+eliminado mais rapidamente, resultando em níveis subterapêuticos. Se este
+medicamento for prescrito, monitoramento dos níveis séricos (TDM - Therapeutic
+Drug Monitoring) é fortemente recomendado. Pode ser necessário aumento de dose
+para atingir concentrações eficazes. Esta mesma característica afeta também:
+omeprazol, clopidogrel, escitalopram e sertralina.
+
+População de estudo: Europeia (frequência *17: ~21% em europeus)
+
+
+================================================================================
+4. VINCRISTINA (Tecnocris®, Dabaz®, Fauldvincri®, Vincizina®)
+   Classe: Antineoplásicos (Quimioterápicos)
+   Tipo de análise: Resposta/Efeitos colaterais
+   Genes: ABCB1
+================================================================================
+
+SOBRE O MEDICAMENTO:
+A vincristina é um alcaloide da vinca utilizado no tratamento de diversos
+tipos de câncer, incluindo leucemias linfoblásticas agudas, linfomas de
+Hodgkin e não-Hodgkin, neuroblastoma e tumor de Wilms. Atua inibindo a
+formação dos microtúbulos durante a divisão celular. O principal efeito
+adverso limitante é a neurotoxicidade (neuropatia periférica), que pode ser
+grave e dose-limitante. Outros efeitos incluem constipação, alopecia e
+mielossupressão (leve). Nomes comerciais: Tecnocris®, Dabaz®, Vincizina®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs1045642 │ ABCB1(C3435T)│ N/D*     │ SNP não disponível no chip               │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+* Não coberto pelo chip de genotipagem GSA v3.0 da Genera.
+
+ENTENDENDO SEU RESULTADO:
+O gene ABCB1 (cromossomo 7) codifica a glicoproteína-P (P-gp), uma proteína
+transportadora que atua como "bomba de efluxo", expulsando substâncias
+(incluindo vincristina) das células. A variante C3435T (rs1045642) afeta a
+expressão desta proteína: pessoas com genótipo GG (TT na nomenclatura reversa)
+têm P-gp reduzida, o que pode aumentar a concentração intracelular de
+vincristina e o risco de neurotoxicidade.
+
+Infelizmente, este SNP não está disponível no chip GSA v3.0 utilizado pela
+Genera.
+
+RESULTADO:
+- ABCB1 rs1045642: ❓ Indeterminado - SNP não disponível no chip
+
+SUGESTÕES:
+Não é possível avaliar o risco de neurotoxicidade aumentada à vincristina
+sem os dados do ABCB1. Se este medicamento for necessário, monitoramento
+clínico neurológico rigoroso é recomendado. Para informação completa,
+considerar teste farmacogenético específico para ABCB1.
+
+População de estudo: Europeia
+
+
+================================================================================
+5. VILAZODONA (Viibryd®)
+   Classe: Antidepressivos
+   Tipo de análise: Metabolismo
+   Genes: CYP3A4
+================================================================================
+
+SOBRE O MEDICAMENTO:
+A vilazodona é um antidepressivo com mecanismo dual: inibidor seletivo da
+recaptação de serotonina (ISRS) e agonista parcial do receptor 5-HT1A.
+Indicada para transtorno depressivo maior em adultos. É metabolizada
+principalmente pelo CYP3A4 no fígado. Efeitos adversos incluem diarreia,
+náuseas, tontura, insônia e boca seca. Nome comercial: Viibryd®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs35599367│ CYP3A4 (*22) │ GG       │ Metabolizador normal                     │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+
+ENTENDENDO SEU RESULTADO:
+O gene CYP3A4 (cromossomo 7) é a enzima mais abundante do sistema CYP450
+e responsável pelo metabolismo de aproximadamente 50% dos medicamentos
+existentes. Eric possui genótipo GG no rs35599367 (variante *22), que é o
+genótipo de referência (normal). Isso significa que sua enzima CYP3A4
+funciona adequadamente.
+
+RESULTADO:
+- CYP3A4 *22 GG: ✅ Normal - Metabolismo adequado
+
+SUGESTÕES:
+Eric possui metabolismo normal pelo CYP3A4. A vilazodona deve ser processada
+em velocidade adequada, e a dose padrão é apropriada. Não há necessidade de
+ajuste de dose com base neste resultado genético.
+
+População de estudo: Europeia (frequência *22: ~5% em europeus)
+
+
+6. VORTIOXETINA (Brintellix®, Trintellix®)
+   Classe: Antidepressivos
+   Tipo de análise: Metabolismo
+   Genes: CYP2D6
+
+SOBRE O MEDICAMENTO:
+A vortioxetina é um antidepressivo multimodal com ação sobre múltiplos
+receptores serotoninérgicos, indicado para transtorno depressivo maior.
+Apresenta benefícios cognitivos adicionais (memória, concentração). É
+metabolizada principalmente pelo CYP2D6 no fígado. Efeitos adversos incluem
+náuseas (principal), tontura, diarreia e prurido. Nomes comerciais:
+Brintellix®, Trintellix®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs3892097 │ CYP2D6 (*4)  │ N/D*     │ SNP não disponível no chip               │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+* Não coberto pelo chip de genotipagem GSA v3.0 da Genera.
+
+ENTENDENDO SEU RESULTADO:
+O CYP2D6 é a principal enzima de metabolização da vortioxetina. O CPIC
+recomenda redução de dose em metabolizadores lentos (50% da dose) e permite
+aumento de dose em metabolizadores ultra-rápidos. Infelizmente, o principal
+marcador (*4, rs3892097) não está disponível no chip utilizado pela Genera.
+
+RESULTADO:
+- CYP2D6: ❓ Indeterminado - SNP principal não disponível
+
+SUGESTÕES:
+Sem dados completos do CYP2D6, recomenda-se iniciar com dose padrão e
+monitorar resposta clínica. Se houver efeitos colaterais excessivos
+(sugerindo metabolismo lento) ou falta de resposta (sugerindo metabolismo
+ultra-rápido), considerar teste farmacogenético específico para CYP2D6.
+
+População de estudo: Europeia
+
+
+7. ZIPRASIDONA (Geodon®, Zisid®, Zipras®)
+   Classe: Antipsicóticos
+   Tipo de análise: Resposta/Efeitos colaterais
+   Genes: MC4R, HTR2C
+
+SOBRE O MEDICAMENTO:
+A ziprasidona é um antipsicótico atípico (segunda geração) utilizado no
+tratamento de esquizofrenia e transtorno bipolar (episódios maníacos/mistos).
+Atua como antagonista dos receptores D2, 5-HT2A e 5-HT2C. É um dos
+antipsicóticos com menor risco de ganho de peso. Efeitos adversos incluem
+sonolência, tontura, prolongamento do QTc, acatisia e sintomas extrapiramidais.
+Nomes comerciais: Geodon®, Zisid®, Zipras®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs17782313│ MC4R         │ TT       │ Normal - Sem risco aumentado de obesidade │
+│rs3813929 │ HTR2C (-759) │ CC       │ Risco padrão de ganho de peso            │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+
+ENTENDENDO SEU RESULTADO:
+O gene MC4R (cromossomo 18) codifica o receptor de melanocortina 4, envolvido
+na regulação do apetite e peso corporal. Eric possui genótipo TT (referência),
+sem risco aumentado de obesidade associado a antipsicóticos.
+
+O gene HTR2C (cromossomo X) codifica o receptor de serotonina 2C. A variante
+-759C/T (rs3813929) está associada à proteção contra ganho de peso induzido
+por antipsicóticos. Eric possui genótipo CC (referência), indicando risco
+PADRÃO de ganho de peso (sem proteção adicional, mas sem risco aumentado).
+
+RESULTADO:
+- MC4R TT: ✅ Normal - Sem predisposição genética a obesidade
+- HTR2C CC: ✅ Normal - Risco padrão de ganho de peso com antipsicóticos
+
+SUGESTÕES:
+Eric não apresenta predisposição genética aumentada para ganho de peso com
+antipsicóticos pelos marcadores analisados. A ziprasidona já é o antipsicótico
+com menor risco metabólico. Se prescrita, monitorar peso e perfil metabólico
+conforme protocolo padrão.
+
+População de estudo: Europeia
+
+
+8. ZOLPIDEM (Stilnox®, Hizolp®, Insonox®, Insopidem®, Lebazi®, Sonotrat®)
+   Classe: Hipnóticos
+   Tipo de análise: Metabolismo
+   Genes: CYP3A4
+
+SOBRE O MEDICAMENTO:
+O zolpidem é um hipnótico não-benzodiazepínico (classe das imidazopiridinas)
+utilizado para tratamento de curto prazo da insônia. Atua como agonista
+seletivo do receptor GABA-A (subunidade alfa-1). É metabolizado principalmente
+pelo CYP3A4 no fígado. Efeitos adversos incluem sonolência residual, tontura,
+cefaleia, amnésia anterógrada e comportamentos complexos durante o sono
+(sonambulismo). Nomes comerciais: Stilnox®, Hizolp®, Insonox®, Sonotrat®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs35599367│ CYP3A4 (*22) │ GG       │ Metabolizador normal                     │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+
+ENTENDENDO SEU RESULTADO:
+Eric possui genótipo GG no CYP3A4 *22, indicando metabolismo normal. O
+zolpidem é processado em velocidade adequada pelo fígado.
+
+RESULTADO:
+- CYP3A4 *22 GG: ✅ Normal - Metabolismo adequado
+
+SUGESTÕES:
+Eric possui metabolismo normal pelo CYP3A4. A dose padrão de zolpidem é
+apropriada. Nota: Para adolescentes (16 anos), o uso de zolpidem geralmente
+não é recomendado. Se necessário para insônia, discutir com o médico
+alternativas adequadas para a faixa etária.
+
+População de estudo: Europeia
+
+
+9. ZOPICLONA (Imovane®)
+   Classe: Hipnóticos
+   Tipo de análise: Metabolismo
+   Genes: CYP3A4
+
+SOBRE O MEDICAMENTO:
+A zopiclona é um hipnótico da classe das ciclopirrolonas, utilizado para
+tratamento de curto prazo da insônia. Atua como agonista do receptor GABA-A,
+de forma semelhante ao zolpidem. É metabolizada principalmente pelo CYP3A4
+no fígado. Efeitos adversos incluem gosto metálico (disgeusia), sonolência,
+boca seca e tontura. Nome comercial: Imovane®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs35599367│ CYP3A4 (*22) │ GG       │ Metabolizador normal                     │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+
+ENTENDENDO SEU RESULTADO:
+Mesma análise do zolpidem. Eric possui CYP3A4 funcional com genótipo de
+referência (GG), indicando metabolismo normal da zopiclona.
+
+RESULTADO:
+- CYP3A4 *22 GG: ✅ Normal - Metabolismo adequado
+
+SUGESTÕES:
+Eric possui metabolismo normal pelo CYP3A4. A zopiclona seria processada
+adequadamente. Mesma observação sobre faixa etária: hipnóticos geralmente
+não são indicados para adolescentes sem avaliação rigorosa.
+
+População de estudo: Europeia
+
+
+10. ZUCLOPENTIXOL (Clopixol®, Cisordinol®)
+    Classe: Antipsicóticos
+    Tipo de análise: Metabolismo
+    Genes: CYP2D6
+
+SOBRE O MEDICAMENTO:
+O zuclopentixol é um antipsicótico típico (primeira geração) do grupo dos
+tioxantenos, utilizado no tratamento de esquizofrenia e outros transtornos
+psicóticos. Existe nas formas oral (Cisordinol®), de depósito/decanoato
+(Clopixol Depot®) e acetato para uso intramuscular agudo (Clopixol-Acuphase®).
+É metabolizado principalmente pelo CYP2D6 no fígado. Efeitos adversos incluem
+sintomas extrapiramidais (distonia, acatisia, parkinsonismo), sedação,
+hipotensão ortostática e ganho de peso. Nomes comerciais: Clopixol®,
+Cisordinol®.
+
+DADOS GENÉTICOS:
+┌──────────┬──────────────┬──────────┬──────────────────────────────────────────┐
+│ SNP      │ Gene         │ Genótipo │ Interpretação                            │
+├──────────┼──────────────┼──────────┼──────────────────────────────────────────┤
+│rs3892097 │ CYP2D6 (*4)  │ N/D*     │ SNP não disponível no chip               │
+└──────────┴──────────────┴──────────┴──────────────────────────────────────────┘
+* Não coberto pelo chip de genotipagem GSA v3.0 da Genera.
+
+ENTENDENDO SEU RESULTADO:
+O CYP2D6 é a principal enzima responsável pelo metabolismo do zuclopentixol.
+Metabolizadores lentos do CYP2D6 podem ter concentrações plasmáticas
+significativamente elevadas, com maior risco de efeitos extrapiramidais e
+sedação excessiva. Metabolizadores ultra-rápidos podem ter resposta insuficiente.
+
+Infelizmente, o principal marcador do CYP2D6 (*4, rs3892097) não está
+disponível no chip GSA v3.0 da Genera.
+
+RESULTADO:
+- CYP2D6: ❓ Indeterminado - SNP principal não disponível
+
+SUGESTÕES:
+Sem dados completos do CYP2D6, não é possível prever o metabolismo do
+zuclopentixol. Se este medicamento for prescrito, iniciar com dose baixa
+e titular gradualmente, monitorando efeitos colaterais (especialmente
+extrapiramidais). Para informação completa, considerar teste farmacogenético
+específico para CYP2D6.
+
+População de estudo: Europeia
+
+
+RESUMO GERAL DOS RESULTADOS DE ERIC
+
+ACHADOS RELEVANTES:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ⚠️ VKORC1 (rs9923231) = TT → Muito sensível à varfarina                    │
+│ ⚠️ CYP2C19*17 (rs12248560) = CT → Metabolizador rápido                     │
+│ ⚠️ CYP4F2*3 (
