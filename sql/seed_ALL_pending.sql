@@ -1,3 +1,5 @@
+﻿ALTER TABLE `pgx_drug_details` ADD COLUMN IF NOT EXISTS `confidence_level` VARCHAR(10) NULL AFTER `suggestions`, ADD COLUMN IF NOT EXISTS `evidence_notes` TEXT NULL AFTER `confidence_level`, ADD COLUMN IF NOT EXISTS `patient_genotype` VARCHAR(20) NULL AFTER `gene_symbol`, ADD COLUMN IF NOT EXISTS `genotype_result` TEXT NULL AFTER `study_population`;
+
 -- BATCHES 11-20: PARTE A LIMPA
 -- Rode este arquivo para medicamentos 111-200 no dashboard
 
@@ -202,7 +204,7 @@ VALUES
 -- =====================================================
 
 -- 1. BUPRENORFINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Buprenorfina',
@@ -219,13 +221,13 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 2. BUPIVACAÍNA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Bupivacaína',
@@ -242,13 +244,13 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 3. BUMETANIDA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Bumetanida',
@@ -265,13 +267,13 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 4. BROMOCRIPTINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Bromocriptina',
@@ -288,157 +290,13 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 5. BRIVARACETAM
 INSERT INTO pgx_drug_-- =====================================================
--- BATCH 21B: Medicamentos 205-210 (continuação)
--- Brivaracetam, Brexpiprazol, Benazepril, Azitromicina,
--- Azatioprina, Atorvastatina
--- =====================================================
-
--- 5. BRIVARACETAM
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Brivaracetam',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
-  'O brivaracetam é um anticonvulsivante de nova geração, derivado do levetiracetam, utilizado como terapia adjuvante em crises epilépticas parciais. Atua ligando-se seletivamente à proteína SV2A nas vesículas sinápticas. Efeitos adversos incluem sonolência, tontura, fadiga e irritabilidade. Nomes comerciais: Briviact®.',
-  'O gene CYP2C19, localizado no cromossomo 10, participa do metabolismo do brivaracetam (via secundária - a hidrólise por amidases é a via principal). A variante CYP2C19*17 (rs12248560) confere atividade enzimática aumentada. Eric possui CYP2C19 CT (*1/*17) = metabolismo mais RÁPIDO.',
-  'rs12248560', '10', 'CYP2C19', 'C,T',
-  'Europeia',
-  'Eric possui CYP2C19 *1/*17 (CT) = metabolizador rápido. Para brivaracetam o impacto é LIMITADO pois a via principal é hidrólise (amidases), não CYP2C19.',
-  'O impacto do CYP2C19*17 no brivaracetam é LIMITADO porque a via principal é hidrólise. Em doses altas, CYP2C19 contribui mais. Se crises não controladas, metabolismo rápido pode contribuir para níveis subótimos. Monitorar resposta clínica. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Briviact',
-  '2B',
-  'CYP2C19 e brivaracetam: evidência moderada (2B). CYP2C19 é via SECUNDÁRIA. Impacto clínico limitado mas possível em doses altas.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 6. BREXPIPRAZOL
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Brexpiprazol',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
-  'O brexpiprazol é um antipsicótico atípico de segunda geração, agonista parcial D2/5-HT1A e antagonista 5-HT2A. Utilizado em esquizofrenia e como adjuvante em depressão resistente. Menor risco de acatisia que aripiprazol. Efeitos adversos: ganho de peso, acatisia, sonolência, nasofaringite. Nomes comerciais: Rexulti®.',
-  'O gene CYP2D6, localizado no cromossomo 22, é responsável pelo metabolismo principal do brexpiprazol. Metabolizadores lentos apresentam níveis 47% maiores. A FDA recomenda redução de dose para metabolizadores lentos. Eric NÃO possui tipagem do CYP2D6 (rs3892097 não disponível no chip Genera GSA v3.0).',
-  'rs3892097', '22', 'CYP2D6', 'N/D',
-  'Europeia',
-  'Eric NÃO possui tipagem do CYP2D6. Sem esta informação, não é possível determinar se é metabolizador normal, intermediário, lento ou ultra-rápido.',
-  'SEM TIPAGEM DO CYP2D6: iniciar em dose baixa (0.5mg) e titular lentamente. FDA recomenda metade da dose para metabolizadores lentos. MC4R TT e HTR2C CC favorecem menor risco de ganho de peso. Para autismo, brexpiprazol pode ser alternativa à risperidona com perfil de efeitos adversos potencialmente melhor. RECOMENDA-SE TESTE CYP2D6 ANTES. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Rexulti',
-  '1A',
-  'CYP2D6 e brexpiprazol: evidência forte (1A). FDA label inclui recomendação de ajuste. Eric: CYP2D6 NÃO DISPONÍVEL.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 7. BENAZEPRIL
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Benazepril',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
-  'O benazepril é um inibidor da enzima conversora de angiotensina (iECA), utilizado no tratamento da hipertensão e insuficiência cardíaca. É uma pró-droga convertida em benazeprilato (forma ativa) no fígado. Efeitos adversos: tosse seca, hipercalemia, angioedema (raro), tontura e cefaleia. Nomes comerciais: Lotensin®, Bhena®.',
-  'O gene AGT, localizado no cromossomo 1, codifica o angiotensinogênio, substrato do sistema renina-angiotensina-aldosterona. A variante rs699 (M235T) está associada a níveis elevados de angiotensinogênio e maior resposta a iECAs. Eric possui AGT AG (heterozigoto Met/Thr).',
-  'rs699', '1', 'AGT', 'A,G',
-  'Europeia',
-  'Eric possui AGT AG (heterozigoto M235T). Níveis intermediários de angiotensinogênio. Resposta intermediária a iECAs.',
-  'Com AGT AG e ACE rs4343 GG (níveis elevados de ECA), o perfil geral sugere que iECAs podem ter boa eficácia para Eric. Se anti-hipertensivo necessário, iECAs são opção farmacogeneticamente razoável. Monitorar potássio e função renal. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Lotensin, Bhena',
-  '2B',
-  'AGT rs699 e iECAs: evidência moderada (2B). Meta-análises mostram associação, mas não determinante isolado.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 8. AZITROMICINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Azitromicina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Infectologia'),
-  'A azitromicina é um antibiótico macrolídeo de amplo espectro, usado em infecções respiratórias, otites, sinusites, infecções de pele e DSTs. Meia-vida longa permite esquemas curtos (3-5 dias). Efeitos adversos: diarreia, náuseas, dor abdominal e raramente prolongamento QT. Nomes comerciais: Zitromax®, Astro®, Azi®, Azimed®, Zirk®.',
-  'O gene ABCB1 (MDR1), localizado no cromossomo 7, codifica a P-glicoproteína (bomba de efluxo). Para azitromicina, o impacto é LIMITADO pois ela se acumula em macrófagos por mecanismo independente da P-gp. Eric NÃO possui tipagem do ABCB1 (rs1045642 não disponível no chip).',
-  'rs1045642', '7', 'ABCB1', 'N/D',
-  'Europeia',
-  'ABCB1 N/D no chip. Para azitromicina, o impacto é clinicamente IRRELEVANTE.',
-  'Azitromicina é SEGURA para Eric independentemente do ABCB1: acumula-se em macrófagos por mecanismo não-P-gp, impacto farmacogenético marginal, G6PD normal. Usar normalmente conforme indicação. Atenção ao prolongamento QT se combinada com outros medicamentos QT-prolongadores. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Zitromax, Astro, Azi, Azimed, Zirk, Zitroneo',
-  '3',
-  'ABCB1 e azitromicina: evidência baixa (3). Impacto clinicamente marginal.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 9. AZATIOPRINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Azatioprina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Imunossupressores/Transplante'),
-  'A azatioprina é um imunossupressor antimetabólito, pró-droga da 6-mercaptopurina, utilizada em doenças autoimunes (artrite reumatoide, lúpus, Crohn, hepatite autoimune), prevenção de rejeição de transplantes e protocolos poupadores de corticoides. Efeitos adversos graves: mielossupressão (leucopenia, trombocitopenia), hepatotoxicidade, pancreatite, risco aumentado de infecções e neoplasias. Nomes comerciais: Imuran®, Imunen®, Imussuprex®.',
-  'O gene TPMT, localizado no cromossomo 6, codifica a tiopurina S-metiltransferase, responsável pela inativação das tiopurinas. Variantes que reduzem a atividade do TPMT causam acúmulo de metabólitos tóxicos (6-TGN), levando a mielossupressão potencialmente FATAL. As variantes principais são *2 (rs1800462), *3A (rs1800460+rs1142345) e *3C (rs1142345). Eric: TPMT rs1800460 CC (normal) e rs1800462 CC (normal). rs1142345 N/D no chip.',
-  'rs1800460', '6', 'TPMT', 'C,C',
-  'Europeia',
-  'Eric possui TPMT rs1800460 CC e rs1800462 CC = ambos NORMAIS. rs1142345 (*3C) não disponível no chip, mas a prevalência de *3C isolado é baixa em europeus (~0.2%).',
-  'TPMT parcialmente genotipado: *3B (rs1800460) e *2 (rs1800462) NORMAIS. O TPMT*3C (rs1142345) não está no chip, mas é raro em europeus isolado. Com alta probabilidade (>99%), Eric tem TPMT funcional. Dose padrão de azatioprina deve ser segura. RECOMENDAÇÃO: Se azatioprina for prescrita, solicitar dosagem da atividade enzimática do TPMT (teste fenotípico) antes de iniciar, como confirmação. Monitorar hemograma na 1ª semana. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Imuran, Imunen, Imussuprex',
-  '1A',
-  'TPMT e tiopurinas: evidência MUITO forte (1A). Guideline CPIC obrigatório. Eric: 2 de 3 variantes testadas = normais. *3C não testado mas prevalência <0.2% em europeus.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_-- =====================================================
--- BATCH 21C: Medicamento 210 - Atorvastatina (final)
--- =====================================================
-
--- 10. ATORVASTATINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Atorvastatina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
-  'A atorvastatina é uma estatina (inibidor da HMG-CoA redutase) utilizada para redução do colesterol LDL e prevenção cardiovascular. É a estatina mais prescrita mundialmente. Efeitos adversos incluem mialgia, elevação de CPK, rabdomiólise (raro), hepatotoxicidade e diabetes. Nomes comerciais: Citalor®, Atorless®, Atorvasterol®, Corastorva®, Kolevas®, Lipitor®.',
-  'O gene SLCO1B1, localizado no cromossomo 12, codifica o transportador OATP1B1, responsável pela captação hepática das estatinas. A variante rs4149056 (SLCO1B1*5, Val174Ala) reduz a captação hepática, aumentando os níveis sistêmicos e o risco de miopatia. Eric possui SLCO1B1 TC (heterozigoto) = transporte REDUZIDO. Além disso, APOA5 rs964184 GC = risco moderado de triglicerídeos elevados.',
-  'rs4149056', '12', 'SLCO1B1', 'T,C',
-  'Europeia',
-  'Eric possui SLCO1B1 TC (heterozigoto *1/*5). Risco de miopatia 2-3x aumentado com atorvastatina em doses altas (>40mg). APOA5 GC sugere possível benefício de estatinas se colesterol elevado.',
-  'SLCO1B1 TC (heterozigoto): A atorvastatina é MENOS afetada pelo SLCO1B1 que a sinvastatina, mas em doses altas (>40mg) o risco de miopatia existe. RECOMENDAÇÕES: (1) Se estatina necessária, atorvastatina em dose baixa-moderada (10-20mg) OU rosuvastatina (menor impacto SLCO1B1) são preferíveis à sinvastatina. (2) APOA5 GC indica possível predisposição a triglicerídeos elevados - monitorar perfil lipídico. (3) Evitar sinvastatina >20mg (risco 4.5x miopatia). (4) Monitorar CPK e sintomas musculares. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Citalor, Atorless, Atorvasterol, Corastorva, Kolevas, Lipitor',
-  '1A',
-  'SLCO1B1 e estatinas: evidência FORTE (1A). Guideline CPIC. Atorvastatina menos afetada que sinvastatina mas risco existe em doses altas. APOA5 rs964184: evidência 2B para triglicerídeos.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);-- =====================================================
 -- BATCH 22: Medicamentos 211-220 (FINAL - completa 220!)
 -- Atomoxetina, Atenolol, Atazanavir, Asenapina,
 -- Aripiprazol Lauroxil, Aripiprazol, Apixabana,
@@ -471,7 +329,7 @@ VALUES
 -- =====================================================
 
 -- 1. ATOMOXETINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Atomoxetina',
@@ -488,13 +346,13 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 2. ATENOLOL
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Atenolol',
@@ -511,13 +369,13 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 3. ATAZANAVIR
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Atazanavir',
@@ -534,187 +392,17 @@ VALUES
 )
 ON DUPLICATE KEY UPDATE
   class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
+  snp_rsid=VALUES(snp_rsid), chromosome=VALUES(chromosome), gene_symbol=VALUES(gene_symbol),
   patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
   genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
   commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
 
 -- 4. ASENAPINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
+INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_rsid, chromosome, gene_symbol, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
 VALUES
 (
   'Asenapina',
   (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
   'A asenapina é um antipsicótico atípico administrado por via sublingual, utilizado em esquizofrenia e mania bipolar. Antagonista D2/5-HT2A com perfil de receptores amplo. Efeitos adversos: sonolência, acatisia, ganho de peso moderado, hipoestesia oral. Nomes comerciais: Saphris®, Secuado® (transdérmico).',
-  'O gene CYP1A2, localizado no cromossomo 15, participa do metabolismo da asenapina. A-- =====================================================
--- BATCH 22B: Medicamentos 214-220 (continuação final)
--- Asenapina, Aripiprazol Lauroxil, Aripiprazol, Apixabana,
--- Anticoncepcionais, Anlodipino, Anfetamina
--- =====================================================
+  'O gene CYP1A2, localizado no cromossomo 15, participa do metabolismo da asenapina. A
 
--- 4. ASENAPINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Asenapina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
-  'A asenapina é um antipsicótico atípico sublingual para esquizofrenia e mania bipolar. Antagonista D2/5-HT2A. Efeitos adversos: sonolência, acatisia, ganho de peso moderado, hipoestesia oral. Nomes comerciais: Saphris®, Secuado®.',
-  'O gene CYP1A2, no cromossomo 15, metaboliza a asenapina. A variante rs762551 (*1F, alelo A) confere alta indutibilidade. Eric possui CYP1A2 CA = metabolizador ultra-rápido (induzível). Isso pode resultar em níveis menores de asenapina, especialmente se exposto a indutores (tabaco, carne grelhada).',
-  'rs762551', '15', 'CYP1A2', 'C,A',
-  'Europeia',
-  'Eric: CYP1A2 CA (ultra-rápido induzível). Níveis de asenapina podem ser menores que o esperado. Porém, como via sublingual, a biodisponibilidade é menos CYP-dependente.',
-  'CYP1A2 CA: metabolismo potencialmente mais rápido. PORÉM: asenapina sublingual tem biodisponibilidade de 35% por via sublingual vs <2% se engolida. O metabolismo hepático de primeira passagem é parcialmente contornado pela via sublingual. Impacto clínico do CYP1A2 é MODERADO. Monitorar resposta. Via transdérmica (Secuado) também contorna CYP1A2. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Saphris, Secuado',
-  '2A',
-  'CYP1A2 e asenapina: evidência moderada (2A). Via sublingual atenua impacto do CYP1A2. Eric CA = potencialmente rápido.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 5. ARIPIPRAZOL LAUROXIL
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Aripiprazol Lauroxil',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
-  'O aripiprazol lauroxil é a forma injetável de ação prolongada (LAI) do aripiprazol, administrado mensalmente ou a cada 2 meses. Pró-droga que é convertida em aripiprazol. Indicado para esquizofrenia. Efeitos adversos: acatisia, insônia, cefaleia, reações no local da injeção. Nomes comerciais: Aristada®.',
-  'O gene CYP2D6, no cromossomo 22, metaboliza o aripiprazol (forma ativa). Metabolizadores lentos CYP2D6 apresentam níveis ~60% maiores. A FDA recomenda ajuste de dose. Eric NÃO possui tipagem CYP2D6.',
-  'rs3892097', '22', 'CYP2D6', 'N/D',
-  'Europeia',
-  'Eric: CYP2D6 N/D. Para forma LAI, ajuste é mais crítico pois não pode ser revertido rapidamente.',
-  'ARIPIPRAZOL LAI SEM CYP2D6: ALTO RISCO. Como é injeção de longa duração, se Eric for metabolizador lento, os níveis elevados persistirão por semanas. RECOMENDAÇÃO: NÃO iniciar forma LAI sem tipagem CYP2D6 prévia. Se aripiprazol oral for tolerado, pode-se inferir fenótipo. FDA: PM CYP2D6 = reduzir para 441mg (ao invés de 882mg). Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Aristada',
-  '1A',
-  'CYP2D6 e aripiprazol LAI: evidência forte (1A). FDA label. Forma LAI = irreversibilidade = teste ANTES.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 6. ARIPIPRAZOL
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Aripiprazol',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
-  'O aripiprazol é um antipsicótico atípico, agonista parcial D2/5-HT1A e antagonista 5-HT2A. Utilizado em esquizofrenia, mania bipolar, depressão adjuvante, irritabilidade no autismo e Tourette. É um dos antipsicóticos mais prescritos para TEA. Efeitos adversos: acatisia, insônia, náuseas, cefaleia, ganho de peso moderado. Nomes comerciais: Abilify®, Aristab®, Toarip®, Sensaz®.',
-  'O gene CYP2D6 metaboliza o aripiprazol. PM CYP2D6 = níveis ~60% maiores. FDA recomenda redução de dose. Além disso, MC4R (rs17782313) e HTR2C (rs3813929) influenciam ganho de peso. Eric: CYP2D6 N/D, MC4R TT (normal), HTR2C CC (risco padrão de ganho de peso).',
-  'rs3892097', '22', 'CYP2D6', 'N/D',
-  'Europeia',
-  'Eric: CYP2D6 N/D. MC4R TT e HTR2C CC = menor risco de ganho de peso metabólico com antipsicóticos. Perfil favorável EXCETO pela incerteza do CYP2D6.',
-  'ARIPIPRAZOL PARA AUTISMO: MC4R TT e HTR2C CC = perfil FAVORÁVEL para menor ganho de peso. CYP2D6 desconhecido: iniciar com dose BAIXA (2mg) e titular lentamente. Se boa tolerância em 2-5mg, fenótipo provavelmente não é PM. ALTERNATIVAS se CYP2D6 for preocupação: Paliperidona (não CYP2D6), Lurasidona (CYP3A4 normal). Para irritabilidade no TEA, aripiprazol tem aprovação FDA. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Abilify, Aristab, Toarip, Sensaz',
-  '1A',
-  'CYP2D6 e aripiprazol: evidência forte (1A). FDA label. MC4R/HTR2C: evidência 2B para ganho de peso.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 7. APIXABANA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Apixabana',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
-  'A apixabana é um anticoagulante oral direto (DOAC), inibidor do fator Xa. Utilizada na prevenção de AVC em fibrilação atrial e tratamento/prevenção de trombose venosa. NÃO requer monitoramento de INR. Efeitos adversos: sangramento, hematomas, anemia. Nomes comerciais: Eliquis®.',
-  'O gene ABCG2, no cromossomo 4, codifica um transportador de efluxo. A variante rs2231142 (Q141K) reduz a função do transportador, podendo aumentar níveis de apixabana. Eric: ABCG2 GG (normal) = transporte normal. Além disso, F5 Leiden (rs6025) CC = sem trombofilia hereditária.',
-  'rs2231142', '4', 'ABCG2', 'G,G',
-  'Europeia',
-  'Eric: ABCG2 GG (normal). Transporte adequado da apixabana. F5 Leiden CC = sem Fator V Leiden.',
-  'Apixabana é ALTERNATIVA PREFERENCIAL à varfarina para Eric! Motivos: (1) VKORC1 TT torna varfarina muito sensível/instável; (2) ABCG2 GG = transporte normal; (3) F5 CC = sem trombofilia; (4) NÃO requer monitoramento de INR; (5) NÃO depende de CYP2C9 nem VKORC1. Se anticoagulação necessária (peri-operatória ou outra), PREFERIR apixabana ou rivaroxabana. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Eliquis',
-  '2A',
-  'ABCG2 e apixabana: evidência moderada (2A). Apixabana preferencial à varfarina quando VKORC1 TT.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 8. ANTICONCEPCIONAIS ORAIS (ESTROGÊNIO)
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Anticoncepcionais orais (estrogênio)',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
-  'Os anticoncepcionais orais combinados contêm estrogênio (etinilestradiol) e progestágeno. Embora primariamente contraceptivos, a análise farmacogenética foca no RISCO TROMBÓTICO associado ao estrogênio. Portadores do Fator V Leiden têm risco 7-30x aumentado de trombose venosa com estrogênio. Nomes comerciais: Yasmin®, Diane®, Belara®, Ciclo21®.',
-  'O gene F5, no cromossomo 1, codifica o Fator V da coagulação. A mutação Leiden (rs6025 G>A) causa resistência à proteína C ativada e risco 3-8x de trombose venosa. Com estrogênio, o risco é sinérgico (7-30x). Eric: F5 CC (referência) = SEM Fator V Leiden.',
-  'rs6025', '1', 'F5', 'C,C',
-  'Europeia',
-  'Eric: F5 CC = SEM Fator V Leiden. Risco trombótico com estrogênio é o PADRÃO populacional (não aumentado geneticamente).',
-  'F5 CC: Sem Fator V Leiden. Se anticoncepção hormonal ou terapia estrogênica forem necessárias no futuro, não há contraindicação farmacogenética por esta via. Risco trombótico é o padrão da população. Considerar outros fatores de risco (obesidade, imobilização, cirurgia). PARA A CIRURGIA MAXILAR: Se Eric estiver em uso de qualquer medicamento estrogênico, informar cirurgião. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Yasmin, Diane, Belara, Ciclo21',
-  '1A',
-  'Fator V Leiden e estrogênio: evidência MUITO forte (1A). Eric CC = sem risco genético adicional.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 9. ANLODIPINO
-INSERT INTO pgx_drug_details (drug-- =====================================================
--- BATCH 22C: Medicamentos 219-220 (Anlodipino, Anfetamina)
--- FINAL DOS 232 MEDICAMENTOS!
--- =====================================================
-
--- 9. ANLODIPINO
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Anlodipino',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
-  'O anlodipino é um bloqueador de canais de cálcio diidropiridínico, utilizado no tratamento de hipertensão e angina. Possui meia-vida longa (30-50h). Via principal: CYP3A4 (com contribuição menor do CYP2D6). Efeitos adversos: edema periférico, cefaleia, rubor, tontura. Nomes comerciais: Norvasc®, Alivpress®, Anlo®, Tenlopin®, Tensaliv®.',
-  'O CYP3A4 é a via PRINCIPAL de metabolismo do anlodipino, com contribuição SECUNDÁRIA do CYP2D6. Eric: CYP3A4 GG (normal). Como a via principal está normal, o impacto do CYP2D6 desconhecido é LIMITADO.',
-  'rs3892097', '22', 'CYP2D6', 'N/D',
-  'Europeia',
-  'Eric: CYP2D6 N/D mas CYP3A4 GG (normal). Como CYP3A4 é a via PRINCIPAL, o impacto do CYP2D6 desconhecido é clinicamente LIMITADO para anlodipino.',
-  'CYP3A4 é a via principal do anlodipino e está NORMAL (GG). O CYP2D6 é via secundária com impacto limitado. Anlodipino pode ser usado normalmente. VANTAGEM: não depende criticamente do CYP2D6 desconhecido. Se anti-hipertensivo necessário, anlodipino é opção farmacogeneticamente aceitável. Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Norvasc, Alivpress, Anlo, Tenlopin, Tensaliv',
-  '3',
-  'CYP2D6 e anlodipino: evidência baixa (3). CYP3A4 é via principal (normal). Impacto clínico do CYP2D6 limitado.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
-
--- 10. ANFETAMINA
-INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_result, snp_id, chromosome, gene_name, patient_genotype, study_population, genotype_result, suggestions, commercial_names, confidence_level, evidence_notes)
-VALUES
-(
-  'Anfetamina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
-  'As anfetaminas são psicoestimulantes utilizados no tratamento de TDAH e narcolepsia. Incluem dextroanfetamina, anfetamina racêmica e lisdexanfetamina (pró-droga). Mecanismo: liberação de dopamina e noradrenalina. Efeitos adversos: insônia, diminuição de apetite, taquicardia, ansiedade, irritabilidade. Nomes comerciais: Evekeo®, Dynavel®, Adzenys®. No Brasil, a lisdexanfetamina (Venvanse®) é a forma mais acessível.',
-  'As anfetaminas são primariamente metabolizadas por desaminação oxidativa (MAO) e conjugação (não-CYP). O CYP2D6 participa apenas de vias SECUNDÁRIAS de metabolismo. O impacto farmacogenético é LIMITADO para anfetaminas. Os genes mais relevantes para RESPOSTA são DRD1, SLC6A3 e COMT.',
-  'rs3892097', '22', 'CYP2D6', 'N/D',
-  'Europeia',
-  'CYP2D6 N/D mas impacto LIMITADO para anfetaminas (via secundária). DRD1 TT e COMT AG são mais relevantes para resposta.',
-  'ANFETAMINAS PARA TDAH NO ERIC: O CYP2D6 desconhecido tem impacto LIMITADO (via secundária). PORÉM, DRD1 rs4532 TT sugere resposta VARIÁVEL a estimulantes dopaminérgicos. RECOMENDAÇÃO: (1) Lisdexanfetamina (Venvanse) é preferível pois é convertida por hidrólise (não-CYP); (2) Monitorar resposta clinicamente; (3) Se resposta insuficiente, considerar Guanfacina (não-estimulante, CYP3A4 normal). Nunca inicie, interrompa ou altere tratamentos sem orientação médica.',
-  'Evekeo, Dynavel, Adzenys, Venvanse (lisdexanfetamina)',
-  '3',
-  'CYP2D6 e anfetaminas: evidência baixa (3) para metabolismo. DRD1/COMT: evidência moderada (2B) para resposta clínica.'
-)
-ON DUPLICATE KEY UPDATE
-  class_id=VALUES(class_id), description=VALUES(description), understanding_result=VALUES(understanding_result),
-  snp_id=VALUES(snp_id), chromosome=VALUES(chromosome), gene_name=VALUES(gene_name),
-  patient_genotype=VALUES(patient_genotype), study_population=VALUES(study_population),
-  genotype_result=VALUES(genotype_result), suggestions=VALUES(suggestions),
-  commercial_names=VALUES(commercial_names), confidence_level=VALUES(confidence_level), evidence_notes=VALUES(evidence_notes);
