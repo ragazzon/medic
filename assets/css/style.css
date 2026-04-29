@@ -928,6 +928,24 @@ body {
     justify-content: center;
 }
 
+/* ============ DRUG CARDS (Genomic) ============ */
+.drug-card-link {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.drug-card-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+}
+
+/* ============ GLOSSARY TOOLTIPS ============ */
+.glossary-term {
+    border-bottom: 1px dotted #6c757d;
+    cursor: help;
+    white-space: nowrap;
+}
+
 /* Print styles */
 @media print {
     .sidebar, .topbar, .sidebar-overlay {

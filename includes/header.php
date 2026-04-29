@@ -62,21 +62,21 @@ $parentDir = basename(dirname($_SERVER['PHP_SELF']));
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= ($parentDir === 'exams' && $currentPage !== 'compare') ? 'active' : '' ?>" href="<?= baseUrl('pages/exams/list.php') ?>">
+                <a class="nav-link <?= $parentDir === 'exams' ? 'active' : '' ?>" href="<?= baseUrl('pages/exams/list.php') ?>">
                     <i class="bi bi-clipboard2-pulse"></i>
                     <span>Exames</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link <?= $currentPage === 'compare' ? 'active' : '' ?>" href="<?= baseUrl('pages/exams/compare.php') ?>">
-                    <i class="bi bi-arrow-left-right"></i>
-                    <span>Comparar Exames</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <?= $parentDir === 'medications' ? 'active' : '' ?>" href="<?= baseUrl('pages/medications/list.php') ?>">
                     <i class="bi bi-capsule"></i>
                     <span>Medicamentos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $parentDir === 'genomic' ? 'active' : '' ?>" href="<?= baseUrl('pages/genomic/index.php') ?>" title="Análise genética">
+                    <i class="bi bi-dna"></i>
+                    <span>Genética</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -107,12 +107,6 @@ $parentDir = basename(dirname($_SERVER['PHP_SELF']));
         <div class="sidebar-divider"></div>
         <small class="text-muted px-3 mb-1 d-block" style="font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;">Análises</small>
         <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link <?= $parentDir === 'genomic' ? 'active' : '' ?>" href="<?= baseUrl('pages/genomic/index.php') ?>" title="Analise genômica">
-                    <i class="bi bi-card-checklist"></i>
-                    <span>Genômica</span>
-                </a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link <?= $parentDir === 'reports' ? 'active' : '' ?>" href="<?= baseUrl('pages/reports/index.php') ?>">
                     <i class="bi bi-bar-chart-line"></i>

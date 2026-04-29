@@ -305,6 +305,6 @@ function getDrugAnalysis($patientId, $drugName = null) {
     }
     return $drugs;
 }
-function genomicStatusBadge($s) { $m=['normal'=>['bg-success','Normal'],'attention'=>['bg-warning text-dark','Atencao'],'risk'=>['bg-danger','Risco'],'info'=>['bg-info','Info'],'unknown'=>['bg-secondary','N/D']]; $x=$m[$s]??$m['unknown']; return '<span class="badge '.$x[0].'">'.$x[1].'</span>'; }
+function genomicStatusBadge($s) { $m=['normal'=>['bg-success','Normal'],'attention'=>['bg-warning text-dark','Atenção'],'risk'=>['bg-danger','Risco'],'info'=>['bg-info','Info'],'unknown'=>['bg-secondary','N/D']]; $x=$m[$s]??$m['unknown']; return '<span class="badge '.$x[0].'">'.$x[1].'</span>'; }
 function genomicStatusIcon($s) { return ['normal'=>'&#128994;','attention'=>'&#128993;','risk'=>'&#128308;','info'=>'&#128309;','unknown'=>'&#9898;'][$s] ?? '&#9898;'; }
 function hasGenomicData($pid) { $pdo=getConnection(); $s=$pdo->prepare("SELECT COUNT(*) FROM patient_genotypes WHERE patient_id=?"); $s->execute([$pid]); return $s->fetchColumn()>0; }
