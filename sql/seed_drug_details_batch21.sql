@@ -9,18 +9,19 @@
 -- PARTE A: pgx_drug_genes (faz aparecer no dashboard)
 -- =====================================================
 
-INSERT IGNORE INTO pgx_drug_genes (drug_name, gene_name, rsid, effect_allele, effect_description, recommendation, evidence_level)
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`)
 VALUES
-('Buprenorfina', 'OPRD1', 'rs678849', 'T', 'Receptor delta-opioide: variante associada a resposta variável', 'Monitorar resposta analgésica. COMT AG pode exigir dose maior.', '2B'),
-('Bupivacaína', 'G6PD', 'rs1050829', 'C', 'Deficiência de G6PD pode causar metemoglobinemia', 'Eric: G6PD TT (normal). Uso seguro.', '1A'),
-('Bumetanida', 'GNB3', 'rs5443', 'T', 'Subunidade beta3 da proteína G: afeta resposta a diuréticos', 'Eric: GNB3 CC (normal). Resposta padrão esperada.', '3'),
-('Bromocriptina', 'CYP3A4', 'rs35599367', 'A', 'CYP3A4*22: atividade reduzida', 'Eric: CYP3A4 GG (normal). Metabolismo padrão.', '2A'),
-('Brivaracetam', 'CYP2C19', 'rs12248560', 'T', 'CYP2C19*17: metabolizador rápido', 'Eric: CYP2C19 *1/*17 (CT). Metabolismo mais rápido - possível duração menor.', '2B'),
-('Brexpiprazol', 'CYP2D6', 'rs3892097', 'A', 'CYP2D6*4: metabolizador nulo', 'Eric: CYP2D6 N/D. Sem tipagem - FDA recomenda ajuste conforme fenótipo.', '1A'),
-('Benazepril', 'AGT', 'rs699', 'G', 'Angiotensinogênio M235T: afeta resposta a iECAs', 'Eric: AGT AG (heterozigoto). Resposta intermediária a iECAs.', '2B'),
-('Azitromicina', 'ABCB1', 'rs1045642', 'T', 'P-glicoproteína: afeta distribuição tecidual', 'Eric: ABCB1 N/D. Impacto clínico limitado para azitromicina.', '3'),
-('Azatioprina', 'TPMT', 'rs1800460', 'A', 'TPMT*3B: atividade reduzida - risco mielossupressão', 'Eric: TPMT CC (normal). Dose padrão segura.', '1A'),
-('Atorvastatina', 'SLCO1B1', 'rs4149056', 'C', 'SLCO1B1*5: transporte hepático reduzido - risco miopatia', 'Eric: SLCO1B1 TC (heterozigoto). Risco moderado miopatia. Preferir rosuvastatina.', '1A');
+('Buprenorfina', '', 'OPRD1', 'rs678849', 'substrate', 'Receptor delta-opioide: variante associada a resposta variável', 'Monitorar resposta analgésica. COMT AG pode exigir dose maior.', 'Monitorar resposta analgésica. COMT AG pode exigir dose maior.', 'Monitorar resposta analgésica. COMT AG pode exigir dose maior.', '2B', 'curated', 1),
+('Bupivacaína', '', 'G6PD', 'rs1050829', 'substrate', 'Deficiência de G6PD pode causar metemoglobinemia', 'Eric: G6PD TT (normal). Uso seguro.', 'Eric: G6PD TT (normal). Uso seguro.', 'Eric: G6PD TT (normal). Uso seguro.', '1A', 'curated', 1),
+('Bumetanida', '', 'GNB3', 'rs5443', 'substrate', 'Subunidade beta3 da proteína G: afeta resposta a diuréticos', 'Eric: GNB3 CC (normal). Resposta padrão esperada.', 'Eric: GNB3 CC (normal). Resposta padrão esperada.', 'Eric: GNB3 CC (normal). Resposta padrão esperada.', '3', 'curated', 1),
+('Bromocriptina', '', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4*22: atividade reduzida', 'Eric: CYP3A4 GG (normal). Metabolismo padrão.', 'Eric: CYP3A4 GG (normal). Metabolismo padrão.', 'Eric: CYP3A4 GG (normal). Metabolismo padrão.', '2A', 'curated', 1),
+('Brivaracetam', '', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17: metabolizador rápido', 'Eric: CYP2C19 *1/*17 (CT). Metabolismo mais rápido - possível duração menor.', 'Eric: CYP2C19 *1/*17 (CT). Metabolismo mais rápido - possível duração menor.', 'Eric: CYP2C19 *1/*17 (CT). Metabolismo mais rápido - possível duração menor.', '2B', 'curated', 1),
+('Brexpiprazol', '', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6*4: metabolizador nulo', 'Eric: CYP2D6 N/D. Sem tipagem - FDA recomenda ajuste conforme fenótipo.', 'Eric: CYP2D6 N/D. Sem tipagem - FDA recomenda ajuste conforme fenótipo.', 'Eric: CYP2D6 N/D. Sem tipagem - FDA recomenda ajuste conforme fenótipo.', '1A', 'curated', 1),
+('Benazepril', '', 'AGT', 'rs699', 'substrate', 'Angiotensinogênio M235T: afeta resposta a iECAs', 'Eric: AGT AG (heterozigoto). Resposta intermediária a iECAs.', 'Eric: AGT AG (heterozigoto). Resposta intermediária a iECAs.', 'Eric: AGT AG (heterozigoto). Resposta intermediária a iECAs.', '2B', 'curated', 1),
+('Azitromicina', '', 'ABCB1', 'rs1045642', 'substrate', 'P-glicoproteína: afeta distribuição tecidual', 'Eric: ABCB1 N/D. Impacto clínico limitado para azitromicina.', 'Eric: ABCB1 N/D. Impacto clínico limitado para azitromicina.', 'Eric: ABCB1 N/D. Impacto clínico limitado para azitromicina.', '3', 'curated', 1),
+('Azatioprina', '', 'TPMT', 'rs1800460', 'substrate', 'TPMT*3B: atividade reduzida - risco mielossupressão', 'Eric: TPMT CC (normal). Dose padrão segura.', 'Eric: TPMT CC (normal). Dose padrão segura.', 'Eric: TPMT CC (normal). Dose padrão segura.', '1A', 'curated', 1),
+('Atorvastatina', '', 'SLCO1B1', 'rs4149056', 'substrate', 'SLCO1B1*5: transporte hepático reduzido - risco miopatia', 'Eric: SLCO1B1 TC (heterozigoto). Risco moderado miopatia. Preferir rosuvastatina.', 'Eric: SLCO1B1 TC (heterozigoto). Risco moderado miopatia. Preferir rosuvastatina.', 'Eric: SLCO1B1 TC (heterozigoto). Risco moderado miopatia. Preferir rosuvastatina.', '1A', 'curated', 1);
+
 
 -- =====================================================
 -- PARTE B: pgx_drug_details (textos detalhados)

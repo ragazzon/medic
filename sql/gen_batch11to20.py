@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""
+Gera o SQL limpo para os batches 11-20 (PARTE A somente).
+Rode: python sql/gen_batch11to20.py > sql/seed_batch11to20_clean.sql
+"""
+
+meds = [
+    # BATCH 11
+    ('Maraviroque', 'Antivirais', 'CYP3A5', 'rs776746', 'substrate', 'CYP3A5 metaboliza maraviroque', '2B'),
+    ('Mafenida', 'Antibióticos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco hemólise', '3'),
+    ('Lurasidona', 'Antipsicóticos', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza lurasidona', '2A'),
+    ('Lovastatina', 'Estatinas', 'SLCO1B1', 'rs4149056', 'transporter', 'SLCO1B1 - risco miopatia', '1A'),
+    ('Losartana', 'BRAs', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 converte em metabólito ativo', '2A'),
+    ('Lorazepam', 'Ansiolíticos', 'UGT2B15', 'rs1902023', 'substrate', 'UGT2B15 - NÃO depende CYP', '2B'),
+    ('Lítio', 'Estabilizadores de Humor', 'GSK3B', 'rs6438552', 'target', 'GSK3B modula resposta', '3'),
+    ('Lisdexanfetamina', 'Psicoestimulantes', 'DRD1', 'rs4532', 'target', 'DRD1 modula resposta', '3'),
+    ('Lidocaína-Tetracaína', 'Anestésicos Locais', 'G6PD', 'rs1050829', 'risk', 'G6PD - metemoglobinemia', '3'),
+    ('Lidocaína-Prilocaína', 'Anestésicos Locais', 'G6PD', 'rs1050829', 'risk', 'G6PD - prilocaína metemoglobinemia', '2B'),
+    # BATCH 12
+    ('Levodopa', 'Antiparkinsonianos', 'COMT', 'rs4680', 'target', 'COMT degrada levodopa', '2A'),
+    ('Levodopa-Carbidopa-Entacapona', 'Antiparkinsonianos', 'COMT', 'rs4680', 'target', 'Entacapona inibe COMT', '2A'),
+    ('Lansoprazol', 'IBP', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 reduz eficácia', '1A'),
+    ('Lamotrigina', 'Anticonvulsivantes', 'HLA-B', 'rs3909184', 'risk', 'HLA-B*15:02 risco SJS', '1A'),
+    ('Irbesartana', 'BRAs', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza irbesartana', '2A'),
+    ('Imipramina', 'Antidepressivos Tricíclicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza imipramina', '1A'),
+    ('Imatinibe', 'Antineoplásicos', 'CYP1A2', 'rs762551', 'substrate', 'CYP1A2 ultra-rápido reduz níveis', '2B'),
+    ('Iloperidona', 'Antipsicóticos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza iloperidona', '1A'),
+    ('Ibuprofeno', 'AINEs', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza ibuprofeno', '2A'),
+    ('Hidroxicloroquina', 'Antiparasitários', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - hemólise', '2B'),
+    # BATCH 13
+    ('Hidrocodona', 'Analgésicos Opioides', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 ativa hidrocodona', '1A'),
+    ('Hidroclorotiazida', 'Diuréticos', 'NEDD4L', 'rs4149601', 'target', 'NEDD4L afeta resposta', '3'),
+    ('Haloperidol', 'Antipsicóticos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza haloperidol', '1A'),
+    ('Guanfacina', 'Não-estimulantes TDAH', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza guanfacina', '2A'),
+    ('Glimepirida', 'Antidiabéticos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - hemólise', '3'),
+    ('Gliclazida', 'Antidiabéticos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - hemólise', '3'),
+    ('Glibenclamida', 'Antidiabéticos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - hemólise', '3'),
+    ('Gefitinibe', 'Antineoplásicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza gefitinibe', '2B'),
+    ('Galantamina', 'Inib. Colinesterase', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza galantamina', '2A'),
+    ('Furosemida', 'Diuréticos', 'GNB3', 'rs5443', 'target', 'GNB3 afeta resposta a diuréticos', '3'),
+    # BATCH 14
+    ('Fosfenitoína', 'Anticonvulsivantes', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza fenitoína', '1A'),
+    ('Fluvoxamina', 'Antidepressivos ISRS', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza fluvoxamina', '2A'),
+    ('Flutamida', 'Antineoplásicos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - hemólise', '3'),
+    ('Flurbiprofeno', 'AINEs', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza flurbiprofeno', '2A'),
+    ('Fluoxetina', 'Antidepressivos ISRS', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza fluoxetina', '1A'),
+    ('Fluoruracila', 'Antineoplásicos', 'DPYD', 'rs3918290', 'substrate', 'DPYD metaboliza 5-FU - deficiência FATAL', '1A'),
+    ('Flufenazina', 'Antipsicóticos', 'CYP1A2', 'rs762551', 'substrate', 'CYP1A2 metaboliza flufenazina', '2A'),
+    ('Flecainida', 'Antiarrítmicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza flecainida', '1A'),
+    ('Fentanil', 'Analgésicos Opioides', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza fentanil', '2A'),
+    ('Fenofibrato', 'Fibratos', 'APOA5', 'rs964184', 'target', 'APOA5 afeta triglicerídeos', '2B'),
+    # BATCH 15
+    ('Fenobarbital', 'Anticonvulsivantes', 'ABCB1', 'rs1045642', 'transporter', 'P-gp afeta distribuição', '3'),
+    ('Fenitoína', 'Anticonvulsivantes', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza fenitoína', '1A'),
+    ('Femprocumona', 'Anticoagulantes', 'VKORC1', 'rs9923231', 'target', 'VKORC1 afeta sensibilidade', '1A'),
+    ('Extrato de Cannabis', 'Canabinóides', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza THC/CBD', '2B'),
+    ('Exemestano', 'Antineoplásicos', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza exemestano', '2A'),
+    ('Eszopiclona', 'Hipnóticos', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza eszopiclona', '2A'),
+    ('Esomeprazol', 'IBP', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 reduz eficácia', '1A'),
+    ('Escitalopram', 'Antidepressivos ISRS', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 reduz níveis 30-40%', '1A'),
+    ('Eritromicina-Sulfisoxazol', 'Antibióticos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - hemólise', '3'),
+    ('Erdafitinibe', 'Antineoplásicos', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza erdafitinibe', '2A'),
+    # BATCH 16
+    ('Entacapona', 'Inibidores COMT', 'COMT', 'rs4680', 'target', 'COMT AG - benefício intermediário', '2A'),
+    ('Eltrombopague', 'Antitrombóticos', 'F5', 'rs6025', 'risk', 'Fator V Leiden - risco trombose', '1A'),
+    ('Eliglustate', 'Endócrinos/Metabólicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza eliglustate', '1A'),
+    ('Efavirenz', 'Antivirais', 'CYP2B6', 'rs3211371', 'substrate', 'CYP2B6 metaboliza efavirenz', '1A'),
+    ('Duloxetina', 'Antidepressivos IRSN', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 via parcial (CYP1A2 principal)', '2A'),
+    ('Dronabinol', 'Canabinóides', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza dronabinol', '2B'),
+    ('Doxorrubicina', 'Antineoplásicos', 'RARG', 'rs2229774', 'risk', 'RARG - risco cardiotoxicidade', '2A'),
+    ('Doxepina', 'Antidepressivos Tricíclicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza doxepina', '1A'),
+    # BATCH 17
+    ('Donepezila', 'Inib. Colinesterase', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza donepezila', '2A'),
+    ('Divalproato de Sódio', 'Anticonvulsivantes', 'ANKK1', 'rs1800497', 'target', 'ANKK1/DRD2 modula resposta', '3'),
+    ('Diltiazem', 'Bloq. Canais Cálcio', 'PLCD3', 'rs12946454', 'target', 'PLCD3 afeta resposta', '3'),
+    ('Digoxina', 'Cardiotônicos', 'ABCB1', 'rs1045642', 'transporter', 'P-gp transporta digoxina', '2A'),
+    ('Diclofenaco', 'AINEs', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza diclofenaco', '1A'),
+    ('Diazepam', 'Ansiolíticos', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 metaboliza mais rápido', '1A'),
+    ('Dextroanfetamina', 'Psicoestimulantes', 'DRD1', 'rs4532', 'target', 'DRD1 modula resposta', '3'),
+    ('Dexmetilfenidato', 'Psicoestimulantes', 'ADRA2A', 'rs1800544', 'target', 'ADRA2A afeta resposta', '3'),
+    ('Dexlansoprazol', 'IBP', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 reduz eficácia', '1A'),
+    ('Deutetrabenazina', 'In

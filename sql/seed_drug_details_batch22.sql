@@ -12,18 +12,19 @@
 -- PARTE A: pgx_drug_genes (faz aparecer no dashboard)
 -- =====================================================
 
-INSERT IGNORE INTO pgx_drug_genes (drug_name, gene_name, rsid, effect_allele, effect_description, recommendation, evidence_level)
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`)
 VALUES
-('Atomoxetina', 'CYP2D6', 'rs3892097', 'A', 'CYP2D6*4: metabolizador nulo - níveis 5-10x maiores em PM', 'Eric: CYP2D6 N/D. TESTE OBRIGATÓRIO antes de prescrever (FDA).', '1A'),
-('Atenolol', 'ADRB2', 'rs1042713', 'A', 'Beta-2 Arg16Gly: afeta resposta cardiovascular', 'Eric: ADRB2 GA (Arg/Gly). Resposta intermediária.', '2B'),
-('Atazanavir', 'CYP2C19', 'rs12248560', 'T', 'CYP2C19*17: metabolismo rápido do atazanavir', 'Eric: CYP2C19 *1/*17 (CT). Possível níveis reduzidos.', '2B'),
-('Asenapina', 'CYP1A2', 'rs762551', 'A', 'CYP1A2*1F: alta indutibilidade', 'Eric: CYP1A2 CA (ultra-rápido). Níveis possivelmente menores.', '2A'),
-('Aripiprazol Lauroxil', 'CYP2D6', 'rs3892097', 'A', 'CYP2D6*4: metabolizador nulo', 'Eric: CYP2D6 N/D. FDA recomenda ajuste conforme fenótipo.', '1A'),
-('Aripiprazol', 'CYP2D6', 'rs3892097', 'A', 'CYP2D6*4: metabolizador nulo - FDA recomenda ajuste', 'Eric: CYP2D6 N/D. Iniciar dose baixa, titular. MC4R TT + HTR2C CC favoráveis.', '1A'),
-('Apixabana', 'ABCG2', 'rs2231142', 'T', 'ABCG2 Q141K: transportador reduzido', 'Eric: ABCG2 GG (normal). Transporte normal. Alternativa preferencial à varfarina.', '2A'),
-('Anticoncepcionais orais (estrogênio)', 'F5', 'rs6025', 'A', 'Fator V Leiden: risco trombose venosa com estrogênio', 'Eric: F5 CC (normal). SEM Fator V Leiden. Risco trombótico padrão.', '1A'),
-('Anlodipino', 'CYP2D6', 'rs3892097', 'A', 'CYP2D6 participa do metabolismo secundário', 'Eric: CYP2D6 N/D. Impacto limitado (CYP3A4 é via principal, CYP3A4 GG normal).', '3'),
-('Anfetamina', 'CYP2D6', 'rs3892097', 'A', 'CYP2D6 participa da metabolização (via secundária)', 'Eric: CYP2D6 N/D. Via principal não-CYP. Usar como lisdexanfetamina/dextroanfetamina.', '3');
+('Atomoxetina', '', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6*4: metabolizador nulo - níveis 5-10x maiores em PM', 'Eric: CYP2D6 N/D. TESTE OBRIGATÓRIO antes de prescrever (FDA).', 'Eric: CYP2D6 N/D. TESTE OBRIGATÓRIO antes de prescrever (FDA).', 'Eric: CYP2D6 N/D. TESTE OBRIGATÓRIO antes de prescrever (FDA).', '1A', 'curated', 1),
+('Atenolol', '', 'ADRB2', 'rs1042713', 'substrate', 'Beta-2 Arg16Gly: afeta resposta cardiovascular', 'Eric: ADRB2 GA (Arg/Gly). Resposta intermediária.', 'Eric: ADRB2 GA (Arg/Gly). Resposta intermediária.', 'Eric: ADRB2 GA (Arg/Gly). Resposta intermediária.', '2B', 'curated', 1),
+('Atazanavir', '', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17: metabolismo rápido do atazanavir', 'Eric: CYP2C19 *1/*17 (CT). Possível níveis reduzidos.', 'Eric: CYP2C19 *1/*17 (CT). Possível níveis reduzidos.', 'Eric: CYP2C19 *1/*17 (CT). Possível níveis reduzidos.', '2B', 'curated', 1),
+('Asenapina', '', 'CYP1A2', 'rs762551', 'substrate', 'CYP1A2*1F: alta indutibilidade', 'Eric: CYP1A2 CA (ultra-rápido). Níveis possivelmente menores.', 'Eric: CYP1A2 CA (ultra-rápido). Níveis possivelmente menores.', 'Eric: CYP1A2 CA (ultra-rápido). Níveis possivelmente menores.', '2A', 'curated', 1),
+('Aripiprazol Lauroxil', '', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6*4: metabolizador nulo', 'Eric: CYP2D6 N/D. FDA recomenda ajuste conforme fenótipo.', 'Eric: CYP2D6 N/D. FDA recomenda ajuste conforme fenótipo.', 'Eric: CYP2D6 N/D. FDA recomenda ajuste conforme fenótipo.', '1A', 'curated', 1),
+('Aripiprazol', '', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6*4: metabolizador nulo - FDA recomenda ajuste', 'Eric: CYP2D6 N/D. Iniciar dose baixa, titular. MC4R TT + HTR2C CC favoráveis.', 'Eric: CYP2D6 N/D. Iniciar dose baixa, titular. MC4R TT + HTR2C CC favoráveis.', 'Eric: CYP2D6 N/D. Iniciar dose baixa, titular. MC4R TT + HTR2C CC favoráveis.', '1A', 'curated', 1),
+('Apixabana', '', 'ABCG2', 'rs2231142', 'substrate', 'ABCG2 Q141K: transportador reduzido', 'Eric: ABCG2 GG (normal). Transporte normal. Alternativa preferencial à varfarina.', 'Eric: ABCG2 GG (normal). Transporte normal. Alternativa preferencial à varfarina.', 'Eric: ABCG2 GG (normal). Transporte normal. Alternativa preferencial à varfarina.', '2A', 'curated', 1),
+('Anticoncepcionais orais (estrogênio)', '', 'F5', 'rs6025', 'substrate', 'Fator V Leiden: risco trombose venosa com estrogênio', 'Eric: F5 CC (normal). SEM Fator V Leiden. Risco trombótico padrão.', 'Eric: F5 CC (normal). SEM Fator V Leiden. Risco trombótico padrão.', 'Eric: F5 CC (normal). SEM Fator V Leiden. Risco trombótico padrão.', '1A', 'curated', 1),
+('Anlodipino', '', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 participa do metabolismo secundário', 'Eric: CYP2D6 N/D. Impacto limitado (CYP3A4 é via principal, CYP3A4 GG normal).', 'Eric: CYP2D6 N/D. Impacto limitado (CYP3A4 é via principal, CYP3A4 GG normal).', 'Eric: CYP2D6 N/D. Impacto limitado (CYP3A4 é via principal, CYP3A4 GG normal).', '3', 'curated', 1),
+('Anfetamina', '', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 participa da metabolização (via secundária)', 'Eric: CYP2D6 N/D. Via principal não-CYP. Usar como lisdexanfetamina/dextroanfetamina.', 'Eric: CYP2D6 N/D. Via principal não-CYP. Usar como lisdexanfetamina/dextroanfetamina.', 'Eric: CYP2D6 N/D. Via principal não-CYP. Usar como lisdexanfetamina/dextroanfetamina.', '3', 'curated', 1);
+
 
 -- =====================================================
 -- PARTE B: pgx_drug_details (textos detalhados)
