@@ -1,0 +1,159 @@
+-- BATCHES 11-20: PARTE A LIMPA
+-- Rode este arquivo para medicamentos 111-200 no dashboard
+
+SET NAMES utf8mb4;
+
+-- BATCH 11
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Maraviroque', 'Antivirais (HIV)', 'CYP3A5', 'rs776746', 'substrate', 'CYP3A5 metaboliza maraviroque - expressores eliminam mais rápido', 'Dose padrão', 'Metabolismo aumentado', 'Pode necessitar dose maior', '2B', 'PharmGKB', 1),
+('Mafenida', 'Antibióticos (Sulfonamidas tópicas)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco de hemólise com sulfonamidas', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Lurasidona', 'Antipsicóticos', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza lurasidona', 'Dose padrão', 'Metabolismo reduzido', 'Risco de acúmulo', '2A', 'PharmGKB', 1),
+('Lovastatina', 'Estatinas', 'SLCO1B1', 'rs4149056', 'transporter', 'SLCO1B1 transporta lovastatina - risco de miopatia', 'Dose padrão', 'Dose máxima limitada', 'Risco de miopatia', '1A', 'CPIC', 1),
+('Losartana', 'Antagonistas de Angiotensina II (BRAs)', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 converte losartana em metabólito ativo (E-3174)', 'Dose padrão (boa conversão)', 'Conversão intermediária', 'Conversão reduzida - eficácia pode ser menor', '2A', 'PharmGKB', 1),
+('Losartana', 'Antagonistas de Angiotensina II (BRAs)', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 é via secundária', 'Normal', 'Metabolismo reduzido', 'Monitorar', '3', 'PharmGKB', 1),
+('Lorazepam', 'Ansiolíticos (Benzodiazepínicos)', 'UGT2B15', 'rs1902023', 'substrate', 'UGT2B15 metaboliza lorazepam por glucuronidação - NÃO depende CYP', 'Dose padrão', 'Metabolismo reduzido', 'Meia-vida prolongada', '2B', 'PharmGKB', 1),
+('Lítio', 'Estabilizadores de Humor', 'GSK3B', 'rs6438552', 'target', 'GSK3B modula resposta ao lítio', 'Resposta padrão', 'Resposta variável', 'Resposta variável', '3', 'PharmGKB', 1),
+('Lisdexanfetamina', 'Psicoestimulantes (TDAH)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza parcialmente anfetamina', 'Dose padrão', 'Monitorar', 'Monitorar', '3', 'PharmGKB', 1),
+('Lisdexanfetamina', 'Psicoestimulantes (TDAH)', 'DRD1', 'rs4532', 'target', 'DRD1 modula resposta a estimulantes', 'Normal', 'Função executiva variável', 'Função executiva alterada', '3', 'PharmGKB', 1),
+('Lidocaína-Tetracaína', 'Anestésicos Locais', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco teórico de metemoglobinemia', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Lidocaína-Prilocaína', 'Anestésicos Locais', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - prilocaína é o principal causador de metemoglobinemia', 'Sem risco', 'Cautela', 'Monitorar metemoglobina', '2B', 'PharmGKB', 1);
+
+-- BATCH 12
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Levodopa', 'Antiparkinsonianos', 'COMT', 'rs4680', 'target', 'COMT degrada dopamina - afeta duração da levodopa', 'Duração padrão', 'Duração intermediária da levodopa', 'Duração maior (COMT baixa = mais dopamina)', '2A', 'PharmGKB', 1),
+('Levodopa-Carbidopa-Entacapona', 'Antiparkinsonianos', 'COMT', 'rs4680', 'target', 'COMT é inibida pela entacapona - genótipo modula resposta', 'Resposta padrão', 'Resposta intermediária', 'Melhor resposta à entacapona', '2B', 'PharmGKB', 1),
+('Lansoprazol', 'IBPs (Inibidores de Bomba de Prótons)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 metaboliza lansoprazol - *17 reduz eficácia', 'Dose padrão', 'Eficácia reduzida', 'Eficácia muito reduzida', '1A', 'CPIC', 1),
+('Lamotrigina', 'Anticonvulsivantes/Estabilizadores', 'HLA-B', 'rs3909184', 'risk', 'HLA-B*15:02 associado a SJS - risco em asiáticos', 'Sem risco (europeus)', 'Baixo risco', 'Tipagem HLA em asiáticos', '1A', 'CPIC', 1),
+('Irbesartana', 'Antagonistas de Angiotensina II (BRAs)', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza irbesartana', 'Dose padrão', 'Metabolismo reduzido - níveis maiores', 'Níveis aumentados', '2A', 'PharmGKB', 1),
+('Imipramina', 'Antidepressivos (Tricíclicos)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza imipramina em desipramina', 'Dose padrão', 'Monitorar níveis', 'Reduzir dose 50%', '1A', 'CPIC', 1),
+('Imipramina', 'Antidepressivos (Tricíclicos)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 é via secundária - *17 aumenta metabolismo', 'Dose padrão', 'Metabolismo aumentado', 'Pode necessitar dose maior', '1A', 'CPIC', 1),
+('Imatinibe', 'Antineoplásicos (Inibidores de Tirosina Quinase)', 'CYP1A2', 'rs762551', 'substrate', 'CYP1A2 metaboliza parcialmente imatinibe', 'Dose padrão', 'Metabolismo aumentado', 'Monitorar resposta', '2B', 'PharmGKB', 1),
+('Iloperidona', 'Antipsicóticos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza iloperidona', 'Dose padrão', 'Monitorar', 'Reduzir dose 50%', '1A', 'FDA', 1),
+('Ibuprofeno', 'Anti-inflamatórios (AINEs)', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza ibuprofeno', 'Dose padrão', 'Meia-vida prolongada', 'Risco de sangramento GI', '2A', 'DPWG', 1),
+('Hidroxicloroquina', 'Antiparasitários/Imunossupressores', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco de hemólise', 'Sem risco', 'Cautela', 'Monitorar hemograma', '2A', 'CPIC', 1);
+
+-- BATCH 13
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Hidrocodona', 'Analgésicos Opioides', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 converte hidrocodona em hidromorfona - pró-droga parcial', 'Dose padrão', 'Analgesia possivelmente reduzida', 'Eficácia reduzida em metabolizadores nulos', '2A', 'CPIC', 1),
+('Hidroclorotiazida', 'Diuréticos', 'NEDD4L', 'rs4149601', 'target', 'NEDD4L modula resposta pressórica a tiazídicos', 'Resposta padrão', 'Resposta variável', 'Resposta variável', '3', 'PharmGKB', 1),
+('Hidroclorotiazida', 'Diuréticos', 'ADD1', 'rs4961', 'target', 'ADD1 G460W modula sensibilidade ao sódio e resposta a tiazídicos', 'Resposta padrão', 'Sensibilidade ao sódio intermediária', 'Alta sensibilidade ao sódio', '2B', 'PharmGKB', 1),
+('Haloperidol', 'Antipsicóticos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza haloperidol', 'Dose padrão', 'Efeito aumentado', 'Risco de EPS - reduzir dose', '1A', 'DPWG', 1),
+('Haloperidol', 'Antipsicóticos', 'MC4R', 'rs17782313', 'risk', 'MC4R modula ganho de peso', 'Sem risco aumentado', 'Risco moderado', 'Risco alto', '2B', 'PharmGKB', 1),
+('Guanfacina', 'Não estimulantes SNC (TDAH)', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza guanfacina', 'Dose padrão', 'Metabolismo reduzido', 'Risco de acúmulo', '2A', 'PharmGKB', 1),
+('Glimepirida', 'Antidiabéticos (Sulfonilureias)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - sulfonilureias podem causar hemólise', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Gliclazida', 'Antidiabéticos (Sulfonilureias)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco de hemólise', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Glibenclamida', 'Antidiabéticos (Sulfonilureias)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco de hemólise', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Gefitinibe', 'Antineoplásicos (Inibidores TK)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza parcialmente gefitinibe', 'Dose padrão', 'Monitorar', 'Monitorar', '3', 'PharmGKB', 1),
+('Galantamina', 'Inibidores da Colinesterase', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza galantamina', 'Dose padrão', 'Monitorar efeitos colinérgicos', 'Dose menor', '2B', 'PharmGKB', 1),
+('Furosemida', 'Diuréticos de Alça', 'GNB3', 'rs5443', 'target', 'GNB3 C825T modula resposta a diuréticos', 'Resposta padrão', 'Resposta variável', 'Melhor resposta', '3', 'PharmGKB', 1);
+
+-- BATCH 14
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Fosfenitoína', 'Anticonvulsivantes', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza fenitoína (pró-droga) - lentos acumulam', 'Dose padrão', 'Metabolismo reduzido - dose menor', 'Risco de toxicidade - reduzir dose significativamente', '1A', 'CPIC', 1),
+('Fosfenitoína', 'Anticonvulsivantes', 'HLA-B', 'rs3909184', 'risk', 'HLA-B*15:02 associado a SJS/TEN - risco em asiáticos', 'Sem risco (europeus)', 'Baixo risco', 'Tipagem HLA em asiáticos', '1A', 'CPIC', 1),
+('Fluvoxamina', 'Antidepressivos (ISRS)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza fluvoxamina parcialmente', 'Dose padrão', 'Monitorar', 'Monitorar', '2B', 'PharmGKB', 1),
+('Flutamida', 'Antineoplásicos (Antiandrogênicos)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - flutamida pode causar hemólise', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Flurbiprofeno', 'Anti-inflamatórios (AINEs)', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza flurbiprofeno', 'Dose padrão', 'Meia-vida prolongada', 'Risco de sangramento', '2A', 'DPWG', 1),
+('Fluoxetina', 'Antidepressivos (ISRS)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza fluoxetina + é INIBIDOR POTENTE do CYP2D6', 'Dose padrão', 'Monitorar', 'Considerar alternativa', '1A', 'CPIC', 1),
+('Fluoxetina', 'Antidepressivos (ISRS)', 'FKBP5', 'rs1360780', 'target', 'FKBP5 modula resposta a antidepressivos', 'Resposta favorável', 'Eixo HPA desregulado', 'Resposta reduzida', '2B', 'PharmGKB', 1),
+('Fluoruracila', 'Antineoplásicos', 'DPYD', 'rs3918290', 'substrate', 'DPD metaboliza 5-FU - deficiência causa toxicidade FATAL', 'Dose padrão', 'Reduzir dose 25-50%', 'CONTRAINDICADO', '1A', 'CPIC', 1),
+('Flufenazina', 'Antipsicóticos', 'CYP1A2', 'rs762551', 'substrate', 'CYP1A2 metaboliza flufenazina - ultra-rápidos eliminam mais rápido', 'Dose padrão', 'Metabolismo aumentado', 'Pode necessitar dose maior', '2B', 'PharmGKB', 1),
+('Flecainida', 'Antiarrítmicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza flecainida - lentos têm mais efeito/toxicidade', 'Dose padrão', 'Monitorar ECG', 'Reduzir dose - risco pró-arrítmico', '1A', 'DPWG', 1),
+('Fentanil', 'Analgésicos Opioides', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza fentanil', 'Dose padrão', 'Metabolismo reduzido', 'Risco de acúmulo', '2A', 'PharmGKB', 1),
+('Fentanil', 'Analgésicos Opioides', 'OPRM1', 'rs2952768', 'target', 'rs2952768 modula dose de opioide necessária', 'Dose padrão', 'Pode necessitar dose maior', 'Dose maior', '3', 'GWAS', 1),
+('Fenofibrato', 'Fibratos (Dislipidemia)', 'APOA5', 'rs964184', 'target', 'APOA5 modula resposta de triglicerídeos a fibratos', 'Resposta padrão', 'Pode ter melhor resposta (TG altos)', 'Melhor resposta se TG basalmente elevados', '2B', 'PharmGKB', 1);
+
+-- BATCH 15
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Fenobarbital', 'Anticonvulsivantes', 'ABCB1', 'rs1045642', 'transporter', 'ABCB1 modula níveis de fenobarbital no SNC', 'Normal', 'Níveis variáveis', 'Níveis potencialmente maiores no SNC', '3', 'PharmGKB', 1),
+('Fenitoína', 'Anticonvulsivantes', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza fenitoína - CPIC guideline', 'Dose padrão', 'Reduzir dose 25%', 'Reduzir dose 50%', '1A', 'CPIC', 1),
+('Fenitoína', 'Anticonvulsivantes', 'HLA-B', 'rs3909184', 'risk', 'HLA-B*15:02 - SJS em asiáticos', 'Sem risco (europeus)', 'Baixo risco', 'Tipagem HLA', '1A', 'CPIC', 1),
+('Femprocumona', 'Anticoagulantes', 'VKORC1', 'rs9923231', 'target', 'VKORC1 modula sensibilidade a cumarínicos', 'Dose padrão', 'Sensível - dose menor', 'Muito sensível - dose muito menor', '1A', 'CPIC', 1),
+('Femprocumona', 'Anticoagulantes', 'CYP4F2', 'rs2108622', 'substrate', 'CYP4F2 afeta metabolismo vitamina K', 'Normal', 'Metabolismo VitK reduzido', 'Muito reduzido', '2A', 'PharmGKB', 1),
+('Extrato de Cannabis', 'Canabinoides', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza canabinoides', 'Normal', 'Metabolismo reduzido', 'Acúmulo', '3', 'PharmGKB', 1),
+('Exemestano', 'Antineoplásicos (Inibidores de Aromatase)', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza exemestano', 'Dose padrão', 'Metabolismo reduzido', 'Monitorar', '2B', 'PharmGKB', 1),
+('Eszopiclona', 'Hipnóticos', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza eszopiclona', 'Dose padrão', 'Metabolismo reduzido', 'Sedação prolongada', '2A', 'PharmGKB', 1),
+('Esomeprazol', 'IBPs (Inibidores de Bomba de Prótons)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 metaboliza esomeprazol - moderadamente dependente', 'Dose padrão', 'Eficácia moderadamente reduzida', 'Considerar rabeprazol', '2A', 'CPIC', 1),
+('Escitalopram', 'Antidepressivos (ISRS)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 aumenta metabolismo do escitalopram', 'Dose padrão', 'Níveis 30-40% menores', 'Níveis muito reduzidos - alternativa', '1A', 'CPIC', 1),
+('Escitalopram', 'Antidepressivos (ISRS)', 'HTR2A', 'rs6311', 'target', 'HTR2A modula resposta a ISRS', 'Normal', 'Resposta variável', 'Resposta variável', '2B', 'PharmGKB', 1),
+('Escitalopram', 'Antidepressivos (ISRS)', 'GRIK4', 'rs1954787', 'target', 'GRIK4 associado a resposta a ISRS (STAR*D)', 'Resposta padrão', 'Possivelmente melhor resposta', 'Possivelmente melhor resposta', '3', 'PharmGKB', 1),
+('Escitalopram', 'Antidepressivos (ISRS)', 'COMT', 'rs4680', 'target', 'COMT modula neurotransmissão dopaminérgica', 'Normal', 'Intermediário', 'Variável', '3', 'PharmGKB', 1),
+('Eritromicina-Sulfisoxazol', 'Antibióticos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - sulfisoxazol pode causar hemólise', 'Sem risco', 'Cautela', 'Monitorar', '2A', 'CPIC', 1),
+('Erdafitinibe', 'Antineoplásicos', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza erdafitinibe', 'Dose padrão', 'Monitorar', 'Monitorar', '2B', 'PharmGKB', 1);
+
+-- BATCH 16
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Entacapona', 'Inibidores da COMT', 'COMT', 'rs4680', 'target', 'COMT é o alvo da entacapona - genótipo modula benefício', 'Benefício padrão', 'Benefício intermediário', 'Maior benefício (COMT alta inibida)', '2B', 'PharmGKB', 1),
+('Eltrombopague', 'Agonistas de Trombopoietina', 'F5', 'rs6025', 'risk', 'Fator V Leiden aumenta risco trombótico com estimuladores de plaquetas', 'Sem risco adicional de trombose', 'Risco trombótico aumentado', 'Alto risco', '2B', 'PharmGKB', 1),
+('Eliglustate', 'Agentes para Doença de Gaucher', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza eliglustate - FDA limita em lentos', 'Dose padrão', 'Monitorar', 'Dose máxima 84mg 1x/dia (FDA)', '1A', 'FDA', 1),
+('Efavirenz', 'Antivirais (HIV)', 'CYP2B6', 'rs3211371', 'substrate', 'CYP2B6 metaboliza efavirenz - lentos têm mais neurotoxicidade', 'Dose 600mg', 'Monitorar neurotoxicidade', 'Considerar dose 400mg', '1A', 'CPIC', 1),
+('Duloxetina', 'Antidepressivos (IRSN)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza duloxetina parcialmente', 'Dose padrão', 'Monitorar', 'Monitorar efeitos', '2A', 'PharmGKB', 1),
+('Dronabinol', 'Canabinoides/Antieméticos', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza dronabinol (THC)', 'Dose padrão', 'Efeitos prolongados', 'Efeitos muito prolongados', '2B', 'PharmGKB', 1),
+('Doxorrubicina', 'Antineoplásicos (Antraciclinas)', 'RARG', 'rs2229774', 'risk', 'RARG S427L associado a CARDIOTOXICIDADE com antraciclinas', 'Risco padrão', 'RISCO AUMENTADO de cardiotoxicidade', 'Risco muito aumentado', '2A', 'CPGG', 1),
+('Doxorrubicina', 'Antineoplásicos (Antraciclinas)', 'SLC28A3', 'rs7853758', 'risk', 'SLC28A3 pode ter efeito PROTETOR contra cardiotoxicidade', 'Sem proteção', 'Proteção parcial', 'Proteção', '2B', 'PharmGKB', 1),
+('Doxepina', 'Antidepressivos (Tricíclicos)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza doxepina - CPIC guideline', 'Dose padrão', 'Monitorar', 'Reduzir dose ou alternativa', '1A', 'CPIC', 1),
+('Doxepina', 'Antidepressivos (Tricíclicos)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 é via secundária - *17 aumenta metabolismo', 'Dose padrão', 'Metabolismo aumentado', 'Pode necessitar dose maior', '2A', 'CPIC', 1);
+
+-- BATCH 17
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Donepezila', 'Inibidores da Colinesterase', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza donepezila', 'Dose padrão', 'Monitorar efeitos colinérgicos', 'Dose menor', '2B', 'PharmGKB', 1),
+('Divalproato de Sódio', 'Anticonvulsivantes/Estabilizadores', 'ANKK1', 'rs1800497', 'target', 'ANKK1/DRD2 TaqIA modula resposta', 'Resposta padrão', 'Resposta variável', 'Resposta variável', '3', 'PharmGKB', 1),
+('Diltiazem', 'Bloqueadores de Canais de Cálcio', 'PLCD3', 'rs12946454', 'target', 'PLCD3 modula resposta pressórica', 'Resposta padrão', 'Resposta variável', 'Resposta variável', '3', 'PharmGKB', 1),
+('Digoxina', 'Glicosídeos Cardíacos', 'ABCB1', 'rs1045642', 'transporter', 'ABCB1 modula níveis de digoxina', 'Níveis padrão', 'Níveis variáveis', 'Níveis potencialmente maiores', '2B', 'PharmGKB', 1),
+('Diclofenaco', 'Anti-inflamatórios (AINEs)', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza diclofenaco', 'Dose padrão', 'Meia-vida prolongada', 'Risco de sangramento/nefrotoxicidade', '2A', 'DPWG', 1),
+('Diazepam', 'Ansiolíticos (Benzodiazepínicos)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 metaboliza diazepam - *17 elimina mais rápido', 'Dose padrão', 'Duração pode ser menor', 'Duração reduzida', '2A', 'PharmGKB', 1),
+('Diazepam', 'Ansiolíticos (Benzodiazepínicos)', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 é via secundária', 'Normal', 'Metabolismo reduzido', 'Monitorar', '3', 'PharmGKB', 1),
+('Dextroanfetamina', 'Psicoestimulantes (TDAH)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza parcialmente anfetamina', 'Dose padrão', 'Monitorar', 'Monitorar', '3', 'PharmGKB', 1),
+('Dextroanfetamina', 'Psicoestimulantes (TDAH)', 'DRD1', 'rs4532', 'target', 'DRD1 modula resposta a estimulantes', 'Normal', 'Função executiva variável', 'Função executiva alterada', '3', 'PharmGKB', 1),
+('Dexmetilfenidato', 'Psicoestimulantes (TDAH)', 'ADRA2A', 'rs1800544', 'target', 'ADRA2A modula resposta', 'Resposta padrão', 'Resposta variável', 'Duração alterada', '2B', 'PharmGKB', 1),
+('Dexlansoprazol', 'IBPs (Inibidores de Bomba de Prótons)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 metaboliza dexlansoprazol', 'Dose padrão', 'Eficácia reduzida', 'Considerar rabeprazol', '2A', 'CPIC', 1),
+('Deutetrabenazina', 'Inibidores do Transportador de Monoamina', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza deutetrabenazina - FDA limita dose em lentos', 'Dose padrão', 'Monitorar', 'Dose máxima limitada (FDA)', '1A', 'FDA', 1);
+
+-- BATCH 18
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Desvenlafaxina', 'Antidepressivos (IRSN)', 'FKBP5', 'rs1360780', 'target', 'FKBP5 modula resposta a antidepressivos', 'Resposta favorável', 'Eixo HPA desregulado', 'Resposta reduzida', '2B', 'PharmGKB', 1),
+('Desipramina', 'Antidepressivos (Tricíclicos)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza desipramina - CPIC guideline', 'Dose padrão', 'Monitorar níveis', 'Reduzir dose 50%', '1A', 'CPIC', 1),
+('Desipramina', 'Antidepressivos (Tricíclicos)', 'BDNF', 'rs6265', 'target', 'BDNF modula resposta', 'Normal', 'Secreção reduzida', 'Resposta reduzida', '2B', 'PharmGKB', 1),
+('Daunorrubicina', 'Antineoplásicos (Antraciclinas)', 'RARG', 'rs2229774', 'risk', 'RARG S427L - cardiotoxicidade com antraciclinas', 'Risco padrão', 'RISCO AUMENTADO', 'Risco muito aumentado', '2A', 'CPGG', 1),
+('Daunorrubicina', 'Antineoplásicos (Antraciclinas)', 'SLC28A3', 'rs7853758', 'risk', 'SLC28A3 efeito protetor', 'Sem proteção', 'Proteção parcial', 'Proteção', '2B', 'PharmGKB', 1),
+('Darifenacina', 'Antimuscarínicos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza darifenacina', 'Dose padrão', 'Monitorar anticolinérgicos', 'Dose menor', '2A', 'PharmGKB', 1),
+('Dapsona', 'Antibióticos (Sulfonas)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - dapsona causa hemólise', 'Sem risco', 'Cautela', 'CONTRAINDICADO se deficiente grave', '1A', 'CPIC', 1),
+('Dabrafenibe', 'Antineoplásicos', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - dabrafenibe pode causar hemólise', 'Sem risco', 'Teste G6PD', 'Monitorar', '2A', 'FDA', 1),
+('Dabigatrana', 'Anticoagulantes (DOACs)', 'CES1', 'rs2244613', 'substrate', 'CES1 ativa dabigatrana (pró-droga)', 'Ativação normal', 'Ativação variável', 'Ativação reduzida', '3', 'PharmGKB', 1),
+('Codeína', 'Analgésicos Opioides', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 converte codeína em morfina - ESSENCIAL. Sem CYP2D6 = INEFICAZ', 'Dose padrão (morfina produzida)', 'Analgesia reduzida', 'Codeína INEFICAZ - usar alternativa', '1A', 'CPIC', 1),
+('Clozapina', 'Antipsicóticos', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 é via secundária da clozapina', 'Dose padrão', 'Monitorar', 'Monitorar', '2B', 'PharmGKB', 1),
+('Clozapina', 'Antipsicóticos', 'MC4R', 'rs17782313', 'risk', 'MC4R modula ganho de peso', 'Sem risco aumentado', 'Risco moderado', 'Risco alto', '2B', 'PharmGKB', 1),
+('Clozapina', 'Antipsicóticos', 'HTR2C', 'rs3813929', 'risk', 'HTR2C modula ganho de peso', 'Risco padrão', 'Proteção parcial', 'Proteção', '2B', 'PharmGKB', 1),
+('Clorpromazina', 'Antipsicóticos', 'CYP1A2', 'rs762551', 'substrate', 'CYP1A2 metaboliza clorpromazina - ultra-rápidos eliminam mais rápido', 'Dose padrão', 'Metabolismo aumentado', 'Pode necessitar dose maior', '2B', 'PharmGKB', 1);
+
+-- BATCH 19
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Cloroquina', 'Antiparasitários (Antimaláricos)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - cloroquina pode causar hemólise', 'Sem risco', 'Cautela', 'Monitorar', '2A', 'CPIC', 1),
+('Clopidogrel', 'Anticoagulantes (Antiplaquetários)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 converte clopidogrel em metabólito ativo - *17 AUMENTA eficácia', 'Dose padrão', 'Eficácia AUMENTADA (boa notícia)', 'Eficácia muito aumentada', '1A', 'CPIC', 1),
+('Clopidogrel', 'Anticoagulantes (Antiplaquetários)', 'CES1', 'rs2244613', 'substrate', 'CES1 modula ativação do clopidogrel', 'Normal', 'Ativação variável', 'Ativação reduzida', '3', 'PharmGKB', 1),
+('Clonazepam', 'Ansiolíticos (Benzodiazepínicos)', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza clonazepam', 'Dose padrão', 'Metabolismo reduzido', 'Acúmulo possível', '2B', 'PharmGKB', 1),
+('Clomipramina', 'Antidepressivos (Tricíclicos)', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza clomipramina', 'Dose padrão', 'Monitorar', 'Reduzir dose', '1A', 'CPIC', 1),
+('Clomipramina', 'Antidepressivos (Tricíclicos)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 é via secundária - *17 aumenta metabolismo', 'Dose padrão', 'Metabolismo aumentado', 'Pode necessitar dose maior', '2A', 'CPIC', 1),
+('Clobazam', 'Ansiolíticos/Anticonvulsivantes', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 metaboliza clobazam em N-desmetilclobazam - *17 elimina mais rápido', 'Dose padrão', 'Duração pode ser menor', 'Duração reduzida', '1A', 'CPIC', 1),
+('Citalopram', 'Antidepressivos (ISRS)', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19*17 aumenta metabolismo do citalopram', 'Dose padrão', 'Níveis 30-40% menores', 'Considerar alternativa', '1A', 'CPIC', 1),
+('Citalopram', 'Antidepressivos (ISRS)', 'HTR2A', 'rs6311', 'target', 'HTR2A modula resposta', 'Normal', 'Variável', 'Variável', '2B', 'PharmGKB', 1),
+('Cisplatina', 'Antineoplásicos', 'TPMT', 'rs1800460', 'risk', 'TPMT modula risco de ototoxicidade com cisplatina', 'Risco padrão', 'Risco aumentado de ototoxicidade', 'Risco alto', '2A', 'CPIC', 1),
+('Ciprofloxacina', 'Antibióticos (Fluoroquinolonas)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco de hemólise', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Ciclosporina', 'Imunossupressores', 'CYP3A5', 'rs776746', 'substrate', 'CYP3A5 metaboliza ciclosporina - expressores necessitam dose maior', 'Dose padrão (não-expressor)', 'Dose maior necessária (expressor parcial)', 'Dose significativamente maior', '2A', 'PharmGKB', 1),
+('Cetamina', 'Anestésicos/Antidepressivos', 'CYP2B6', 'rs3211371', 'substrate', 'CYP2B6 metaboliza cetamina em norketamina', 'Dose padrão', 'Metabolismo variável', 'Monitorar', '3', 'PharmGKB', 1);
+
+-- BATCH 20
+INSERT IGNORE INTO `pgx_drug_genes` (`drug_name`, `drug_class`, `gene_symbol`, `rsid`, `interaction_type`, `effect_description`, `recommendation_normal`, `recommendation_het`, `recommendation_risk`, `evidence_level`, `source`, `is_active`) VALUES
+('Celecoxibe', 'Anti-inflamatórios (AINEs/COX-2)', 'CYP2C9', 'rs1799853', 'substrate', 'CYP2C9 metaboliza celecoxibe', 'Dose padrão', 'Metabolismo reduzido', 'Risco de efeitos adversos', '2A', 'DPWG', 1),
+('Ceftriaxona', 'Antibióticos (Cefalosporinas)', 'G6PD', 'rs1050829', 'risk', 'G6PD deficiente - risco teórico de hemólise', 'Sem risco', 'Cautela', 'Monitorar', '3', 'PharmGKB', 1),
+('Carvedilol', 'Betabloqueadores', 'CYP2D6', 'rs3892097', 'substrate', 'CYP2D6 metaboliza carvedilol', 'Dose padrão', 'Efeito beta-bloqueador aumentado', 'Hipotensão/bradicardia', '2A', 'PharmGKB', 1),
+('Carisoprodol', 'Relaxantes Musculares', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 metaboliza carisoprodol em meprobamato', 'Dose padrão', 'Metabolismo aumentado - efeito menor', 'Efeito reduzido', '2B', 'PharmGKB', 1),
+('Carbamazepina', 'Anticonvulsivantes/Estabilizadores', 'HLA-B', 'rs3909184', 'risk', 'HLA-B*15:02 - SJS/TEN em asiáticos', 'Sem risco (europeus)', 'Baixo risco', 'Tipagem HLA em asiáticos', '1A', 'CPIC', 1),
+('Carbamazepina', 'Anticonvulsivantes/Estabilizadores', 'EPHX1', 'rs1051740', 'substrate', 'EPHX1 metaboliza epóxido da carbamazepina', 'Normal', 'Metabolismo reduzido do epóxido', 'Epóxido acumula - neurotoxicidade', '2B', 'PharmGKB', 1),
+('Captopril', 'Inibidores da ECA', 'ACE', 'rs4343', 'target', 'ACE modula resposta a iECAs', 'Resposta padrão', 'Resposta intermediária', 'Níveis elevados - boa resposta', '2B', 'PharmGKB', 1),
+('Capecitabina', 'Antineoplásicos (Fluoropirimidinas)', 'DPYD', 'rs3918290', 'substrate', 'DPD metaboliza capecitabina - deficiência FATAL', 'Dose padrão', 'Reduzir dose 25-50%', 'CONTRAINDICADO', '1A', 'CPIC', 1),
+('Canabidiol', 'Canabinoides', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza canabidiol', 'Dose padrão', 'Metabolismo reduzido', 'Monitorar', '2B', 'PharmGKB', 1),
+('Canabidiol', 'Canabinoides', 'CYP2C19', 'rs12248560', 'substrate', 'CYP2C19 é via secundária do CBD', 'Normal', 'Metabolismo aumentado', 'Menos impacto', '3', 'PharmGKB', 1),
+('Buspirona', 'Ansiolíticos', 'CYP3A4', 'rs35599367', 'substrate', 'CYP3A4 metaboliza buspirona', 'Dose padrão', 'Metabolismo reduzido', 'Níveis aumentados', '2A', 'PharmGKB', 1),
+('Bupropiona', 'Antidepressivos', 'CYP2B6', 'rs3211371', 'substrate', 'CYP2B6 metaboliza bupropiona em hidroxibupropiona', 'Dose padrão', 'Metabolismo variável', 'Monitorar', '2A', 'PharmGKB', 1);
+
