@@ -208,7 +208,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Buprenorfina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Analgésicos/Anestésicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'analgesico'),
   'A buprenorfina é um opioide semissintético utilizado para o tratamento da dor crônica moderada a intensa e no manejo da dependência de opioides. Atua como agonista parcial do receptor mu-opioide e antagonista do receptor kappa. Possui efeito teto para depressão respiratória, tornando-a mais segura que opioides plenos. Efeitos adversos incluem náuseas, constipação, sonolência, cefaleia e sudorese. Nomes comerciais: Restiva®, Subutex®, Norpatch®, Transtec®.',
   'O gene OPRD1, localizado no cromossomo 1, codifica o receptor delta-opioide, que modula a percepção da dor e a resposta emocional. A variante rs678849 pode influenciar a resposta à buprenorfina. Além disso, o gene COMT (rs4680) afeta o metabolismo das catecolaminas e a percepção de dor. Eric possui COMT AG (Val/Met) = atividade intermediária da COMT, e rs2952768 TC = variante associada a necessidade de doses maiores de opioides.',
   'rs678849', '1', 'OPRD1', 'C,T',
@@ -231,7 +231,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Bupivacaína',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Analgésicos/Anestésicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'analgesico'),
   'A bupivacaína é um anestésico local do tipo amida, de longa duração, amplamente utilizado em anestesia regional, peridural, raquidiana e bloqueios nervosos periféricos. É uma das drogas mais utilizadas em cirurgias maxilofaciais. Proporciona analgesia de 4-8 horas. Efeitos adversos incluem hipotensão, bradicardia e, em doses excessivas, cardiotoxicidade. Nomes comerciais: Marcaina®, Tradinol®, Bupstesic®, Neocaína®.',
   'O gene G6PD, localizado no cromossomo X, codifica a enzima glicose-6-fosfato desidrogenase, essencial para proteção dos glóbulos vermelhos contra estresse oxidativo. Deficiência de G6PD pode causar metemoglobinemia com anestésicos locais. Eric possui G6PD rs1050829 TT = atividade enzimática NORMAL.',
   'rs1050829', 'X', 'G6PD', 'T,T',
@@ -254,7 +254,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Bumetanida',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'cardio'),
   'A bumetanida é um diurético de alça potente, 40 vezes mais potente que a furosemida em base mg por mg. Utilizada para edema associado a insuficiência cardíaca, cirrose e doença renal. Efeitos adversos incluem hipocalemia, hiponatremia, hipotensão, ototoxicidade e hiperuricemia. Nomes comerciais: Burinax®.',
   'O gene GNB3, localizado no cromossomo 12, codifica a subunidade beta-3 da proteína G, envolvida na transdução de sinal. A variante rs5443 (C825T) afeta resposta a diuréticos. Eric possui GNB3 CC (genótipo de referência) = resposta padrão a diuréticos.',
   'rs5443', '12', 'GNB3', 'C,C',
@@ -277,7 +277,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Bromocriptina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'psiq_neuro'),
   'A bromocriptina é um agonista dopaminérgico derivado do ergot, utilizada no tratamento de hiperprolactinemia, acromegalia, doença de Parkinson e supressão da lactação. Atua estimulando receptores D2 de dopamina. Efeitos adversos incluem náuseas, hipotensão ortostática, cefaleia, tontura e raramente fibrose retroperitoneal. Nomes comerciais: Parlodel®, Bagren®.',
   'O gene CYP3A4, localizado no cromossomo 7, metaboliza a bromocriptina. A variante CYP3A4*22 (rs35599367) está associada a atividade enzimática reduzida. Eric possui CYP3A4 GG (genótipo de referência) = atividade NORMAL.',
   'rs35599367', '7', 'CYP3A4', 'G,G',
@@ -333,7 +333,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Atomoxetina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'psiq_neuro'),
   'A atomoxetina é um inibidor seletivo da recaptação de noradrenalina, utilizado como tratamento não-estimulante para TDAH. É especialmente indicada quando estimulantes são contraindicados ou ineficazes. Efeitos adversos: diminuição do apetite, náuseas, dor abdominal, sonolência, cefaleia e, raramente, ideação suicida em crianças/adolescentes. Nomes comerciais: Strattera®, Atentah®.',
   'O gene CYP2D6, localizado no cromossomo 22, é responsável pelo metabolismo PRINCIPAL da atomoxetina. Metabolizadores lentos do CYP2D6 apresentam níveis plasmáticos 5-10 VEZES maiores e meia-vida prolongada (21h vs 5h). A FDA EXIGE ajuste de dose conforme fenótipo CYP2D6. Eric NÃO possui tipagem do CYP2D6 (rs3892097 não disponível no chip Genera GSA v3.0).',
   'rs3892097', '22', 'CYP2D6', 'N/D',
@@ -356,7 +356,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Atenolol',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Cardiológicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'cardio'),
   'O atenolol é um betabloqueador cardiosseletivo (beta-1), utilizado no tratamento de hipertensão, angina, arritmias e profilaxia de enxaqueca. Diferente do metoprolol, NÃO é metabolizado pelo CYP2D6 (excreção renal). Efeitos adversos: bradicardia, fadiga, extremidades frias, broncoespasmo. Nomes comerciais: Atenol®, Areblaz®, Ateneum®, Atenopress®.',
   'O gene ADRB2 (receptor beta-2 adrenérgico), localizado no cromossomo 5, possui a variante rs1042713 (Arg16Gly) que afeta a resposta cardiovascular a betabloqueadores. O gene GNB3 (rs5443) modula a transdução de sinal. Eric: ADRB2 GA (Arg/Gly heterozigoto) e GNB3 CC (normal).',
   'rs1042713', '5', 'ADRB2', 'G,A',
@@ -379,7 +379,7 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Atazanavir',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Infectologia'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'infecto'),
   'O atazanavir é um antirretroviral inibidor de protease do HIV, geralmente co-administrado com ritonavir. Efeitos adversos: hiperbilirrubinemia (icterícia), nefrolitíase, prolongamento PR, hiperglicemia. Nomes comerciais: Reyataz®.',
   'O gene CYP2C19 participa parcialmente do metabolismo do atazanavir. A variante *17 (rs12248560 T) confere metabolismo mais rápido. Eric: CYP2C19 CT (*1/*17) = metabolismo aumentado, possivelmente reduzindo níveis do atazanavir.',
   'rs12248560', '10', 'CYP2C19', 'C,T',
@@ -402,7 +402,8 @@ INSERT INTO pgx_drug_details (drug_name, class_id, description, understanding_re
 VALUES
 (
   'Asenapina',
-  (SELECT id FROM pgx_drug_classes WHERE class_name = 'Psiquiátricos/Neurológicos'),
+  (SELECT id FROM pgx_drug_classes WHERE code = 'psiq_neuro'),
   'A asenapina é um antipsicótico atípico administrado por via sublingual, utilizado em esquizofrenia e mania bipolar. Antagonista D2/5-HT2A com perfil de receptores amplo. Efeitos adversos: sonolência, acatisia, ganho de peso moderado, hipoestesia oral. Nomes comerciais: Saphris®, Secuado® (transdérmico).',
   'O gene CYP1A2, localizado no cromossomo 15, participa do metabolismo da asenapina. A
+
 
