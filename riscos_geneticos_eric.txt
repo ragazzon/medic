@@ -1393,6 +1393,59 @@ CONFIANÇA: ALTA para PRS (resultado favorável). Elevei para MODERADO
 pelo histórico familiar cardiovascular pesado. Monitorar a longo prazo.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+32. DIABETES TIPO 2 (PRS Genera completo)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco REDUZIDO! Genética protetora!)
+Variantes analisadas: 22
+Fonte: Genera
+
+DESCRIÇÃO:
+A diabetes tipo 2 é a mais comum. As células não respondem bem
+à insulina e o açúcar se acumula no sangue. Afeta principalmente
+pessoas >40 anos. Fatores: obesidade, sedentarismo, pressão alta.
+A longo prazo pode causar AVC, perda de visão, doenças cardíacas.
+60% é fator ambiental (peso, dieta, exercício)!
+
+RESULTADO GENERA:
+• Risco até 95 anos: 17,64% (13,51% - 22,05%)
+• Classificação: "Risco REDUZIDO" ← BOA NOTÍCIA!
+• Fator genético analisado: 4,08%
+• Fatores ambientais: 60% ← ESTILO DE VIDA É O PRINCIPAL!
+
+GENES PROTETORES (sem alelo de risco):
+• TCF7L2 (rs7903146 CC) — O MAIS IMPORTANTE! NORMAL!
+  Este é o gene nº 1 de diabetes tipo 2 no mundo.
+  Eric CC = genótipo de referência = PROTEGIDO!
+• FTO (rs9936385 TT) — Gene de obesidade/diabetes. NORMAL!
+• CDKAL1 (rs7756992 AA) — Normal!
+• IGF2BP2 (rs4402960 GG) — Normal!
+• KCNQ1 (rs163184 TT) — Normal!
+
+OBSERVAÇÕES SIMPLES:
+1. Eric tem risco REDUZIDO — a genética o PROTEGE!
+2. O gene MAIS importante (TCF7L2) está NORMAL — excelente!
+3. FTO também NORMAL — consistente com ele ser magro
+4. Eric é magro (IMC 16.3) — principal protetor contra diabetes
+5. 60% é ambiental → manter peso saudável = prevenção
+6. Avô paterno TEM diabetes tipo 2 + família paterna obesa
+   → Provavelmente é AMBIENTAL na família do pai (obesidade)
+   → Eric herdou o perfil magro da MÃE = proteção
+
+CONEXÃO COM O QUE JÁ SABEMOS:
+• Item 9 (análise independente) já mostrava KCNJ11 het + TCF7L2
+  normal = risco mínimo. Genera CONFIRMA!
+• Obesidade genética (FTO + MC4R) NORMAIS = não vai engordar
+  facilmente por genética
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento especial (risco reduzido!)
+• Manter peso saudável = melhor prevenção
+• Glicemia de jejum se ganhar peso no futuro
+• Exercício regular (boa prática geral)
+
+CONFIANÇA: ALTA. Resultado FAVORÁVEL (reduzido). Genética protetora!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
