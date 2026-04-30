@@ -1076,6 +1076,86 @@ AÇÃO RECOMENDADA:
 CONFIANÇA: ALTA. Risco PADRÃO. Sem ação necessária.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+27. MELANOMA (câncer de pele agressivo)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (PRS padrão MAS avô teve + pele clara!)
+Variantes analisadas: 14
+Fonte: Genera
+
+DESCRIÇÃO:
+O melanoma é o tipo MAIS AGRESSIVO de câncer de pele. Surge nas
+células que produzem melanina (cor da pele). Aparece como pintas,
+sinais ou manchas escuras de bordas irregulares. Fatores: exposição
+solar, pele/olhos claros, histórico familiar. Incidência aumenta
+após 15 anos. Diagnóstico: exame clínico + biópsia.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,50% (0,36% - 0,67%)
+• Classificação: "Risco PADRÃO"
+• Fator genético analisado: 10,22%
+• Fatores ambientais (sol, pele clara): 33%
+• Outros fatores genéticos: 56,68%
+
+VARIANTE MAIS IMPORTANTE:
+★ rs35407 (SLC45A2): score 1.468!!! — HOMOZIGOTO GG!
+  Este é o gene que determina PELE CLARA em europeus!
+  Score 1.468 é o 2º MAIS ALTO de todas as análises!
+  SLC45A2 = gene de pigmentação. GG = pele MUITO clara.
+  CONFIRMA geneticamente que Eric tem pele clara/transparente.
+
+OUTRAS VARIANTES:
+• rs6059655 (RALY): score 0.322 — gene de pigmentação
+• rs1393350 (TYR - tirosinase): score 0.157 — enzima da melanina
+• rs498136: score 0.113
+• MX2 (rs45430): score 0.117 — gene antiviral/imunidade
+
+GENES DE PIGMENTAÇÃO IDENTIFICADOS:
+• SLC45A2 — Gene de PELE CLARA. Eric GG = confirmação genética
+  de que tem pele muito clara. É o principal determinante de
+  vulnerabilidade ao melanoma em europeus.
+• TYR (tirosinase) — Enzima que produz melanina. GA = heterozigoto
+  (contribuição para pele mais clara)
+• FTO — Aparece aqui E na obesidade (Eric normal neste = GG)
+
+PONTOS IMPORTANTES (contexto do Eric):
+• SLC45A2 GG = CONFIRMAÇÃO GENÉTICA de pele muito clara
+• Eric SABE que tem pele clara/transparente (mãe confirma)
+• AVÔ TEVE CÂNCER DE PELE (provavelmente melanoma!)
+• Ancestralidade ibérica 51% = população com alta incidência
+• Rio Grande do Sul = radiação UV significativa
+
+POR QUE ELEVEI PARA MODERADO (apesar de PRS padrão):
+A Genera classificou como padrão, MAS:
+1. SLC45A2 GG (pele GENETICAMENTE muito clara) = vulnerabilidade
+2. AVÔ TEVE CÂNCER DE PELE ← histórico familiar direto!
+3. Pele clara + sol = combinação perigosa
+4. Melanoma é AGRESSIVO (diferente do basocelular que é "benigno")
+5. Pode aparecer a partir dos 15 anos (Eric já está na faixa!)
+
+AÇÃO RECOMENDADA:
+★★★ PROTEÇÃO SOLAR É OBRIGATÓRIA (genética confirma pele vulnerável):
+  • Protetor FPS 50+ TODOS OS DIAS
+  • Reaplicar a cada 2-3 horas
+  • Chapéu, óculos, roupas UV
+  • EVITAR sol entre 10h-16h
+• Consulta dermatológica ANUAL (mapeamento de pintas)
+• MONITORAR: pintas que mudam de cor, crescem, têm bordas
+  irregulares, coçam ou descamam
+• Regra ABCDE: Assimetria, Bordas irregulares, Cor variável,
+  Diâmetro >6mm, Evolução (mudança)
+• ALERTAR médicos sobre histórico: avô com CA pele
+
+CONEXÃO COM CARCINOMA BASOCELULAR (item 18):
+Ambos os cânceres de pele (melanoma + basocelular) compartilham:
+• SLC45A2 GG (pele clara) = fator de risco para AMBOS
+• Histórico familiar (avô)
+• Exposição solar como principal fator ambiental
+• A proteção solar previne AMBOS simultaneamente
+
+CONFIANÇA: ALTA para o PRS. ELEVEI para MODERADO pelo contexto
+(SLC45A2 GG + avô com CA pele + pele clara visível).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
