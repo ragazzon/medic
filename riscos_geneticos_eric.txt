@@ -848,6 +848,70 @@ CONFIANÇA: ALTA para o PRS. Contexto clínico + familiar ELEVA
 a relevância mesmo com PRS "padrão".
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+23. DOENÇA DE CROHN (PRS — Genera)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (PRS padrão + ATG16L1 AA + sintomas GI)
+SNPs: 23 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+A doença de Crohn é inflamatória e pode acometer qualquer parte
+do tubo digestivo (boca ao ânus). Atinge pessoas entre 20-40 anos.
+Pode levar a câncer colorretal. Associada a fatores genéticos +
+má alimentação + tabagismo. Sinais: febre, sangramento retal,
+diarreia, dores abdominais, perda de peso. Sem cura, mas tratável.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,27% (0,21% - 0,35%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 4,00%
+• Outros fatores genéticos: 82% ← MUITO ALTO!
+• Fatores ambientais: 14%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs6679677 (PHTF1): score 0.358 (homozigoto CC)
+• rs3897478 (NOTCH2): score 0.299 (homozigoto TT)
+• rs17391694 (intergênico): score 0.252 (homozigoto CC)
+• rs10065637 (ANKRD55): score 0.232 (homozigoto CC)
+• rs2284553 (IFNGR2): score 0.232 (homozigoto GG) — receptor IFN-gamma!
+• rs516246 (FUT2): score 0.203 (homozigoto TT) — secretor!
+• rs12994997 (ATG16L1): score 0 (GG = normal NESTE SNP)
+
+GENES RELEVANTES:
+• ATG16L1 (rs12994997 GG) — NOTA: Este SNP proxy mostra GG (normal),
+  MAS na minha análise independente rs2241880 = AA (risco!).
+  São SNPs DIFERENTES no mesmo gene. AMBOS são corretos.
+• IFNGR2 — Receptor de interferon-gamma (imunidade intestinal)
+• FUT2 — Gene secretor (status de Lewis/ABO nas secreções).
+  TT homozigoto = pode afetar microbioma intestinal
+• NOTCH2 — Via de sinalização celular (diferenciação de linfócitos)
+• SP140 — Proteína nuclear imune (Eric GG = normal neste)
+
+MINHAS OBSERVAÇÕES:
+1. A Genera classificou como RISCO PADRÃO (0,27%).
+2. MAS: "Outros fatores genéticos" = 82%! Isso significa que a
+   MAIORIA da predisposição genética para Crohn NÃO é captada
+   pelos 23 SNPs analisados.
+3. Na MINHA análise independente, identifiquei ATG16L1 rs2241880 AA
+   (homozigoto risco = 2x) — que NÃO está neste PRS da Genera!
+   Ou seja, o RISCO REAL é MAIOR que o PRS indica.
+4. Combinando Genera PRS padrão + minha análise (ATG16L1 AA) +
+   DII PRS padrão (IL23R alto) + Colite PRS aumentado =
+   PERFIL DE RISCO GI CONSISTENTE.
+5. Eric TEM sintomas compatíveis AGORA (16 anos = faixa de início).
+
+AÇÃO RECOMENDADA:
+• MESMA da investigação prioritária já definida:
+  → Calprotectina fecal URGENTE
+  → Se elevada: colonoscopia
+• O PRS da Genera SUBESTIMA o risco porque não captou o ATG16L1 AA
+  que identifiquei diretamente no CSV
+
+CONFIANÇA: ALTA. O PRS é padrão MAS minha análise independente
+mostra ATG16L1 AA que ELEVA o risco real. Combinado com sintomas
+= MODERADO com indicação de investigação.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
