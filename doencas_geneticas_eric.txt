@@ -116,11 +116,50 @@ LIMITAÇÕES
   Surdez hereditária (GJB2 35delG), Atrofia Muscular Espinhal
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DADOS DA GENERA (quando disponíveis)
+DADOS DA GENERA — Painel de Doenças Genéticas
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Aguardando dados do painel de Doenças Genéticas da Genera para
-cruzamento e complementação.
+10. DEFICIÊNCIA DE FATOR XII (coagulação)
+    Gene: F12 (cromossomo 5)
+    SNP: rs1801020
+    Genótipo: A,G
+    Status: ⚠️ PORTADOR (heterozigoto)
+
+    DESCRIÇÃO:
+    A deficiência de fator XII é uma condição genética que altera
+    a coagulação do sangue (fica mais demorada). Geralmente NÃO
+    causa sintomas e raramente é diagnosticada. Estudos recentes
+    mostram possível maior predisposição à trombose.
+
+    RESULTADO:
+    Eric tem UMA cópia do alelo de risco (A,G = heterozigoto).
+    • A,A = afetado (2 cópias = deficiência)
+    • A,G = PORTADOR (1 cópia — é ISSO que Eric tem!)
+    • G,G = normal (sem variante)
+
+    O QUE ISSO SIGNIFICA:
+    • Eric é PORTADOR — tem 1 cópia do gene alterado
+    • NÃO tem a doença (precisa de 2 cópias para manifestar)
+    • NÃO tem predisposição para trombose (só homozigoto AA)
+    • Pode TRANSMITIR a variante para filhos (50% de chance)
+    • Se o futuro parceiro(a) também for portador: filho pode
+      ser afetado (25% de chance)
+
+    MINHAS OBSERVAÇÕES:
+    1. Eric já foi testado para F5 Leiden e F2 Protrombina = NORMAIS
+       → NÃO tem trombofilia por essas vias
+    2. O fator XII é paradoxal: deficiência NÃO causa sangramento
+       (ao contrário do que se esperaria). Na verdade, pode até
+       PROTEGER contra trombose em alguns estudos.
+    3. Para a CIRURGIA MAXILAR: NÃO é preocupante. Ser portador
+       heterozigoto NÃO altera o risco cirúrgico.
+    4. Relevante para: planejamento familiar futuro (transmissão)
+
+    AÇÃO RECOMENDADA:
+    • NÃO precisa de ação para o Eric (portador, não afetado)
+    • Informar futura parceira sobre status de portador
+    • Se parceira for portadora: 25% chance de filho afetado
+    • Para cirurgia: SEM restrição (coagulação normal como het)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
