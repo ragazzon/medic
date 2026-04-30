@@ -3,7 +3,7 @@
 ║   Para uso em consultas médicas e emergências                ║
 ╚══════════════════════════════════════════════════════════════╝
 
-PACIENTE: Eric Ragazzon
+PACIENTE: Eric Machado Fressatto
 DATA NASC: [preencher]
 ANCESTRALIDADE: Europeia 92% (Ibérica 51%)
 ANÁLISE: 232 medicamentos × 61 genes (Genera GSA v3.0, abril/2026)
