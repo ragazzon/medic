@@ -651,6 +651,61 @@ AÇÃO RECOMENDADA:
 CONFIANÇA: ALTA para o PRS. Risco PADRÃO. Sem ação necessária.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+20. LEUCEMIA LINFOCÍTICA CRÔNICA (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco padrão, doença de idosos)
+SNPs: 17 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+A leucemia linfocítica crônica (LLC) é um câncer causado pelo
+crescimento descontrolado dos linfócitos. Afeta principalmente
+pessoas >70 anos. Não é hereditária. Sinais: fraqueza, perda de
+peso, febre, aumento dos gânglios. Diagnóstico: hemograma + biópsia.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 1,07% (1,04% - 1,10%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 12,22% ← alto % genético
+• Fatores ambientais: 66%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs4987855 (BCL2): score 0.771 (homozigoto CC!) — gene anti-apoptose!
+• rs13401811 (ACOXL): score 0.687 (homozigoto GG)
+• rs872071 (IRF4): score 0.570 (homozigoto GG) — gene imunológico!
+• rs210142 (intergênico): score 0.398 (homozigoto CC)
+• rs17483466 (intergênico): score 0.315 (heterozigoto AG)
+• rs391023 (intergênico): score 0.285 (heterozigoto CT)
+
+GENES RELEVANTES:
+• BCL2 — Gene ANTI-APOPTOSE (impede morte celular programada).
+  Homozigoto CC = expressão aumentada. BCL2 é alvo terapêutico
+  em LLC (venetoclax). Score alto mas RISCO PADRÃO no PRS total.
+• IRF4 — Fator regulador de interferon 4. Transcription factor
+  crítico para linfócitos B. GG homozigoto.
+• FAS (rs4406737 AG) — Receptor de morte celular (apoptose).
+• CASP8 (rs3769825 AG) — Caspase 8 (via de apoptose).
+• LEF1 (rs898518 CA) — Fator de transcrição linfocitário.
+
+MINHAS OBSERVAÇÕES:
+1. Risco PADRÃO (1,07%) — sem preocupação para adolescente.
+2. LLC é doença de IDOSOS (>70 anos). Irrelevante para 16 anos.
+3. INTERESSANTE: Vários genes de APOPTOSE estão presentes
+   (BCL2, FAS, CASP8) — isso reflete o mecanismo da LLC.
+4. A contribuição genética é ALTA (12,22%) comparada a outras
+   condições, mas o PRS final é padrão porque muitas variantes
+   de risco estão em genótipos de referência (sem alelo de risco).
+5. IRF4 GG é interessante — mesmo gene da família IRF que aparece
+   na Colite Ulcerativa (IRF5). Consistente com perfil imunológico.
+
+AÇÃO RECOMENDADA:
+• NÃO necessita nenhum rastreamento específico
+• Doença de idosos — irrelevante para decisões atuais
+• Hemograma de rotina (boa prática geral)
+
+CONFIANÇA: ALTA para o PRS. Risco PADRÃO. Sem ação necessária.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
