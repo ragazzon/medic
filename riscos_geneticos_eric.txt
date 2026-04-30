@@ -534,6 +534,74 @@ CONFIANÇA: ALTA para o PRS. Risco absoluto BAIXO.
 Relevância clínica: MÍNIMA para adolescente masculino.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+18. CARCINOMA BASOCELULAR (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (PRS padrão MAS contexto familiar + pele clara)
+SNPs: 11 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+O carcinoma basocelular é o tipo mais frequente de câncer de pele.
+Surge nas células basais da epiderme, especialmente em áreas
+expostas ao sol (rosto, pescoço, couro cabeludo, ombros). Além da
+exposição solar (principal fator), causas genéticas e ambientais
+contribuem. Sinais: nódulos e lesões rosadas na pele. Atinge
+especialmente homens >40 anos e PESSOAS COM PELE CLARA.
+
+RESULTADO GENERA:
+• Risco até 75 anos: 12,02% (11,06% - 13,02%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 6,07%
+• Fatores ambientais: 83,15% ← EXPOSIÇÃO SOLAR É O PRINCIPAL!
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs73635312 (intergênico): score 0.600 (homozigoto GG!)
+• rs57244888 (intergênico): score 0.555 (homozigoto TT)
+• rs7006527 (RGS22): score 0.555 (homozigoto AA)
+• rs157935 (LINC00513): score 0.381 (homozigoto TT)
+• rs801114 (intergênico): score 0.207 (heterozigoto TG)
+
+GENES RELEVANTES:
+• TP53 (rs78378222 TT) — NORMAL! Variante rara de risco (G) AUSENTE
+• KRT5 (rs11170164 CC) — NORMAL! Queratina 5 sem variante
+• CDKN2B-AS1 — Gene supressor tumoral (Eric AA = normal neste)
+• TGM3 — Transglutaminase (barreira cutânea, Eric AA = normal)
+
+MINHAS OBSERVAÇÕES:
+1. A Genera classificou como RISCO PADRÃO. Concordo com o PRS.
+2. PORÉM: O contexto do Eric ELEVA o risco REAL:
+   - AVÔ TEVE CÂNCER DE PELE
+   - PAI MORREU DE CÂNCER RENAL
+   - Eric tem PELE MUITO CLARA/TRANSPARENTE
+   - É HOMEM (sexo de maior risco)
+   - Vive no RIO GRANDE DO SUL (alta radiação UV para pele clara)
+3. Os fatores ambientais representam 83% do risco! Isso significa
+   que PROTEÇÃO SOLAR é a medida mais importante.
+4. Pele clara + ancestralidade ibérica (51%) + italiana (13%) =
+   fototipo I-II (maior vulnerabilidade UV)
+5. O histórico de câncer na família (avô pele, pai renal) sugere
+   possível predisposição familiar a neoplasias em geral.
+
+AÇÃO RECOMENDADA:
+★ PROTEÇÃO SOLAR RIGOROSA (mais importante que genética!):
+  • Protetor solar FPS 50+ DIARIAMENTE (mesmo nublado)
+  • Reaplicar a cada 2-3 horas se ao ar livre
+  • Chapéu, óculos de sol, camiseta UV
+  • Evitar sol entre 10h-16h
+• Consulta dermatológica anual (mapeamento de nevos)
+• Autoexame de pele mensal (manchas que crescem/mudam)
+• ALERTAR para: lesões que não cicatrizam, sangram, crescem
+
+CONEXÃO COM HISTÓRICO FAMILIAR:
+• Avô: câncer de pele → risco familiar confirmado
+• Pai: câncer renal → pode sugerir predisposição geral a neoplasias
+• Considerar consulta com geneticista para avaliar se painel
+  de câncer hereditário mais amplo seria indicado
+
+CONFIANÇA: ALTA para o PRS (risco padrão). ELEVEI para MODERADO
+pelo contexto familiar + fenótipo (pele clara) + sexo masculino.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
