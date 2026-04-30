@@ -1193,6 +1193,63 @@ AÇÃO: Nenhuma necessária. Risco abaixo da média.
 CONFIANÇA: ALTA. Resultado FAVORÁVEL.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+29. DOENÇA DE ALZHEIMER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco REDUZIDO! Boa notícia!)
+Variantes analisadas: 15
+Fonte: Genera
+
+DESCRIÇÃO:
+O Alzheimer é uma doença que causa perda gradual da memória e
+capacidade de raciocinar. Afeta principalmente idosos. Pessoas
+com Alzheimer podem ter dificuldade para lembrar coisas recentes,
+confusões e mudanças de humor. Fatores: idade, genética, estilo
+de vida (exercício e dieta ajudam a prevenir).
+
+RESULTADO GENERA:
+• Risco até 75 anos: 4,68% (3,16% - 6,59%)
+• Classificação: "Risco REDUZIDO" ← BOA NOTÍCIA!
+• Fator genético analisado: 5%
+• Outros fatores genéticos: 69%
+• Fatores ambientais: 26%
+
+VARIANTES MAIS RELEVANTES:
+• SORL1 (rs11218343 TT): score 0.523 — gene de reciclagem
+  celular no cérebro. Homozigoto TT (contribui ao score, mas
+  a Genera ainda classifica como reduzido)
+• rs10792832: score 0.278
+• rs6733839: score 0.199
+
+PONTOS POSITIVOS (proteção):
+• Classificação REDUZIDA pela Genera
+• Vários genes importantes sem alelo de risco:
+  - CR1 GG = normal (sistema imune cerebral)
+  - CLU CC = normal (clusterina, proteção neuronal)
+  - CELF1 TT = normal
+  - FERMT2 TT = normal
+• APOE (principal gene de Alzheimer) NÃO testado no chip
+  → impossível determinar se tem o alelo ε4 de risco
+
+OBSERVAÇÕES:
+1. Resultado FAVORÁVEL — risco abaixo da média!
+2. PORÉM: O gene MAIS importante para Alzheimer (APOE ε4) NÃO
+   está incluído no chip da Genera. Sem ele, a avaliação é
+   INCOMPLETA. APOE ε4 sozinho pode multiplicar o risco por 3-12x.
+3. Para um adolescente de 16 anos, Alzheimer é irrelevante
+   por décadas. Só se manifestaria após 60-70+ anos.
+4. Exercício físico, boa alimentação e saúde cardiovascular são
+   os melhores protetores contra Alzheimer (independente da genética).
+
+AÇÃO RECOMENDADA:
+• NÃO necessita nenhuma ação (resultado favorável + jovem)
+• Hábitos saudáveis = melhor prevenção (exercício, alimentação,
+  sono, estímulo cognitivo)
+• Se preocupação futura (>50 anos): testar APOE (consultar geneticista)
+
+CONFIANÇA: ALTA para o PRS. INCOMPLETA sem APOE.
+Resultado FAVORÁVEL (risco reduzido).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
