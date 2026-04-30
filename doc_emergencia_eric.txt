@@ -1,0 +1,152 @@
+╔══════════════════════════════════════════════════════════════╗
+║   CARTÃO FARMACOGENÉTICO DE EMERGÊNCIA                       ║
+║   Para uso em consultas médicas e emergências                ║
+╚══════════════════════════════════════════════════════════════╝
+
+PACIENTE: Eric Ragazzon
+DATA NASC: [preencher]
+ANCESTRALIDADE: Europeia 92% (Ibérica 51%)
+ANÁLISE: 232 medicamentos × 61 genes (Genera GSA v3.0, abril/2026)
+GUIDELINES: CPIC / DPWG / PharmGKB
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔴 ALERTAS CRÍTICOS (informar SEMPRE ao médico/emergência)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. CYP2D6 NÃO TESTADO → Afeta 40+ medicamentos
+   ❌ NÃO usar: Tramadol, Codeína, Meperidina
+   ✅ Preferir: Morfina, Oxicodona, Fentanil, Paracetamol
+
+2. VKORC1 TT → MUITO sensível a anticoagulantes orais
+   ❌ NÃO usar: Varfarina, Acenocumarol, Femprocumona
+   ✅ Preferir: Rivaroxabana (Xarelto) ou Apixabana (Eliquis)
+
+3. SLCO1B1 TC → Risco de miopatia com estatinas
+   ❌ Sinvastatina máximo 20mg
+   ✅ Preferir: Rosuvastatina ou Pravastatina
+
+4. RARG GA → Risco de CARDIOTOXICIDADE com antraciclinas
+   ⚠️ Doxorrubicina/Daunorrubicina: eco obrigatório + monitorar
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🟡 ATENÇÕES IMPORTANTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. CYP2C19 *1/*17 (metabolizador RÁPIDO)
+   → Omeprazol/Lansoprazol/Esomeprazol: eficácia REDUZIDA
+   ✅ Preferir: Rabeprazol (Pariet) ou Pantoprazol
+   → Sertralina/Escitalopram: níveis 30-40% MENORES
+   → Clopidogrel: eficácia AUMENTADA (favorável!)
+
+6. COMT AG → Opioides: pode precisar dose ~20% MAIOR
+   (Confirmado pela Genera: "menor resposta a opioides")
+
+7. CYP3A5 CT (expressor parcial)
+   → Tacrolimo/Ciclosporina: dose 1.5x maior
+   → Midazolam: duração MENOR que esperado
+
+8. CYP1A2 CA (ultra-rápido)
+   → Melatonina: efeito CURTO (usar lib. prolongada)
+   → Olanzapina/Clozapina: pode precisar dose maior
+
+9. HTR1A CG → Resposta a ISRS reduzida ~30%
+   ✅ Preferir IRSN: Desvenlafaxina, Duloxetina
+
+10. ADRB2 GA → Beta-2 agonistas: resposta intermediária
+    (Salbutamol, Salmeterol - confirma achado Genera)
+
+11. NOS1AP CT → Risco moderado prolongamento QTc
+    ⚠️ Cuidado com combinações QT (antipsicóticos + macrolídeos)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🏥 PARA CIRURGIAS / PROCEDIMENTOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANESTESIA GERAL:
+  ✅ Remifentanila, Sufentanila, Fentanil, Alfentanila
+  ✅ Cetamina (adjuvante)
+  ⚠️ Dose de opioides ~20% maior (COMT AG)
+  ⚠️ Midazolam: duração menor (CYP3A5 CT)
+
+ANESTÉSICO LOCAL:
+  ✅ Ropivacaína, Mepivacaína, Bupivacaína, Lidocaína
+  (G6PD normal - sem risco de metemoglobinemia)
+
+ANALGESIA PÓS-OPERATÓRIA:
+  ✅ 1ª linha: Paracetamol + AINE (naproxeno, ibuprofeno)
+  ✅ 2ª linha: Oxicodona VO ou Morfina IV
+  ❌ NÃO usar: Tramadol, Codeína, Hidrocodona, Meperidina
+
+ANTIEMÉTICO:
+  ✅ Ondansetrona (Vonau)
+
+PROTETOR GÁSTRICO:
+  ✅ Rabeprazol (Pariet) — NÃO omeprazol
+
+ANTICOAGULAÇÃO (se necessário):
+  ✅ Rivaroxabana ou Apixabana — NÃO varfarina
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💊 PARA PSIQUIATRIA / NEUROLOGIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANTIDEPRESSIVOS (ordem de preferência):
+  1º Desvenlafaxina (Pristiq) ← MELHOR opção
+  2º Duloxetina (Cymbalta)
+  3º Bupropiona (Wellbutrin) — CI se epilepsia!
+  4º Fluoxetina (Prozac) — ISRS menos CYP2C19
+  ❌ Venlafaxina (Efexor) — depende CYP2D6 desconhecido
+
+TDAH:
+  ✅ Guanfacina (Intuniv) ← NÃO depende CYP2D6
+  ⚠️ Metilfenidato/Lisdexanfetamina — monitorar resposta
+  ❌ Atomoxetina — TESTE CYP2D6 antes (5-10x diferença!)
+
+ANTIPSICÓTICOS (TEA/irritabilidade):
+  ✅ Paliperidona (Invega) — não CYP2D6
+  ✅ Lurasidona (Latuda) — menor ganho peso
+  ⚠️ Aripiprazol — dose baixa e titular
+
+ANSIOLÍTICOS:
+  ✅ Lorazepam — não depende CYP
+  ✅ Buspirona — CYP3A4 normal
+
+INSÔNIA:
+  ✅ Trazodona ou Quetiapina baixa dose
+  ⚠️ Melatonina — efeito curto (CYP1A2 rápido)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ RESULTADOS NORMAIS (pode usar sem restrição farmacogenética)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• G6PD TT (normal) — antibióticos, AINEs, anestésicos OK
+• CYP2C9 *1/*1 (normal) — AINEs, fenitoína, losartana OK
+• CYP3A4 GG (normal) — maioria dos medicamentos CYP3A4 OK
+• TPMT CC (normal) — azatioprina, mercaptopurina OK
+• DPYD CC/TT (normal) — fluoropirimidinas provavelmente OK*
+• F5 Leiden CC — sem trombofilia hereditária
+• OPRM1 AA — receptor opioide normal
+• MC4R TT + HTR2C CC — menor risco ganho peso com antipsicóticos
+• FKBP5 CC — eixo HPA normal (favorável para antidepressivos)
+• BDNF CC — normal (favorável)
+
+*DPYD: confirmar com laudo oficial antes de 5-FU/capecitabina
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚕️ EXAME PENDENTE RECOMENDADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ PAINEL CYP2D6 COMPLETO (com Copy Number Variation)
+  Afeta: tramadol, codeína, atomoxetina, aripiprazol,
+  risperidona, metoprolol, ondansetrona, venlafaxina + 30 outros
+  Labs: Genera (PGx expandido), Mendelics, Fleury, Einstein
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DISCLAIMER: Este documento é baseado em análise farmacogenética
+(Genera GSA v3.0, guidelines CPIC/DPWG). Não substitui avaliação
+clínica. Decisões devem ser tomadas pelo médico considerando o
+quadro clínico completo.
+
+Gerado em: Abril/2026
+Contato: [preencher telefone/email do responsável]
