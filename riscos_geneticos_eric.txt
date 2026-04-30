@@ -1250,6 +1250,66 @@ CONFIANÇA: ALTA para o PRS. INCOMPLETA sem APOE.
 Resultado FAVORÁVEL (risco reduzido).
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+30. DOENÇA CELÍACA (PRS da Genera)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🔴 ALTO — DISCORDO DA GENERA! (ver explicação)
+Variantes analisadas: 14
+Fonte: Genera PRS
+
+DESCRIÇÃO:
+A doença celíaca causa inflamação no intestino quando a pessoa
+come glúten (trigo, centeio, cevada). O corpo não consegue digeri-lo
+e o sistema imune ataca o intestino. Sinais: diarreia, prisão de
+ventre, dor abdominal, anemia, perda de peso, má absorção.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,40% (0,21% - 0,45%)
+• Classificação Genera: "Risco REDUZIDO"
+• Fator genético analisado: 19,69% ← O MAIS ALTO de todas!
+• Fatores ambientais: 30%
+
+⚠️ POR QUE DISCORDO DA GENERA:
+A Genera classificou como "reduzido" baseada APENAS neste PRS
+de 14 SNPs. MAS na MINHA análise independente (item 2 deste
+documento), identifiquei que Eric é HLA-DQ8 POSITIVO (rs7454108 TT).
+
+O HLA-DQ8 é o marcador MAIS IMPORTANTE para celíaca e NÃO está
+incluído neste PRS da Genera! A Genera NÃO testou HLA-DQ2 nem
+HLA-DQ8 diretamente no PRS de celíaca.
+
+CONCLUSÃO: O PRS está INCOMPLETO. Eric TEM o marcador principal
+(HLA-DQ8+) + sintomas compatíveis + dieta de glúten.
+
+CONTEXTO CLÍNICO (já documentado no item 2):
+• HLA-DQ8 POSITIVO (minha análise)
+• Come MASSA todos os dias (glúten!)
+• Dor abdominal recorrente
+• Baixo peso (IMC 16.3)
+• Perfil autoimune (celíaca É autoimune)
+
+VARIANTES DO PRS (informativas):
+• LPP (rs1464510 CA): score 0.255 — gene de junções celulares
+• PUS10 (rs13003464 AG): score 0.140
+• TAGAP (rs1738074 TC): score 0.148
+• BACH2 (rs10806425 CA): score 0.122 — regulador imune!
+• PTPN2 (rs1893217 AA): score 0 — NORMAL (mesmo gene da DII!)
+
+OBSERVAÇÃO HONESTA:
+O PRS da Genera para celíaca é o que tem MAIOR contribuição
+genética analisada (19,69%) — mostra que celíaca é MUITO genética.
+MAS o PRS não inclui o gene PRINCIPAL (HLA-DQ2/DQ8).
+É como avaliar risco de trombose sem testar Fator V Leiden.
+
+AÇÃO RECOMENDADA — MANTÉM a do item 2:
+★ URGENTE: Anti-transglutaminase IgA + IgA total
+★ NÃO tirar glúten antes dos exames!
+★ Se positivo: biópsia
+★ Se IgA total baixa: anti-tTG IgG
+
+CONFIANÇA: ALTA para minha avaliação. DISCORDO da classificação
+"reduzido" da Genera porque o HLA-DQ8+ não foi captado pelo PRS.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
