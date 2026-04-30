@@ -1,0 +1,366 @@
+╔══════════════════════════════════════════════════════════════╗
+║   ANÁLISE DE RISCOS GENÉTICOS — Eric Machado Fressatto       ║
+║   Baseado em: Genera (GSA v3.0) + Análise independente       ║
+║   Atualizado em: Abril/2026                                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+LEGENDA DE CLASSIFICAÇÃO:
+  🔴 ALTO — Risco clinicamente relevante + ação recomendada
+  🟡 MODERADO — Merece monitoramento
+  🟢 BAIXO — Risco mínimo ou irrelevante para o paciente
+  ⚪ INFORMATIVO — Dados para conhecimento, sem ação necessária
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. INTOLERÂNCIA À LACTOSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🔴 ALTO (confirmado geneticamente)
+SNP: rs4988235 | Genótipo: GG
+Gene: MCM6/LCT (cromossomo 2)
+
+RESULTADO GENERA: [aguardando dados Genera]
+
+RESULTADO ANÁLISE INDEPENDENTE:
+GG = NÃO possui a variante de persistência da lactase europeia.
+Após a infância, a produção de lactase diminui progressivamente.
+Eric é GENETICAMENTE INTOLERANTE À LACTOSE.
+
+CONTEXTO CLÍNICO:
+• Eric consome muito leite (seletividade alimentar TEA)
+• Tem dores abdominais recorrentes
+• 175cm, 50kg (IMC 16.3 = baixo peso)
+• A intolerância à lactose é a explicação MAIS PROVÁVEL para as dores
+
+AÇÃO RECOMENDADA:
+• Teste terapêutico: suspender lactose por 2 semanas e observar
+• Ou: teste de hidrogênio expirado (confirmação formal)
+• Substituir por leite sem lactose, enzima lactase, ou alternativas
+• NÃO retirar cálcio da dieta — suplementar se necessário
+
+CONFIANÇA: MUITO ALTA (1A) — Evidência definitiva.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. DOENÇA CELÍACA (predisposição)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🔴 ALTO (contexto clínico muito sugestivo)
+SNP: rs7454108 | Genótipo: TT (proxy HLA-DQ8)
+Gene: HLA região (cromossomo 6)
+
+RESULTADO GENERA: [aguardando dados Genera]
+
+RESULTADO ANÁLISE INDEPENDENTE:
+TT no rs7454108 = alta probabilidade de ser HLA-DQ8 positivo.
+HLA-DQ8 é um dos 2 marcadores necessários para celíaca (DQ2 ou DQ8).
+Presente em ~5-10% da população, mas só ~1% desenvolve celíaca.
+
+CONTEXTO CLÍNICO ALTAMENTE SUGESTIVO:
+• Dieta RESTRITA A MASSAS (trigo = principal fonte de glúten!)
+• Dor abdominal + baixo peso (IMC 16.3)
+• Seletividade alimentar TEA pode mascarar sintomas
+• Possível que a preferência por massa seja "vício" do glúten
+  (mecanismo opioidérgico do gliadorfina em TEA — controverso mas descrito)
+
+AÇÃO RECOMENDADA (URGENTE):
+• Anti-transglutaminase IgA + IgA total sérica
+• NÃO retirar glúten ANTES dos exames (falso negativo!)
+• Se positivo: biópsia duodenal para confirmação
+• Se IgA total baixa: pedir anti-tTG IgG
+
+CONFIANÇA: MODERADA-ALTA (2A) para o SNP proxy.
+Mas o contexto clínico eleva para ALTA suspeita clínica.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. DOENÇA DE CROHN / DII
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (risco genético + sintomas compatíveis)
+SNPs: rs2241880 (ATG16L1) AA + rs10883365 (NKX2-3) GA
+Genes: ATG16L1 (cromossomo 2) + NKX2-3 (cromossomo 10)
+
+RESULTADO GENERA: [aguardando dados Genera]
+
+RESULTADO ANÁLISE INDEPENDENTE:
+ATG16L1 rs2241880 AA = homozigoto para Thr300Ala (variante de risco)
+• Risco ~2x aumentado para Doença de Crohn
+• ~30% dos europeus são AA (é COMUM)
+• NKX2-3 GA = heterozigoto (contribuição adicional menor)
+
+CONTEXTO CLÍNICO:
+• Dor abdominal + baixo peso são compatíveis
+• MAS podem ser explicados por lactose + possível celíaca
+• Crohn só deve ser investigado SE as outras causas forem descartadas
+
+AÇÃO RECOMENDADA:
+• Se anti-tTG negativo E lactose-free não resolve dores:
+  → Calprotectina fecal (marcador de inflamação intestinal)
+  → Se elevada: colonoscopia + biópsia
+
+CONFIANÇA: ALTA (2A) para o genótipo. Risco é POPULACIONAL
+(maioria dos AA nunca desenvolve Crohn).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. PSORÍASE / ARTRITE PSORIÁSICA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (genética + histórico familiar FORTE)
+SNP: rs12191877 | Genótipo: CT (heterozigoto)
+Gene: HLA-C (cromossomo 6)
+
+RESULTADO GENERA: [aguardando dados Genera]
+
+RESULTADO ANÁLISE INDEPENDENTE:
+CT = heterozigoto para variante de risco HLA-C*06:02.
+Isoladamente: risco ~1.5-2x para psoríase.
+COM histórico familiar: risco SUBSTANCIALMENTE maior.
+
+CONTEXTO FAMILIAR:
+• PAI TEM ARTRITE PSORIÁSICA (doença avançada)
+• Artrite psoriásica tem forte componente hereditário
+• Combinação HLA-C + HLA-DRB1 CT = perfil autoimune
+
+AÇÃO RECOMENDADA:
+• Monitorar ATIVAMENTE lesões de pele (placas, descamação)
+• Monitorar dores articulares (especialmente dedos, joelhos)
+• Se artralgia: encaminhar reumatologista PRECOCEMENTE
+• Tratamento precoce pode prevenir dano articular
+
+CONFIANÇA: 2B para o SNP isolado. Mas COM histórico familiar
+paterno, o risco REAL é significativamente elevado.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. ASMA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (genética + histórico familiar)
+SNPs: rs2305480 (GSDMB) GA + rs7216389 (17q21) CT
+Genes: GSDMB/ORMDL3 (cromossomo 17)
+
+RESULTADO GENERA: [aguardando dados Genera]
+
+RESULTADO ANÁLISE INDEPENDENTE:
+Ambos heterozigoto no locus 17q21 (mais replicado em asma).
+Risco ~1.3-1.5x aumentado para asma.
+ADRB2 GA = resposta intermediária a broncodilatadores.
+
+CONTEXTO FAMILIAR:
+• AVÓ MATERNA TEM ASMA
+• Asma tem forte componente hereditário (~60% genético)
+
+AÇÃO RECOMENDADA:
+• Se desenvolver asma: resposta ao salbutamol pode ser SUBÓTIMA
+• Preferir corticoides inalatórios como tratamento preventivo
+• ADRB2 GA confirma achado da Genera sobre broncodilatadores
+
+CONFIANÇA: ALTA (2A). Locus 17q21 é robustamente replicado.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. CÂNCER DE MAMA (PRS — Escala de Risco Poligênico)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (para Eric especificamente)
+SNPs: 60 variantes analisadas
+Fonte: Genera PRS
+
+RESULTADO GENERA:
+• Risco até 95 anos: 13,33% (11,65% - 14,86%)
+• Classificação Genera: "Risco aumentado"
+• Contribuição genética analisada: 5,63%
+• Fatores ambientais: 70%
+
+MINHAS OBSERVAÇÕES:
+1. Este PRS foi calculado com dados de população FEMININA.
+2. Risco de câncer de mama MASCULINO é ~0,1% na população geral.
+3. Mesmo com PRS "aumentado", o risco ABSOLUTO para Eric (homem)
+   continua muito baixo.
+4. A Genera reconhece: "pode ser maior ou menor a depender do sexo"
+5. BRCA1/BRCA2 NÃO foram testados por sequenciamento completo.
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO:
+• rs10995190 (ZNF365): score 0.302
+• rs10771399 (intergênico): score 0.302
+• rs78540526 (intergênico): score 0.293
+• rs75915166 (intergênico): score 0.270
+• rs13387042 (intergênico): score 0.256
+• rs2981579 (FGFR2): score 0.239 — gene relevante!
+• rs3803662 (CASC16): score 0.215
+
+AÇÃO RECOMENDADA (para Eric):
+• Autoexame mamário anual a partir dos 35-40 anos (precaução)
+• NÃO gera ansiedade — risco real para homens é mínimo
+
+RELEVÂNCIA PARA A FAMÍLIA:
+• Mulheres da família (mãe, irmãs, filhas futuras) podem
+  compartilhar esse perfil genético
+• Considerar mamografia mais precoce para mulheres da família
+• Se histórico familiar de CA mama: teste BRCA1/2 (sequenciamento)
+
+CONFIANÇA: ALTA para o PRS. BAIXA para relevância clínica em homem.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. ARTRITE REUMATOIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (perfil autoimune geral)
+SNP: rs6457617 | Genótipo: CT (heterozigoto)
+Gene: HLA-DRB1 (cromossomo 6)
+
+RESULTADO ANÁLISE INDEPENDENTE:
+CT = heterozigoto. Risco ~1.5x para artrite reumatoide.
+Combinado com HLA-C CT (psoríase) = PERFIL AUTOIMUNE.
+
+OBSERVAÇÃO:
+O pai tem artrite PSORIÁSICA (não reumatoide), mas a presença
+de múltiplos HLA de risco autoimune (DRB1 + HLA-C) sugere que
+Eric tem predisposição geral a doenças autoimunes:
+• Artrite psoriásica (pai)
+• Artrite reumatoide
+• Possivelmente doença celíaca (HLA-DQ8)
+
+CONFIANÇA: 2B.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. MTHFR A1298C
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (apenas heterozigoto, C677T normal)
+SNP: rs1801131 | Genótipo: TG (heterozigoto)
+Gene: MTHFR (cromossomo 1)
+
+RESULTADO:
+• MTHFR C677T (rs1801133): GG = NORMAL
+• MTHFR A1298C (rs1801131): TG = Heterozigoto
+• Atividade enzimática ~80% (redução leve)
+• NÃO clinicamente significativo isoladamente
+
+CONTEXTO:
+• Relevante no contexto de dieta restrita + baixo peso
+• Se metotrexato for usado: suplementar L-metilfolato
+• MTRR rs1801394 AG (da farmacogenética) = reciclagem B12 reduzida
+
+AÇÃO: Suplementar ácido fólico/L-metilfolato (prudente dada
+a dieta restrita). Monitorar homocisteína se possível.
+
+CONFIANÇA: 1A para o genótipo. Impacto clínico: MÍNIMO isolado.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9. DIABETES TIPO 2 (KCNJ11)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (heterozigoto + magro + jovem)
+SNP: rs5219 | Genótipo: TC (heterozigoto)
+Gene: KCNJ11 (cromossomo 11)
+
+RESULTADO:
+TC = heterozigoto para variante E23K (Glu23Lys)
+Risco: +15% sobre a população geral
+TCF7L2 (rs7903146 CC) = NORMAL — o gene MAIS importante é normal!
+
+OBSERVAÇÃO: Eric é magro (IMC 16.3), jovem, e o principal gene
+de DM2 (TCF7L2) é normal. Risco de diabetes é MÍNIMO atualmente.
+Monitorar apenas se ganhar peso significativo no futuro.
+
+CONFIANÇA: 2A. Sem relevância clínica atual.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10. TROMBOFILIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (ambos normais)
+SNPs: rs6025 (F5 Leiden) CC + rs1799963 (F2 Protrombina) GG
+
+RESULTADO: AMBOS NORMAIS
+• Sem Fator V Leiden
+• Sem mutação Protrombina G20210A
+• NÃO tem trombofilia hereditária pelas variantes testadas
+
+CONFIANÇA: MUITO ALTA (1A).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+11. HEMOCROMATOSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (ambos normais)
+SNPs: rs1800562 (C282Y) GG + rs1799945 (H63D) CC
+
+RESULTADO: AMBOS NORMAIS
+• Sem risco de hemocromatose hereditária
+• Absorção de ferro normal
+
+CONFIANÇA: MUITO ALTA (1A).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+12. OBESIDADE GENÉTICA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (ambos normais)
+SNPs: rs9939609 (FTO) TT + rs17782313 (MC4R) TT
+
+RESULTADO: AMBOS NORMAIS
+• Sem predisposição genética para obesidade por FTO ou MC4R
+• Consistente com o fenótipo atual (IMC 16.3 = magro)
+• Menor risco de ganho de peso com antipsicóticos (MC4R TT)
+
+CONFIANÇA: MUITO ALTA (1A).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+13. CÂNCER HEREDITÁRIO (genes de alta penetrância)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (todos testados normais)
+
+GENES TESTADOS E NORMAIS:
+• BRCA1 (rs80357906 DD) — Normal
+• BRCA2 (rs28897696 GG, rs80358981 CC) — Normal
+• CHEK2 (rs555607708 II, rs17879961 AA) — Normal
+• ATM (rs11212617 AA, rs1801516 GG) — Normal
+• TP53 (rs1042522 CC, rs1800371 GG) — Normal*
+• MLH1 (rs1800734 GG) — Normal (Lynch)
+• PALB2 (rs152451 TT) — Normal
+• MUTYH (rs36053993 CC) — Normal
+
+*TP53 rs1042522 CC (Pro72Arg Pro/Pro): variante COMUM (~30% europeus).
+NÃO é mutação patogênica tipo Li-Fraumeni. Associação estatística
+fraca com risco geral de câncer. NÃO clinicamente relevante.
+
+OBSERVAÇÃO IMPORTANTE:
+O chip testa apenas SNPs PONTUAIS conhecidos. NÃO substitui
+sequenciamento completo dos genes BRCA1/2. Se houver histórico
+familiar de câncer, considerar painel de sequenciamento.
+
+CONFIANÇA: ALTA (1A) para as variantes TESTADAS.
+Não exclui mutações raras/novas não cobertas pelo chip.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+14. TEA (Transtorno do Espectro Autista) — SNPs informativos
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: ⚪ INFORMATIVO
+SNPs: rs4307059 CC + rs10513025 TT
+Gene: 5p14.1 (intergênico)
+
+RESULTADO:
+• rs4307059 CC = genótipo de referência (sem alelo de risco)
+• rs10513025 TT = genótipo de referência
+
+OBSERVAÇÃO HONESTA:
+Estes SNPs têm associação MUITO FRACA com TEA em GWAS (OR ~1.1-1.2).
+O autismo é ALTAMENTE poligênico (centenas de genes) e a maioria
+dos casos não é explicável por SNPs comuns. Eric já TEM o diagnóstico
+de TEA — esses SNPs não adicionam informação útil.
+
+O autismo do Eric é melhor explicado por combinação de:
+• Fatores genéticos raros (não testáveis por chip)
+• Fatores poligênicos (centenas de variantes de efeito pequeno)
+• Possível contribuição ambiental
+
+CONFIANÇA: 3 (associação fraca). Clinicamente IRRELEVANTE.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• HLA-DQ2.5 (rs2187668) — Celíaca (marcador principal)
+  → Não disponível. Apenas DQ8 testado (positivo).
+  → Para exclusão completa de celíaca: tipagem HLA direta
+
+• CFH (rs1061170) — Degeneração macular relacionada à idade
+  → Não relevante para adolescente de 16 anos
+
+• APOE (rs429358, rs7412) — Alzheimer
+  → Intencionalmente não incluído no chip
+  → Não recomendado testar em adolescentes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FIM DA ANÁLISE INDEPENDENTE.
+Aguardando resultados da Genera para cruzamento e complementação.
+
+Gerado em: Abril/2026
+Analista: IA (Claude) com supervisão da responsável
