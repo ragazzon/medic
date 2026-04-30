@@ -19,9 +19,9 @@ if (!$summary) {
 $drugs = getDrugAnalysis($patientId);
 
 // Separate panels into categories
-$medPanels = []; // Panels about drug metabolism
-$riskPanels = []; // Panels about disease risk
-$medCodes = ['pharmaco', 'neuro']; // Panels primarily about medications
+$medPanels = [];
+$riskPanels = [];
+$medCodes = ['pharmaco', 'neuro'];
 $riskCodes = ['cardio', 'onco', 'nutri', 'musculo', 'derma', 'immuno', 'endocrino', 'sleep'];
 foreach ($summary['panels'] as $pnl) {
     if (in_array($pnl['code'], $medCodes)) $medPanels[] = $pnl;
@@ -42,15 +42,14 @@ require_once __DIR__ . '/../../includes/header.php';
     <h1><i class="bi bi-dna me-2"></i>Análise Genética — <?= sanitize($patient['name']) ?></h1>
     <div>
         <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>" class="btn btn-primary btn-sm"><i class="bi bi-file-earmark-medical me-1"></i>Relatório Médico</a>
-        <a href="<?= baseUrl('pages/genomic/ancestry.php?patient_id=' . $patientId) ?>" class="btn btn-outline-info btn-sm"><i class="bi bi-globe-americas me-1"></i>Ancestralidade</a>
         <a href="<?= baseUrl('pages/genomic/argue.php?patient_id=' . $patientId) ?>" class="btn btn-outline-danger btn-sm"><i class="bi bi-chat-left-quote me-1"></i>Argumente com o Médico</a>
+        <a href="<?= baseUrl('pages/genomic/ancestry.php?patient_id=' . $patientId) ?>" class="btn btn-outline-info btn-sm"><i class="bi bi-globe-americas me-1"></i>Ancestralidade</a>
         <a href="<?= baseUrl('pages/genomic/upload.php?patient_id=' . $patientId) ?>" class="btn btn-outline-secondary btn-sm"><i class="bi bi-upload me-1"></i>Re-importar</a>
-        <a href="<?= baseUrl('pages/patients/view.php?id=' . $patientId) ?>" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
     </div>
 </div>
 
 <?php if ($summary['import']): ?>
-<div class="alert alert-light border mb-4">
+<div class="alert alert-light border mb-3">
     <i class="bi bi-info-circle me-1"></i>
     <strong><?= sanitize($summary['import']['file_name']) ?></strong> |
     <?= number_format($summary['import']['imported_snps'], 0, ',', '.') ?> SNPs |
@@ -59,108 +58,291 @@ require_once __DIR__ . '/../../includes/header.php';
 </div>
 <?php endif; ?>
 
-<!-- ===== SEÇÃO 1: MEDICAMENTOS ===== -->
-<div class="card mb-4">
-    <div class="card-header bg-primary text-white">
-        <h5 class="mb-0"><i class="bi bi-capsule me-2"></i>Análise de Medicamentos por Categoria</h5>
-    </div>
-    <div class="card-body">
-        <p class="text-muted mb-3">Como o organismo metaboliza cada medicamento com base no perfil genético.</p>
+<!-- ===== NAVEGAÇÃO POR BOTÕES ===== -->
+<div class="btn-group w-100 mb-4" role="group">
+    <button type="button" class="btn btn-outline-primary active" onclick="showSection('overview')" id="btn-overview">
+        <i class="bi bi-speedometer2 me-1"></i>Visão Geral
+    </button>
+    <button type="button" class="btn btn-outline-primary" onclick="showSection('medications')" id="btn-medications">
+        <i class="bi bi-capsule me-1"></i>Medicamentos
+    </button>
+    <button type="button" class="btn btn-outline-primary" onclick="showSection('risks')" id="btn-risks">
+        <i class="bi bi-shield-exclamation me-1"></i>Riscos Genéticos
+    </button>
+    <button type="button" class="btn btn-outline-primary" onclick="showSection('panels')" id="btn-panels">
+        <i class="bi bi-grid-3x3 me-1"></i>Análise por Gene
+    </button>
+</div>
 
-        <?php foreach ($drugsByClass as $className => $classDrugs): ?>
-        <h6 class="mt-3 mb-2 text-primary"><i class="bi bi-tag me-1"></i><?= sanitize($className) ?></h6>
-        <div class="row g-3 mb-3">
-            <?php foreach ($classDrugs as $d): ?>
-            <div class="col-md-6 col-lg-4">
-                <a href="<?= baseUrl('pages/genomic/drug_detail.php?patient_id=' . $patientId . '&drug=' . urlencode($d['name'])) ?>" class="text-decoration-none">
-                <div class="card h-100 border-start border-4 <?= $d['worst_status'] === 'risk' ? 'border-danger' : ($d['worst_status'] === 'attention' ? 'border-warning' : 'border-success') ?> drug-card-link">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0 text-dark"><?= sanitize($d['name']) ?></h6>
-                            <?= genomicStatusBadge($d['worst_status']) ?>
+<!-- ===== SEÇÃO: VISÃO GERAL ===== -->
+<div id="section-overview" class="dashboard-section">
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="bi bi-speedometer2 me-2"></i>Visão Geral — Achados Principais</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted mb-3">Resumo dos achados farmacogenéticos mais importantes. Para detalhes completos, acesse o <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>">Relatório Médico</a>.</p>
+            
+            <div class="row g-3">
+                <!-- Alertas Críticos -->
+                <div class="col-md-6">
+                    <div class="card border-danger h-100">
+                        <div class="card-header bg-danger text-white py-2">
+                            <strong><i class="bi bi-exclamation-triangle me-1"></i>Alertas Críticos</strong>
                         </div>
-                        <div class="mt-2">
-                            <?php foreach ($d['genes'] as $g): ?>
-                            <div class="d-flex justify-content-between align-items-center py-1 border-top">
-                                <div>
-                                    <small><strong class="text-dark"><?= $g['gene_symbol'] ?></strong></small>
-                                    <?php if ($g['phenotype']): ?><br><small class="text-muted"><?= sanitize($g['phenotype']) ?></small><?php endif; ?>
-                                </div>
-                                <div class="text-end">
-                                    <small><?= genomicStatusIcon($g['status'] ?? 'unknown') ?></small>
-                                    <small class="fw-bold text-dark"><?= $g['patient_genotype'] ?? 'N/D' ?></small>
-                                </div>
-                            </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="text-end mt-2">
-                            <small class="text-primary"><i class="bi bi-arrow-right-circle me-1"></i>Ver detalhes</small>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">🔴 <strong>CYP2D6 NÃO TESTADO</strong> — afeta 40+ medicamentos</li>
+                                <li class="mb-2">🔴 <strong>VKORC1 TT</strong> — muito sensível à varfarina</li>
+                                <li class="mb-2">🔴 <strong>SLCO1B1 TC</strong> — risco miopatia com sinvastatina</li>
+                                <li class="mb-2">🔴 <strong>RARG GA</strong> — cardiotoxicidade com antraciclinas</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                </a>
-            </div>
-            <?php endforeach; ?>
-        </div>
-        <?php endforeach; ?>
-
-        <!-- Sub-painéis de medicamentos -->
-        <h6 class="mt-4 mb-2"><i class="bi bi-grid me-1"></i>Painéis Detalhados de Metabolismo</h6>
-        <div class="row g-2">
-            <?php foreach ($medPanels as $pnl): ?>
-            <div class="col-md-6">
-                <a href="<?= baseUrl('pages/genomic/panel.php?patient_id=' . $patientId . '&panel=' . $pnl['code']) ?>" class="text-decoration-none">
-                    <div class="card">
-                        <div class="card-body py-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <i class="bi <?= $pnl['icon'] ?> me-2" style="color:<?= $pnl['color'] ?>"></i>
-                                <span><?= sanitize($pnl['name']) ?></span>
-                            </div>
-                            <div class="d-flex gap-1">
-                                <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?></span><?php endif; ?>
-                                <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?></span><?php endif; ?>
-                                <span class="badge bg-success"><?= $pnl['normal_count'] ?></span>
-                            </div>
+                
+                <!-- Atenções -->
+                <div class="col-md-6">
+                    <div class="card border-warning h-100">
+                        <div class="card-header bg-warning text-dark py-2">
+                            <strong><i class="bi bi-exclamation-circle me-1"></i>Atenções Importantes</strong>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</div>
-
-<!-- ===== SEÇÃO 2: RISCOS DE DOENÇAS ===== -->
-<div class="card mb-4">
-    <div class="card-header bg-danger text-white">
-        <h5 class="mb-0"><i class="bi bi-shield-exclamation me-2"></i>Riscos Genéticos para Doenças</h5>
-    </div>
-    <div class="card-body">
-        <p class="text-muted mb-3">Predisposições genéticas identificadas. <strong>NÃO</strong> significam que a doença vai ocorrer.</p>
-        <div class="row g-3">
-            <?php foreach ($riskPanels as $pnl): ?>
-            <div class="col-md-6 col-lg-4">
-                <a href="<?= baseUrl('pages/genomic/panel.php?patient_id=' . $patientId . '&panel=' . $pnl['code']) ?>" class="text-decoration-none">
-                    <div class="card h-100">
                         <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                                <div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width:40px;height:40px;background:<?= $pnl['color'] ?>20;">
-                                    <i class="bi <?= $pnl['icon'] ?>" style="color:<?= $pnl['color'] ?>"></i>
-                                </div>
-                                <h6 class="mb-0"><?= sanitize($pnl['name']) ?></h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">🟡 <strong>CYP2C19 *17</strong> — omeprazol/ISRS eficácia reduzida</li>
+                                <li class="mb-2">🟡 <strong>COMT AG</strong> — opioides dose ~20% maior</li>
+                                <li class="mb-2">🟡 <strong>CYP1A2 CA</strong> — melatonina efeito curto</li>
+                                <li class="mb-2">🟡 <strong>HTR1A CG</strong> — ISRS resposta -30%</li>
+                                <li class="mb-2">🟡 <strong>ADRB2 GA</strong> — salbutamol resposta intermediária</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Para Cirurgia -->
+                <div class="col-md-6">
+                    <div class="card border-success h-100">
+                        <div class="card-header bg-success text-white py-2">
+                            <strong><i class="bi bi-hospital me-1"></i>Para Cirurgia — USAR</strong>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1">✅ Remifentanila / Fentanil / Sufentanila</li>
+                                <li class="mb-1">✅ Ropivacaína / Bupivacaína / Mepivacaína</li>
+                                <li class="mb-1">✅ Paracetamol + Oxicodona/Morfina</li>
+                                <li class="mb-1">✅ Ondansetrona (antiemético)</li>
+                                <li class="mb-1">✅ Rabeprazol (protetor gástrico)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Para Cirurgia - EVITAR -->
+                <div class="col-md-6">
+                    <div class="card border-danger h-100">
+                        <div class="card-header bg-light text-danger py-2">
+                            <strong><i class="bi bi-x-circle me-1"></i>Para Cirurgia — EVITAR</strong>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1">❌ Tramadol / Codeína (CYP2D6 desconhecido)</li>
+                                <li class="mb-1">❌ Omeprazol (CYP2C19 rápido)</li>
+                                <li class="mb-1">❌ Varfarina (VKORC1 TT)</li>
+                                <li class="mb-1">❌ Meperidina (neurotóxica)</li>
+                                <li class="mb-1">⚠️ Opioides: dose ~20% maior (COMT AG)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>" class="btn btn-primary">
+                    <i class="bi bi-file-earmark-medical me-1"></i>Ver Relatório Completo para Médicos
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== SEÇÃO: MEDICAMENTOS ===== -->
+<div id="section-medications" class="dashboard-section" style="display:none;">
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="bi bi-capsule me-2"></i>Análise de Medicamentos por Categoria</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted mb-3">Como o organismo metaboliza cada medicamento com base no perfil genético. Clique em um medicamento para ver detalhes.</p>
+
+            <?php foreach ($drugsByClass as $className => $classDrugs): ?>
+            <h6 class="mt-3 mb-2 text-primary"><i class="bi bi-tag me-1"></i><?= sanitize($className) ?></h6>
+            <div class="row g-3 mb-3">
+                <?php foreach ($classDrugs as $d): ?>
+                <div class="col-md-6 col-lg-4">
+                    <a href="<?= baseUrl('pages/genomic/drug_detail.php?patient_id=' . $patientId . '&drug=' . urlencode($d['name'])) ?>" class="text-decoration-none">
+                    <div class="card h-100 border-start border-4 <?= $d['worst_status'] === 'risk' ? 'border-danger' : ($d['worst_status'] === 'attention' ? 'border-warning' : 'border-success') ?> drug-card-link">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h6 class="mb-0 text-dark"><?= sanitize($d['name']) ?></h6>
+                                <?= genomicStatusBadge($d['worst_status']) ?>
                             </div>
-                            <div class="d-flex gap-2">
-                                <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?> risco</span><?php endif; ?>
-                                <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?> atenção</span><?php endif; ?>
-                                <span class="badge bg-success"><?= $pnl['normal_count'] ?> normal</span>
+                            <div class="mt-2">
+                                <?php foreach ($d['genes'] as $g): ?>
+                                <div class="d-flex justify-content-between align-items-center py-1 border-top">
+                                    <div>
+                                        <small><strong class="text-dark"><?= $g['gene_symbol'] ?></strong></small>
+                                        <?php if ($g['phenotype']): ?><br><small class="text-muted"><?= sanitize($g['phenotype']) ?></small><?php endif; ?>
+                                    </div>
+                                    <div class="text-end">
+                                        <small><?= genomicStatusIcon($g['status'] ?? 'unknown') ?></small>
+                                        <small class="fw-bold text-dark"><?= $g['patient_genotype'] ?? 'N/D' ?></small>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="text-end mt-2">
+                                <small class="text-primary"><i class="bi bi-arrow-right-circle me-1"></i>Ver detalhes</small>
                             </div>
                         </div>
                     </div>
-                </a>
+                    </a>
+                </div>
+                <?php endforeach; ?>
             </div>
             <?php endforeach; ?>
         </div>
     </div>
 </div>
+
+<!-- ===== SEÇÃO: RISCOS GENÉTICOS ===== -->
+<div id="section-risks" class="dashboard-section" style="display:none;">
+    <div class="card mb-4">
+        <div class="card-header bg-danger text-white">
+            <h5 class="mb-0"><i class="bi bi-shield-exclamation me-2"></i>Riscos Genéticos para Doenças</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted mb-3">Predisposições genéticas identificadas. <strong>NÃO</strong> significam que a doença vai ocorrer — são apenas tendências que merecem acompanhamento.</p>
+            <div class="row g-3">
+                <?php foreach ($riskPanels as $pnl): ?>
+                <div class="col-md-6 col-lg-4">
+                    <a href="<?= baseUrl('pages/genomic/panel.php?patient_id=' . $patientId . '&panel=' . $pnl['code']) ?>" class="text-decoration-none">
+                        <div class="card h-100 drug-card-link">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width:40px;height:40px;background:<?= $pnl['color'] ?>20;">
+                                        <i class="bi <?= $pnl['icon'] ?>" style="color:<?= $pnl['color'] ?>"></i>
+                                    </div>
+                                    <h6 class="mb-0"><?= sanitize($pnl['name']) ?></h6>
+                                </div>
+                                <p class="text-muted small mb-2"><?= sanitize($pnl['description'] ?? 'Análise de predisposições genéticas nesta área.') ?></p>
+                                <div class="d-flex gap-2">
+                                    <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?> risco</span><?php endif; ?>
+                                    <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?> atenção</span><?php endif; ?>
+                                    <span class="badge bg-success"><?= $pnl['normal_count'] ?> normal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== SEÇÃO: ANÁLISE POR GENE ===== -->
+<div id="section-panels" class="dashboard-section" style="display:none;">
+    <div class="card mb-4">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0"><i class="bi bi-grid-3x3 me-2"></i>Análise por Gene (Enzimas e Transportadores)</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted mb-3">
+                Esta seção mostra a análise <strong>gene a gene</strong> — como cada enzima/transportador do organismo está funcionando. 
+                Diferente da aba "Medicamentos" (que olha para cada remédio), aqui olhamos para cada <strong>gene</strong> e entendemos seu impacto global.
+            </p>
+            
+            <div class="row g-3">
+                <?php foreach ($medPanels as $pnl): ?>
+                <div class="col-md-6">
+                    <a href="<?= baseUrl('pages/genomic/panel.php?patient_id=' . $patientId . '&panel=' . $pnl['code']) ?>" class="text-decoration-none">
+                        <div class="card h-100 drug-card-link">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi <?= $pnl['icon'] ?> me-2 fs-4" style="color:<?= $pnl['color'] ?>"></i>
+                                    <div>
+                                        <h6 class="mb-0"><?= sanitize($pnl['name']) ?></h6>
+                                        <small class="text-muted">Análise detalhada de genes e variantes</small>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-2">
+                                    <?php if ($pnl['code'] === 'pharmaco'): ?>
+                                        Enzimas CYP450 (CYP2D6, CYP2C19, CYP3A4, CYP2C9, etc.), transportadores (SLCO1B1, ABCB1) e alvos (VKORC1, DPYD, TPMT). Determina como o corpo processa medicamentos.
+                                    <?php elseif ($pnl['code'] === 'neuro'): ?>
+                                        Genes relacionados a neurotransmissores (COMT, HTR1A, HTR2A, BDNF, FKBP5, DRD2). Influencia resposta a psicofármacos, dor e humor.
+                                    <?php else: ?>
+                                        <?= sanitize($pnl['description'] ?? '') ?>
+                                    <?php endif; ?>
+                                </p>
+                                <div class="d-flex gap-2">
+                                    <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?> alterado</span><?php endif; ?>
+                                    <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?> atenção</span><?php endif; ?>
+                                    <span class="badge bg-success"><?= $pnl['normal_count'] ?> normal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+
+                <?php foreach ($riskPanels as $pnl): ?>
+                <div class="col-md-6">
+                    <a href="<?= baseUrl('pages/genomic/panel.php?patient_id=' . $patientId . '&panel=' . $pnl['code']) ?>" class="text-decoration-none">
+                        <div class="card h-100 drug-card-link">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi <?= $pnl['icon'] ?> me-2 fs-4" style="color:<?= $pnl['color'] ?>"></i>
+                                    <div>
+                                        <h6 class="mb-0"><?= sanitize($pnl['name']) ?></h6>
+                                        <small class="text-muted">Variantes genéticas de risco/predisposição</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?> risco</span><?php endif; ?>
+                                    <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?> atenção</span><?php endif; ?>
+                                    <span class="badge bg-success"><?= $pnl['normal_count'] ?> normal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript para navegação -->
+<script>
+function showSection(section) {
+    // Esconder todas as seções
+    document.querySelectorAll('.dashboard-section').forEach(el => el.style.display = 'none');
+    // Mostrar a seção selecionada
+    document.getElementById('section-' + section).style.display = 'block';
+    // Atualizar botões
+    document.querySelectorAll('.btn-group .btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('btn-' + section).classList.add('active');
+    // Salvar no localStorage
+    localStorage.setItem('genomic_dashboard_tab', section);
+}
+
+// Restaurar última aba visitada
+document.addEventListener('DOMContentLoaded', function() {
+    var lastTab = localStorage.getItem('genomic_dashboard_tab');
+    if (lastTab && document.getElementById('section-' + lastTab)) {
+        showSection(lastTab);
+    }
+});
+</script>
 
 <?php require_once __DIR__ . '/../../includes/footer.php'; ?>
