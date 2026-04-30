@@ -761,6 +761,93 @@ AÇÃO RECOMENDADA:
 CONFIANÇA: ALTA para o PRS. Risco PADRÃO. Sem ação necessária.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+22. DOENÇA INTESTINAL INFLAMATÓRIA — DII (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (PRS padrão MAS contexto GI + autoimune)
+SNPs: 83 variantes analisadas (!) — O MAIOR PRS de todos
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+DII engloba doenças inflamatórias intestinais (Crohn + Colite
+Ulcerativa e outras). Início aos ~15 anos. Causada por fatores
+genéticos + ambientais. Sinais: dor abdominal, sangramento retal,
+cólicas, diarreia, febre, perda de peso.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,26% (0,20% - 0,34%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 11,78% ← ALTA!
+• Outros fatores genéticos: 63,22%
+• Fatores ambientais: 25%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs11209026 (IL23R): score 1.399 — O MAIS ALTO DE TODOS!
+  Homozigoto GG. IL23R é gene CENTRAL em DII/autoimunidade!
+• rs11742570 (intergênico): score 0.361
+• rs10521318 (intergênico): score 0.288
+• rs2155219 (intergênico): score 0.281
+• rs4845604 (RORC): score 0.269 — receptor órfão (imunidade)
+• rs11879191 (CDC37): score 0.255
+• rs3091316 (CCL7): score 0.230 — quimiocina inflamatória!
+• rs7495132 (CRTC3): score 0.252
+
+GENES IMUNOLÓGICOS RELEVANTES:
+• IL23R — Receptor da IL-23 (CENTRAL em DII e autoimunidade!)
+  Score 1.399 = o MAIS ALTO de TODAS as condições analisadas!
+  GG homozigoto. IL23R é alvo terapêutico (ustekinumab, risankizumab)
+• JAK2 (rs10758669 CA) — Via JAK-STAT (alvo: tofacitinib)
+• STAT3 (rs12942547 AG) — Transdutor de sinal imune
+• STAT4 (rs1517352 AC) — Resposta Th1
+• IL2RA (rs12722515 CC) — Receptor de IL-2
+• IL18RAP (rs917997 CC) — Normal neste
+• IL27 (rs26528 TT) — Normal neste
+• FCGR2A (rs1801274 GG) — Normal neste
+• TNFSF15 (rs4246905 TC) — Via TNF (alvo: anti-TNF)
+• SMAD3 (rs17293632 CC) — Via TGF-beta (normal)
+• CD40, CD226, CD6 — Moléculas co-estimulatórias imunes
+• RORC — Receptor que controla Th17 (células pró-inflamatórias)
+• CCL7 — Quimiocina de recrutamento de macrófagos
+
+MINHAS OBSERVAÇÕES:
+1. A Genera classificou como RISCO PADRÃO (0,26%). O PRS em si
+   está dentro da faixa normal.
+2. PORÉM: IL23R score 1.399 é EXTREMAMENTE ALTO. Este gene é o
+   mais importante em DII e artrite psoriásica. Eric tem o
+   genótipo GG (referência neste caso = protetor parcial).
+3. O que isso significa: Eric NÃO tem a variante PROTETORA rara
+   do IL23R (que seria muito protetora). Ele tem o genótipo
+   COMUM (GG) que contribui para o score.
+4. CONTEXTO CRUCIAL para Eric:
+   - Já identificado: ATG16L1 AA (Crohn 2x)
+   - Já identificado: Colite Ulcerativa PRS aumentado
+   - Já identificado: HLA-DQ8+ (celíaca)
+   - DOR ABDOMINAL + BAIXO PESO atuais
+   - Pai com ARTRITE PSORIÁSICA (IL23R também está envolvido!)
+5. O perfil IMUNOLÓGICO do Eric é CONSISTENTE:
+   IL23R + JAK2 + STAT3 + STAT4 + RORC = Via Th17/IL-23
+   Esta via é compartilhada entre DII, psoríase e espondiloartrites.
+   EXPLICA a predisposição familiar (pai com artrite psoriásica).
+
+CONEXÃO COM ARTRITE PSORIÁSICA DO PAI:
+A via IL-23/Th17 é o mecanismo CENTRAL tanto na DII quanto na
+artrite psoriásica. O pai do Eric tem artrite psoriásica. Eric
+herdou variantes nesta via (IL23R, JAK2, STAT3, RORC) que
+predispõem a AMBAS as condições. Isso NÃO significa que vai
+desenvolver, mas explica a predisposição familiar.
+
+AÇÃO RECOMENDADA:
+• Já incluída na INVESTIGAÇÃO PRIORITÁRIA:
+  → Anti-transglutaminase IgA (celíaca)
+  → Calprotectina fecal (DII)
+  → Teste de lactose
+• Se DII confirmada no futuro: terapias anti-IL23 (ustekinumab)
+  e anti-TNF podem ser especialmente eficazes dado o perfil genético
+• Monitorar: dor abdominal persistente, diarreia, sangue nas fezes
+
+CONFIANÇA: ALTA para o PRS. Contexto clínico + familiar ELEVA
+a relevância mesmo com PRS "padrão".
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
