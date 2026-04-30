@@ -1037,6 +1037,45 @@ CONFIANÇA: ALTA para o resultado. Risco PADRÃO. Sem preocupação
 imediata, mas monitorar se DII se confirmar.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+26. CÂNCER DE BEXIGA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco padrão)
+Variantes analisadas: 9
+Fonte: Genera
+
+DESCRIÇÃO:
+Tipo mais comum de câncer do sistema urinário. Ocorre nas células
+que cobrem a bexiga. Principais fatores: tabagismo (o maior!),
+exposição a químicos industriais, obesidade, abuso de analgésicos.
+Risco aumenta com idade (~60 anos). Sinais: sangue na urina,
+dificuldade para urinar, vontade frequente sem conseguir.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 1,12% (0,95% - 1,25%)
+• Classificação: "Risco PADRÃO"
+• Fator genético analisado: 12,30%
+• Fatores ambientais (tabaco, químicos): 70%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO:
+• MYNN (gene de proliferação): score 0.325 — homozigoto CC
+• rs1495741 (detoxificação): score 0.262 — homozigoto AA
+• rs710521: score 0.262 — homozigoto TT
+• CASC11 (RNA regulatório cromossomo 8): score 0.215
+
+PONTOS POSITIVOS:
+• Risco padrão — sem preocupação
+• Eric NÃO fuma (principal fator de risco)
+• Jovem e sem exposição a químicos industriais
+• Fatores ambientais = 70% do risco → comportamento importa mais
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento (16 anos, sem fatores ambientais)
+• NUNCA FUMAR é a melhor prevenção (70% é ambiental/tabaco)
+• Exame de urina de rotina (boa prática)
+
+CONFIANÇA: ALTA. Risco PADRÃO. Sem ação necessária.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
