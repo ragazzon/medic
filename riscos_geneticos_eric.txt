@@ -481,6 +481,59 @@ CONFIANÇA: ALTA para o PRS. Clinicamente relevante para FUTURO
 (>40-50 anos), não para decisões imediatas em adolescente.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+17. CÂNCER DE TIREOIDE (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (risco aumentado + contexto cirurgia maxilar)
+SNPs: 4 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+O câncer de tireoide é o mais comum da região da cabeça e pescoço
+e afeta mais mulheres que homens. A tireoide é uma glândula na
+parte anterior do pescoço, responsável por hormônios que regulam
+o metabolismo. Sinais: nódulos no pescoço, rouquidão, falta de ar.
+A detecção precoce possibilita maior chance de tratamento.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,45% (0,39% - 0,52%)
+• Classificação Genera: "Risco aumentado"
+• Contribuição genética analisada: 5,20%
+• Fatores ambientais: 47%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs6793295 (LRRC34): score 0.414 — ALTO (homozigoto TT!)
+• rs7902587 (intergênico): score 0.344 (heterozigoto CT)
+• rs10069690 (TERT): score 0.182 (heterozigoto CT)
+
+GENES RELEVANTES:
+• TERT — Telomerase (envolvida em vários cânceres)
+  NOTA: Este mesmo SNP (rs10069690 CT) aparece no PRS de
+  câncer de mama. Gene de manutenção de telômeros.
+• LRRC34 — Homozigoto TT = contribuição principal
+
+MINHAS OBSERVAÇÕES:
+1. Risco absoluto de 0,45% é BAIXO em termos absolutos.
+2. Câncer de tireoide é mais comum em mulheres (3:1).
+   Para homens, risco absoluto é AINDA MENOR.
+3. PORÉM: Eric vai fazer CIRURGIA MAXILAR na região de
+   cabeça/pescoço. Isso NÃO causa câncer de tireoide, mas
+   exames de imagem pré-operatórios podem detectar nódulos
+   tireoidianos incidentalmente.
+4. O gene TERT é interessante — aparece tanto em CA mama quanto
+   CA tireoide, sugerindo predisposição a telômeros mais longos
+   (geralmente favorável para longevidade mas pode facilitar
+   proliferação celular).
+
+AÇÃO RECOMENDADA:
+• Palpação de tireoide em exame físico de rotina
+• Se nódulo detectado: USG tireoide + TSH
+• NÃO necessita rastreamento especial em adolescente assintomático
+• Monitorar TSH de rotina (boa prática geral)
+
+CONFIANÇA: ALTA para o PRS. Risco absoluto BAIXO.
+Relevância clínica: MÍNIMA para adolescente masculino.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
