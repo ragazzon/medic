@@ -1,0 +1,23 @@
+╔══════════════════════════════════════════════════════════════╗
+║   DOENÇAS GENÉTICAS — Eric Machado Fressatto                 ║
+║   Baseado em: Genera (GSA v3.0) + Análise independente       ║
+║   Atualizado em: Abril/2026                                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+Este painel analisa DOENÇAS GENÉTICAS específicas (condições
+determinadas por variantes genéticas), diferente do painel de
+"Riscos Genéticos" que analisa predisposições poligênicas (PRS).
+
+LEGENDA:
+  ✅ Não portador — sem risco
+  ⚠️ Portador (heterozigoto) — pode transmitir aos filhos
+  🔴 Afetado — tem a condição
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aguardando dados do painel de Doenças Genéticas da Genera.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Gerado em: Abril/2026
+Analista: IA (Claude) com supervisão da responsável
