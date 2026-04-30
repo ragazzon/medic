@@ -1446,6 +1446,49 @@ AÇÃO RECOMENDADA:
 CONFIANÇA: ALTA. Resultado FAVORÁVEL (reduzido). Genética protetora!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+33. CÂNCER DE PRÓSTATA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco REDUZIDO!)
+Variantes analisadas: 7
+Fonte: Genera
+
+DESCRIÇÃO:
+O câncer de próstata é o 2º mais comum entre homens. Ocorre quando
+células da próstata se dividem sem controle. Maioria diagnosticada
+~65 anos. Sinais: dificuldade para urinar, necessidade constante
+de urinar. Diagnóstico: toque retal, PSA, ultrassom, biópsia.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 4,35% (3,53% - 6,41%)
+• Classificação: "Risco REDUZIDO" ← BOA NOTÍCIA!
+• Fator genético analisado: 5,08%
+• Fatores ambientais: 58%
+
+GENES PROTETORES (sem alelo de risco):
+• HNF1B (rs4430796 GG) — NORMAL! (score 0 = protetor)
+• CASC8 (rs1447295 CC) — NORMAL! (score 0 = protetor)
+  Estes dois são os principais genes de risco = AMBOS NORMAIS!
+
+OBSERVAÇÕES:
+1. Eric tem risco REDUZIDO — genética protetora!
+2. Os 2 genes principais estão NORMAIS (HNF1B e CASC8)
+3. Bisavô teve aumento de próstata (fez cirurgia) — mas aumento
+   benigno (hiperplasia) NÃO é câncer. São coisas diferentes.
+   Hiperplasia benigna é muito comum em homens idosos (>70 anos)
+4. Aumento de próstata no bisavô NÃO eleva significativamente
+   o risco de CÂNCER no Eric (relação fraca + parentesco distante)
+5. 58% é ambiental = dieta e exercício importam mais que genética
+6. Rastreamento com PSA começa aos 50 anos (ou 45 se negro/HF)
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento agora (16 anos!)
+• Exame de PSA + toque retal a partir dos 50 anos
+• Dieta saudável (menos gordura saturada = proteção)
+• Exercício regular (protetor)
+
+CONFIANÇA: ALTA. Resultado FAVORÁVEL (risco reduzido).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
