@@ -912,6 +912,83 @@ mostra ATG16L1 AA que ELEVA o risco real. Combinado com sintomas
 = MODERADO com indicação de investigação.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+24. DIABETES TIPO 1 (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (PRS padrão + TIO tem DM1 + perfil autoimune)
+SNPs: 12 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+A diabetes tipo 1 aparece principalmente na infância/adolescência.
+O corpo produz pouca ou nenhuma insulina. Representa 5-10% dos
+diagnósticos de diabetes. Sinais: vontade constante de urinar,
+sede excessiva, perda de peso, dor abdominal, cansaço.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,34% (0,15% - 0,61%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 9,42%
+• Outros fatores genéticos: 62,58%
+• Fatores ambientais: 28%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs12722495 (IL2RA): score 0.952 (homozigoto TT!) — ALTO!
+• rs3087243 (CTLA4): score 0.365 (homozigoto AA!)
+• rs1004446 (INS-IGF2): score 0.336 (heterozigoto GA)
+• rs4788084 (NUPR1): score 0.280 (homozigoto CC)
+• rs2292239 (ERBB3): score 0.262 (heterozigoto TG)
+• rs1701704 (IKZF4): score 0.223 (heterozigoto TG)
+
+GENES RELEVANTES:
+• IL2RA — Receptor de IL-2 (CD25). Score 0.952! Gene CENTRAL
+  na regulação imune. Homozigoto TT. CTLA4 + IL2RA = via de
+  TOLERÂNCIA IMUNE (previne autoimunidade).
+• CTLA4 — Checkpoint imune (mesmo alvo do ipilimumab em câncer).
+  AA homozigoto = contribuição para perfil autoimune.
+• INS-IGF2 — Gene da insulina/IGF2. GA heterozigoto.
+• PTPN22 (rs2476601 GG) — NORMAL! Gene de autoimunidade (sem risco)
+• IFIH1 (rs1990760 TT) — NORMAL! Receptor viral (sem risco)
+• CD226 (rs763361 TC) — Mesmo gene que aparece na DII!
+
+MINHAS OBSERVAÇÕES:
+1. A Genera classificou como RISCO PADRÃO (0,34%).
+2. PORÉM: CONTEXTO FAMILIAR IMPORTANTE:
+   - TIO DO ERIC TEM DIABETES TIPO 1!
+   - AVÔ PATERNO TEM DIABETES TIPO 2
+   - DM1 tem forte componente hereditário (~60-70% genético)
+   - Risco para parentes de 1º grau de DM1: ~6% (vs 0,4% geral)
+   - Para parentes de 2º grau (tio): ~2-3%
+3. IL2RA score 0.952 + CTLA4 AA = perfil de REGULAÇÃO IMUNE
+   alterado. Estes genes controlam TOLERÂNCIA (impedir que o
+   sistema imune ataque o próprio corpo).
+4. CTLA4 + IL2RA + CD226 = mesmos genes envolvidos em MÚLTIPLAS
+   doenças autoimunes (DM1, celíaca, DII, tireoide).
+5. CONEXÃO com perfil autoimune geral:
+   - CD226 aparece na DII (item 22)
+   - IL2RA aparece na DII (item 22)
+   - CTLA4 está na via de regulação de tolerância
+   - Eric TEM HLA-DQ8+ (celíaca + DM1!)
+   - HLA-DQ8 é marcador TANTO de celíaca QUANTO de DM1!
+
+ACHADO IMPORTANTE:
+HLA-DQ8 positivo (item 2) + IL2RA TT + CTLA4 AA + TIO com DM1 =
+Eric tem predisposição genética E familiar para DM1.
+DM1 geralmente aparece na infância (5-15 anos). Eric tem 16 anos
+e NÃO desenvolveu = provavelmente NÃO vai. Mas monitorar.
+
+AÇÃO RECOMENDADA:
+• Glicemia de jejum anual (boa prática)
+• Se sintomas (sede excessiva, urinar muito, perder peso):
+  → Glicemia + HbA1c + anti-GAD + anti-IA2 URGENTE
+• Monitorar especialmente se desenvolver doença autoimune
+  (celíaca → DM1 é associação CLÁSSICA: 5-8% dos celíacos
+  desenvolvem DM1)
+• Se celíaca for confirmada: rastreamento DM1 mais frequente
+
+CONFIANÇA: ALTA para o PRS. Com histórico familiar (tio) e
+perfil autoimune (HLA-DQ8, CTLA4, IL2RA) = MODERADO.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
