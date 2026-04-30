@@ -116,7 +116,83 @@ INSÔNIA:
   ⚠️ Melatonina — efeito curto (CYP1A2 rápido)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ RESULTADOS NORMAIS (pode usar sem restrição farmacogenética)
+🔬 RISCOS GENÉTICOS IDENTIFICADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DADOS CLÍNICOS: 175cm, 50kg (IMC 16.3 = BAIXO PESO)
+Seletividade alimentar (TEA): dieta restrita a massas + laticínios
+Dores abdominais recorrentes
+
+⚠️ INTOLERÂNCIA À LACTOSE (rs4988235 GG) — CONFIRMADA GENETICAMENTE
+   → NÃO possui persistência da lactase
+   → Consome muito leite = provável CAUSA das dores abdominais!
+   → Confiança: MUITO ALTA (1A)
+   ★ AÇÃO: Investigar com teste de hidrogênio expirado ou
+     suspensão de lactose por 2 semanas como teste terapêutico
+
+⚠️ DOENÇA CELÍACA — HLA-DQ8 positivo (rs7454108 TT)
+   → Predisposição genética presente
+   → Dieta restrita a MASSAS (trigo/glúten!) + baixo peso + dor abdominal
+   → Confiança: 2A (proxy, não tipagem HLA direta)
+   ★ AÇÃO URGENTE: Solicitar anti-transglutaminase IgA + IgA total
+     ANTES de qualquer dieta sem glúten (senão falso negativo!)
+
+⚠️ DOENÇA DE CROHN / DII (ATG16L1 rs2241880 AA + NKX2-3 GA)
+   → Homozigoto risco para Crohn (2x risco populacional)
+   → Sintomas compatíveis: dor abdominal + baixo peso
+   → Confiança: 2A
+   ★ AÇÃO: Se anti-tTG negativo, considerar calprotectina fecal
+     para descartar inflamação intestinal
+
+⚠️ PSORÍASE / ARTRITE PSORIÁSICA (HLA-C rs12191877 CT)
+   → Heterozigoto — risco moderado
+   → PAI TEM ARTRITE PSORIÁSICA (histórico familiar forte!)
+   → Confiança: 2B para o SNP, mas com HF = risco REAL elevado
+   ★ AÇÃO: Monitorar lesões cutâneas e dores articulares.
+     Se artralgia, encaminhar reumatologista precocemente.
+
+⚠️ ARTRITE REUMATOIDE (HLA-DRB1 rs6457617 CT)
+   → Heterozigoto — risco moderado
+   → Combinado com HLA-C para psoríase = perfil autoimune
+   → Confiança: 2B
+
+⚠️ ASMA (GSDMB rs2305480 GA + 17q21 rs7216389 CT)
+   → Risco moderado (~1.3-1.5x)
+   → AVÓ MATERNA TEM ASMA (histórico familiar!)
+   → ADRB2 GA = resposta intermediária ao salbutamol
+   → Confiança: 2A
+   ★ AÇÃO: Se desenvolver asma, beta-2 agonistas podem
+     ter resposta subótima. Considerar corticoides inalatórios.
+
+ℹ️ MTHFR A1298C heterozigoto (rs1801131 TG)
+   → Atividade ~80% (C677T é NORMAL)
+   → Pode contribuir para absorção subótima de folato
+   → Relevante no contexto de dieta restrita + baixo peso
+   ★ AÇÃO: Suplementar ácido fólico/L-metilfolato
+
+ℹ️ KCNJ11 heterozigoto (rs5219 TC) — Diabetes tipo 2
+   → Risco leve (+15%) — NÃO significativo em adolescente magro
+   → Monitorar apenas se ganhar peso no futuro
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⭐ INVESTIGAÇÃO PRIORITÁRIA (contexto clínico + genética)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Eric tem: baixo peso (IMC 16.3) + dor abdominal + seletividade
+alimentar (massas + leite) + predisposição genética para:
+  1. Intolerância à lactose (CONFIRMADA geneticamente)
+  2. Doença celíaca (HLA-DQ8+)
+  3. Doença de Crohn (ATG16L1 homozigoto)
+
+→ SOLICITAR:
+  • Anti-transglutaminase IgA + IgA total (celíaca)
+  • Calprotectina fecal (inflamação intestinal)
+  • Teste de hidrogênio expirado (intolerância lactose)
+  • Hemograma + ferritina + B12 + folato (carências)
+  • Considerar: endoscopia/colonoscopia se exames alterados
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ RESULTADOS NORMAIS (sem risco genético aumentado)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 • G6PD TT (normal) — antibióticos, AINEs, anestésicos OK
