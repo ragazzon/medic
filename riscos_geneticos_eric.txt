@@ -989,6 +989,54 @@ CONFIANÇA: ALTA para o PRS. Com histórico familiar (tio) e
 perfil autoimune (HLA-DQ8, CTLA4, IL2RA) = MODERADO.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+25. CÂNCER COLORRETAL (câncer de intestino grosso)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco padrão)
+Variantes analisadas: 13
+Fonte: Genera
+
+DESCRIÇÃO:
+O câncer colorretal atinge o intestino grosso (cólon e reto).
+É um dos mais frequentes e afeta principalmente pessoas >50 anos.
+Fatores de risco: álcool, carne vermelha, embutidos, DII.
+Sinais aparecem tarde: diarreia/prisão de ventre, sangue nas fezes.
+Acompanhamento regular é importante para detecção precoce.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 4,00% (3,49% - 4,37%)
+• Classificação: "Risco PADRÃO"
+• Fator genético analisado: 7%
+• Fatores ambientais (dieta, álcool): 65%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO:
+• TERT (gene da telomerase): score 0.167 — mesmo gene do
+  câncer de tireoide e mama
+• SH2B3: score 0.145 — gene de sinalização celular
+• CCND2 (ciclina D2): score 0.140 — controla ciclo celular
+• GREM1: score 0.128 — regulador de crescimento intestinal
+• CCAT2: score 0.128 — RNA não-codificante do cromossomo 8
+
+PONTOS POSITIVOS (proteção):
+• MLH1 GG (normal) — SEM síndrome de Lynch (câncer hereditário)
+• SMAD7 CC (normal neste) — gene supressor de tumor intestinal
+• Eric é jovem e magro — fatores protetores
+
+CONEXÃO COM O QUE JÁ SABEMOS:
+• Eric tem predisposição para inflamação intestinal (Crohn, DII)
+• Inflamação intestinal CRÔNICA aumenta risco de câncer colorretal
+• Se DII for confirmada: colonoscopia de rastreamento periódica
+• GREM1 está alterado — gene específico do intestino
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento agora (16 anos, risco padrão)
+• Se DII/Crohn for confirmado: colonoscopia de vigilância
+• Dieta rica em fibras, pobre em carnes processadas (boa prática)
+• Colonoscopia de rastreamento a partir dos 45 anos (protocolo geral)
+
+CONFIANÇA: ALTA para o resultado. Risco PADRÃO. Sem preocupação
+imediata, mas monitorar se DII se confirmar.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
