@@ -343,6 +343,56 @@ O autismo do Eric é melhor explicado por combinação de:
 CONFIANÇA: 3 (associação fraca). Clinicamente IRRELEVANTE.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+15. COLITE ULCERATIVA (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (no contexto GI do Eric)
+SNPs: 15 variantes analisadas
+Fonte: Genera PRS
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,52% (0,40% - 0,68%)
+• Classificação Genera: "Risco aumentado"
+• Contribuição genética analisada: 3,24%
+• Fatores ambientais: 46%
+• Outros fatores genéticos: 50,76%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs6426833 (intergênico): score 0.470 — ALTO (homozigoto AA)
+• rs561722 (NXPE1): score 0.227
+• rs17229285 (intergênico): score 0.221
+• rs7210086 (SLC39A11): score 0.211
+• rs2816958 (NR5A2): score 0.207
+• rs6017342 (HNF4A): score 0.205 — gene relevante!
+• rs4728142 (IRF5): score 0.198 — gene imunológico!
+
+GENES RELEVANTES IDENTIFICADOS:
+• IRF5 — Fator regulador de interferon (autoimunidade)
+• NFKB1 — Via inflamatória central
+• HNF4A — Fator nuclear hepático (barreira intestinal)
+• ITGAL — Integrina (migração leucocitária)
+• GNA12 — Sinalização celular intestinal
+
+MINHAS OBSERVAÇÕES:
+1. O risco ABSOLUTO é baixo (0,52%), MAS no contexto do Eric:
+   - Já tem ATG16L1 AA (risco 2x para Crohn)
+   - Já tem sintomas GI (dor abdominal)
+   - Colite ulcerativa e Crohn são DII (mesma família)
+   - IRF5 e NFKB1 são genes de AUTOIMUNIDADE
+2. Combinando ATG16L1 AA + Colite PRS elevado + HLA-DQ8+ =
+   PERFIL INFLAMATÓRIO INTESTINAL consistente
+3. A presença de genes autoimunes (IRF5, NFKB1) reforça o
+   perfil autoimune geral (psoríase + artrite + celíaca + DII)
+
+AÇÃO RECOMENDADA:
+• Já incluída na investigação prioritária:
+  → Calprotectina fecal (marcador de DII)
+  → Se elevada: colonoscopia
+• Monitorar: diarreia com sangue, urgência fecal, tenesmo
+
+CONFIANÇA: ALTA para o PRS. Risco absoluto baixo MAS clinicamente
+relevante dado o contexto GI + perfil autoimune do Eric.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
