@@ -156,6 +156,19 @@ CLASSIFICAÇÃO: 🟢 BAIXO (para Eric especificamente)
 SNPs: 60 variantes analisadas
 Fonte: Genera PRS
 
+DESCRIÇÃO DA DOENÇA:
+O câncer de mama, tipo de câncer mais comum entre as mulheres, é
+causado pela multiplicação desordenada das células da mama, região
+onde se localizam as glândulas responsáveis pela produção de leite.
+Histórico familiar ou a presença de mutações genéticas específicas
+podem ser fatores de risco para o desenvolvimento do câncer de mama.
+Fatores ambientais, como idade superior aos 50 anos, a longa
+exposição a hormônios femininos e o excesso de peso, podem colaborar
+para o seu surgimento. Sinais e sintomas da doença incluem nódulos
+nas mamas, axilas e pescoço, alterações nos mamilos e dores e
+vermelhidão na região dos seios. O autoexame e a mamografia podem
+ajudar a identificar a presença da doença.
+
 RESULTADO GENERA:
 • Risco até 95 anos: 13,33% (11,65% - 14,86%)
 • Classificação Genera: "Risco aumentado"
