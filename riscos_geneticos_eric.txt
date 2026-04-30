@@ -349,6 +349,18 @@ CLASSIFICAÇÃO: 🟡 MODERADO (no contexto GI do Eric)
 SNPs: 15 variantes analisadas
 Fonte: Genera PRS
 
+DESCRIÇÃO DA DOENÇA:
+A colite ulcerativa é um tipo de inflamação crônica não contagiosa
+que afeta a mucosa que reveste o intestino grosso. Entre os seus
+principais sinais e sintomas estão as cólicas, febre e crises
+frequentes de diarreia acompanhada de sangue, muco ou pus nas fezes.
+A perda de peso e a anemia também são sinais recorrentes. Ainda não
+se sabe com precisão quais são as causas da colite ulcerativa, mas
+há estudos que relacionam a ela fatores genéticos e distúrbios do
+sistema imunológico. O diagnóstico da doença é feito através da
+colonoscopia. Apesar de não haver cura, existem tratamentos que
+ajudam na sua remissão.
+
 RESULTADO GENERA:
 • Risco até 95 anos: 0,52% (0,40% - 0,68%)
 • Classificação Genera: "Risco aumentado"
