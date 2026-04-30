@@ -279,15 +279,15 @@ require_once __DIR__ . '/../../includes/header.php';
                 <table class="table table-sm table-bordered mb-0">
                     <thead class="table-light"><tr><th>Condição</th><th>Evidência</th><th>Contexto</th></tr></thead>
                     <tbody>
-                        <tr><td><strong>Doença de Crohn</strong></td><td>ATG16L1 AA (2x risco)</td><td>Sintomas GI atuais</td></tr>
-                        <tr><td><strong>Psoríase / Art. Psoriásica</strong></td><td>HLA-C CT</td><td>Pai tem!</td></tr>
-                        <tr><td><strong>Asma</strong></td><td>17q21 + ADRB2 GA</td><td>Avó materna tem</td></tr>
-                        <tr><td><strong>Colite Ulcerativa</strong></td><td>PRS aumentado</td><td>Perfil autoimune</td></tr>
-                        <tr><td><strong>Fibrilação Atrial</strong></td><td>PRS 20,55%</td><td>Doença de idosos (futuro)</td></tr>
-                        <tr><td><strong>Melanoma</strong></td><td>SLC45A2 GG (pele clara)</td><td>Avô teve CA pele!</td></tr>
-                        <tr><td><strong>Doença Coronariana</strong></td><td>PRS reduzido MAS</td><td>Avô infarto + avó AVC</td></tr>
-                        <tr><td><strong>Diabetes Tipo 1</strong></td><td>IL2RA + CTLA4 + HLA-DQ8</td><td>Tio tem DM1</td></tr>
-                        <tr><td><strong>Basocelular</strong></td><td>PRS padrão</td><td>Avô CA pele + pele clara</td></tr>
+                        <tr><td><strong>Doença de Crohn</strong></td><td>Gene de autofagia intestinal alterado (2x risco)</td><td>Tem sintomas intestinais agora</td></tr>
+                        <tr><td><strong>Psoríase / Artrite Psoriásica</strong></td><td>Gene do sistema imune alterado</td><td>Pai tem artrite psoriásica!</td></tr>
+                        <tr><td><strong>Asma</strong></td><td>Genes de asma + resposta ao salbutamol intermediária</td><td>Avó materna tem asma</td></tr>
+                        <tr><td><strong>Colite Ulcerativa</strong></td><td>Risco poligênico aumentado</td><td>Perfil autoimune/inflamatório</td></tr>
+                        <tr><td><strong>Fibrilação Atrial</strong></td><td>Risco poligênico 20,55%</td><td>Doença de idosos (monitorar no futuro)</td></tr>
+                        <tr><td><strong>Melanoma (câncer de pele)</strong></td><td>Gene de pele clara confirmado</td><td>Avô teve câncer de pele!</td></tr>
+                        <tr><td><strong>Doença Coronariana</strong></td><td>Genética protetora, MAS...</td><td>Avô teve infarto + avó morreu de AVC</td></tr>
+                        <tr><td><strong>Diabetes Tipo 1</strong></td><td>Genes de regulação imune alterados</td><td>Tio tem diabetes tipo 1</td></tr>
+                        <tr><td><strong>Carcinoma Basocelular</strong></td><td>Risco padrão pela genética</td><td>Avô teve câncer de pele + pele muito clara</td></tr>
                     </tbody>
                 </table>
             </div>
