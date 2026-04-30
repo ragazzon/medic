@@ -1310,6 +1310,89 @@ CONFIANÇA: ALTA para minha avaliação. DISCORDO da classificação
 "reduzido" da Genera porque o HLA-DQ8+ não foi captado pelo PRS.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+31. DOENÇA ARTERIAL CORONARIANA (veias entupidas do coração)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (PRS reduzido MAS histórico familiar PESADO!)
+Variantes analisadas: 19
+Fonte: Genera
+
+DESCRIÇÃO:
+Doença causada pelo acúmulo de gordura nas artérias do coração,
+reduzindo o fluxo de sangue. Pode levar a infarto. Fatores:
+hipertensão, diabetes, colesterol alto, obesidade, tabagismo,
+sedentarismo. Sinais: dor/pressão no peito, falta de ar. É a
+principal causa de morte no mundo.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 15,02% (11,80% - 18,70%)
+• Classificação: "Risco REDUZIDO"
+• Fator genético analisado: 3,43% ← BAIXO
+• Fatores ambientais: 76,7% ← MUITO ALTO!
+
+VARIANTES — MUITAS NORMAIS (proteção genética):
+• LPA (rs3798220 TT): score 0 — NORMAL! Gene da lipoproteína(a)
+• CDKN2B-AS1 (rs4977574 AA): score 0 — NORMAL! (9p21, o mais
+  importante para doença coronariana)
+• LPA + 9p21 normais = perfil PROTETOR
+
+VARIANTES COM ALGUMA CONTRIBUIÇÃO:
+• PLPP3 (rs17114036 AA): score 0.314
+• MIA3 (rs17465637 CC): score 0.262
+• CNNM2 (rs12413409 GG): score 0.227
+
+PONTOS POSITIVOS (genética do Eric):
+• Gene 9p21 (CDKN2B-AS1) NORMAL — o mais replicado em doença
+  coronariana está sem risco!
+• LPA (lipoproteína a) NORMAL — sem risco genético de colesterol
+• F5 Leiden e F2 Protrombina NORMAIS (sem trombose)
+• Eric é MAGRO (IMC 16.3) — sem obesidade
+• Não fuma, é jovem
+
+⚠️ POR QUE ELEVEI PARA MODERADO (apesar de PRS reduzido):
+O PRS do Eric é FAVORÁVEL (genética protetora), MAS o histórico
+familiar é MUITO PESADO:
+• AVÔ PATERNO: infarto + veias entupidas
+• Família paterna: TODOS obesos (fator de risco)
+• AVÓ MATERNA: morreu de AVC
+• Tios maternos: vários tiveram AVC
+• Mãe/avô materno: "veias entupidas"
+
+Isso sugere que existem fatores genéticos NÃO captados pelo PRS
+OU que os fatores ambientais da família (obesidade, dieta) foram
+os causadores. Como Eric é MAGRO e a família MATERNA é magra,
+ele provavelmente herdou o perfil magro da mãe.
+
+OBSERVAÇÃO IMPORTANTE:
+76,7% do risco é AMBIENTAL! Isso significa que:
+• Dieta saudável = principal proteção
+• Exercício regular = proteção
+• NÃO fumar = proteção
+• Manter peso saudável = proteção
+• Eric ATUALMENTE está protegido (magro, jovem, sem obesidade)
+
+PORÉM: Eric tem perfil de risco de FUTURO:
+• Fibrilação atrial (item 16) = risco cardiovascular a longo prazo
+• NOS1AP CT = QTc pode complicar se usar medicamentos cardíacos
+• VKORC1 TT = se precisar anticoagular, usar DOACs
+• Se ganhar peso: risco pode se elevar
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento cardiovascular agora (16 anos, magro)
+• Manter hábitos saudáveis (exercício, dieta)
+• Perfil lipídico (colesterol) a partir dos 20 anos
+• Monitorar pressão arterial de rotina
+• Se ganhar peso no futuro: atenção especial (família paterna obesa)
+• NUNCA fumar (76% é ambiental!)
+
+CONEXÃO COM FARMACOGENÉTICA:
+• SLCO1B1 TC → Se colesterol alto: rosuvastatina preferida
+• VKORC1 TT → Se precisar anticoagular: DOACs (não varfarina)
+• CYP2C19 *17 → Clopidogrel FUNCIONA BEM (rápido = bom para este)
+
+CONFIANÇA: ALTA para PRS (resultado favorável). Elevei para MODERADO
+pelo histórico familiar cardiovascular pesado. Monitorar a longo prazo.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
