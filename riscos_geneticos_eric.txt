@@ -602,6 +602,55 @@ CONFIANÇA: ALTA para o PRS (risco padrão). ELEVEI para MODERADO
 pelo contexto familiar + fenótipo (pele clara) + sexo masculino.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+19. LINFOMA DE HODGKIN (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco padrão)
+SNPs: 4 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+Linfoma de Hodgkin (LH) é um câncer do sistema linfático. Surge
+quando um linfócito B se transforma em célula maligna. Mais comum
+entre 15-39 anos e >75 anos. Homens têm maior propensão. Sinais:
+gânglios inchados, tosse, falta de ar, febre, suor noturno, perda
+de peso, coceira no corpo.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 0,11% (0,08% - 0,14%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 5,41%
+• Fatores ambientais: 44%
+
+VARIANTES NO ERIC:
+• rs6903608 (HLA-DRB9): score 0.482 (heterozigoto CT)
+• rs3806624 (intergênico): score 0.462 (homozigoto GG)
+• rs1432295 (LINC01185): score 0.215 (heterozigoto GA)
+• rs2019960 (PVT1): score 0 (TT = normal neste)
+
+GENES RELEVANTES:
+• HLA-DRB9 — Região HLA (sistema imune). NOTA: Eric já tem
+  múltiplos HLA de risco autoimune. O HLA-DRB9 CT está no
+  contexto de um perfil HLA complexo.
+• PVT1 — Eric TT = NORMAL neste (sem alelo de risco C)
+
+MINHAS OBSERVAÇÕES:
+1. Risco PADRÃO (0,11%) — não há preocupação específica.
+2. Eric está na faixa etária de maior incidência (15-39 anos)
+   mas o risco absoluto é MUITO BAIXO.
+3. O LH está associado a doenças autoimunes. Eric TEM perfil
+   autoimune (HLA-C, HLA-DRB1, HLA-DQ8) — monitorar se
+   desenvolver doença autoimune ativa.
+4. A Genera mencionou "doenças autoimunes" como fator de risco.
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento específico
+• Monitorar: gânglios inchados persistentes, febre sem causa,
+  suor noturno excessivo, perda de peso inexplicada
+• Se desenvolver doença autoimune ativa: monitoramento mais atento
+
+CONFIANÇA: ALTA para o PRS. Risco PADRÃO. Sem ação necessária.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
