@@ -706,6 +706,61 @@ AÇÃO RECOMENDADA:
 CONFIANÇA: ALTA para o PRS. Risco PADRÃO. Sem ação necessária.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+21. GOTA (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco padrão + adolescente magro)
+SNPs: 4 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+A gota é uma doença inflamatória causada pela sobrecarga de ácido
+úrico no sangue. Quando os rins não conseguem eliminar o excesso,
+ele se acumula nas articulações causando crises agudas de artrite.
+Afeta principalmente pés, joelhos, tornozelos, mãos e punhos.
+Fatores ambientais (dieta, diuréticos) = 90% do risco!
+
+RESULTADO GENERA:
+• Risco até 95 anos: 11,49% (7,03% - 17,01%)
+• Classificação Genera: "Risco PADRÃO"
+• Contribuição genética analisada: 6,66%
+• Fatores ambientais: 90% ← DIETA É O PRINCIPAL!
+
+VARIANTES NO ERIC:
+• rs2188380 (LOC105369980): score 1.119 (homozigoto TT!) — ALTO
+• rs4073582 (CNIH2): score 1.014 (homozigoto GG!) — ALTO
+• rs1260326 (GCKR): score 0.307 (heterozigoto TC)
+• rs2728125 (PKD2): score 0 (AA = normal)
+
+GENES RELEVANTES:
+• GCKR — Glucoquinase reguladora (metabolismo de glicose/frutose,
+  contribui para produção de ácido úrico). TC = heterozigoto.
+• PKD2 — Eric AA = NORMAL (sem alelo de risco G)
+
+MINHAS OBSERVAÇÕES:
+1. Risco PADRÃO (11,49%) — sem preocupação atual.
+2. Os scores individuais são ALTOS (1.119 e 1.014) mas como
+   o PKD2 (principal gene de gota) é NORMAL (AA), o PRS total
+   ficou padrão.
+3. Eric é MAGRO (IMC 16.3) — gota está fortemente associada a
+   obesidade, dieta rica em purinas e álcool. NENHUM desses
+   fatores se aplica ao Eric atualmente.
+4. 90% é fator ambiental! Dieta é o principal.
+5. PORÉM: se Eric desenvolver artrite psoriásica (pai tem!),
+   o ácido úrico pode se elevar. Monitorar ácido úrico se
+   dores articulares aparecerem.
+
+CONEXÃO COM FARMACOGENÉTICA:
+• Alopurinol (antigotoso): ABCG2 GG = normal (pode usar)
+• Hidroclorotiazida pode elevar ácido úrico (menor resposta Genera)
+
+AÇÃO RECOMENDADA:
+• NÃO necessita rastreamento específico para adolescente magro
+• Monitorar ácido úrico se: ganho de peso OU dores articulares
+• Manter dieta equilibrada (boa prática geral)
+
+CONFIANÇA: ALTA para o PRS. Risco PADRÃO. Sem ação necessária.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
