@@ -1156,6 +1156,43 @@ CONFIANÇA: ALTA para o PRS. ELEVEI para MODERADO pelo contexto
 (SLC45A2 GG + avô com CA pele + pele clara visível).
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+28. MOLÉSTIA DE DUPUYTREN (contratura da mão)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟢 BAIXO (risco REDUZIDO!)
+Variantes analisadas: 4
+Fonte: Genera
+
+DESCRIÇÃO:
+Doença hereditária que afeta as palmas das mãos e dedos. Surgem
+nódulos e cordões fibrosos que impedem de esticar os dedos (anelar
+e mínimo principalmente). Mais comum em homens >40 anos. Fatores:
+genética, alcoolismo, tabagismo, diabetes. Casos avançados podem
+precisar de cirurgia.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 3,79% (3,15% - 4,42%)
+• Classificação: "Risco REDUZIDO" ← Boa notícia!
+• Fator genético analisado: 6,76%
+• Fatores ambientais: 20%
+
+VARIANTES — TODAS NORMAIS (sem alelo de risco):
+• rs7524102 AA = normal (sem alelo G)
+• rs16879765 CC = normal (sem alelo T)
+• rs11672517 GG = normal (sem alelo A)
+• rs6519955 GG = normal (sem alelo T)
+
+OBSERVAÇÕES:
+• Eric tem risco REDUZIDO — abaixo da média!
+• Nenhuma das 4 variantes de risco está presente
+• Isso é uma BOA NOTÍCIA (especialmente considerando a cirurgia
+  maxilar — não há risco aumentado de fibrose nas mãos)
+• Relevante para o PAI (que tem artrite psoriásica nas mãos?)
+
+AÇÃO: Nenhuma necessária. Risco abaixo da média.
+
+CONFIANÇA: ALTA. Resultado FAVORÁVEL.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
