@@ -20,6 +20,47 @@ if (!$panel) {
 }
 $results = getPanelResults($patientId, $panelCode);
 
+// Dicionário de nomes claros para genes (para quem não é médico)
+$geneNames = [
+    'ACE' => 'Enzima Conversora de Angiotensina (controle da pressão)',
+    'ADD1' => 'Alfa-Aducina (sensibilidade ao sal)',
+    'ADRB2' => 'Receptor Beta-2 (resposta ao salbutamol/broncodilatadores)',
+    'AGT' => 'Angiotensinogênio (pressão arterial)',
+    'F2' => 'Protrombina (coagulação do sangue)',
+    'F5' => 'Fator V de Leiden (risco de trombose)',
+    'VKORC1' => 'Alvo da Varfarina (sensibilidade a anticoagulantes)',
+    'CYP2C9' => 'Enzima do Fígado CYP2C9 (metaboliza anti-inflamatórios e varfarina)',
+    'CYP2C19' => 'Enzima do Fígado CYP2C19 (metaboliza omeprazol, antidepressivos)',
+    'CYP2D6' => 'Enzima do Fígado CYP2D6 (metaboliza 40+ medicamentos)',
+    'CYP3A4' => 'Enzima do Fígado CYP3A4 (metaboliza maioria dos medicamentos)',
+    'CYP3A5' => 'Enzima do Fígado CYP3A5 (tacrolimo, midazolam)',
+    'CYP1A2' => 'Enzima do Fígado CYP1A2 (metaboliza cafeína, melatonina)',
+    'SLCO1B1' => 'Transportador Hepático OATP1B1 (estatinas/colesterol)',
+    'DPYD' => 'Enzima DPD (metaboliza quimioterápicos 5-FU)',
+    'TPMT' => 'Enzima TPMT (metaboliza imunossupressores)',
+    'COMT' => 'Enzima COMT (degrada dopamina — dor e humor)',
+    'HTR1A' => 'Receptor de Serotonina 1A (resposta a antidepressivos)',
+    'HTR2A' => 'Receptor de Serotonina 2A (resposta a antidepressivos)',
+    'BDNF' => 'Fator Neurotrófico BDNF (crescimento neuronal)',
+    'FKBP5' => 'Proteína FKBP5 (eixo do estresse)',
+    'DRD2' => 'Receptor de Dopamina D2 (resposta a antipsicóticos)',
+    'OPRM1' => 'Receptor Opioide Mu (resposta à morfina/opioides)',
+    'MTHFR' => 'Enzima MTHFR (metabolismo do ácido fólico)',
+    'MTRR' => 'Enzima MTRR (reciclagem de vitamina B12)',
+    'ABCB1' => 'Transportador P-glicoproteína (barreira cerebral)',
+    'G6PD' => 'Enzima G6PD (proteção dos glóbulos vermelhos)',
+    'NOS1AP' => 'Proteína NOS1AP (intervalo QT do coração)',
+    'MC4R' => 'Receptor MC4R (controle do apetite/peso)',
+    'HTR2C' => 'Receptor de Serotonina 2C (ganho de peso com antipsicóticos)',
+    'CLOCK' => 'Gene CLOCK (ritmo circadiano/sono)',
+    'ACTN3' => 'Proteína Alfa-Actinina 3 (fibras musculares rápidas)',
+    'COL1A1' => 'Colágeno Tipo 1 (ossos e tendões)',
+    'HLA-B' => 'Antígeno HLA-B (reações alérgicas graves a medicamentos)',
+    'TCF7L2' => 'Fator TCF7L2 (risco de diabetes tipo 2)',
+    'GNB3' => 'Subunidade Beta-3 da Proteína G (resposta a diuréticos)',
+    'SLC6A4' => 'Transportador de Serotonina (resposta a ISRS)',
+];
+
 // Debug: check if patient has genotype data
 $totalSnps = $pdo->prepare('SELECT COUNT(*) FROM patient_genotypes WHERE patient_id=?');
 $totalSnps->execute([$patientId]);
@@ -53,7 +94,7 @@ require_once __DIR__ . '/../../includes/header.php';
 <div class="d-flex justify-content-between align-items-start mb-2">
     <div>
         <h5 class="mb-0"><?= $r['gene_symbol'] ?></h5>
-        <small class="text-muted"><?= $r['gene_name'] ?? $r['variant_name'] ?? '' ?></small>
+        <small class="text-primary fw-bold"><?= $geneNames[$r['gene_symbol']] ?? ($r['gene_name'] ?? $r['variant_name'] ?? '') ?></small>
         <?php if ($r['gene_desc'] ?? ''): ?><br><small class="text-muted fst-italic"><?= sanitize($r['gene_desc']) ?></small><?php endif; ?>
     </div>
     <?= genomicStatusBadge($status) ?>
