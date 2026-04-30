@@ -4,18 +4,123 @@
 ║   Atualizado em: Abril/2026                                  ║
 ╚══════════════════════════════════════════════════════════════╝
 
-Este painel analisa DOENÇAS GENÉTICAS específicas (condições
-determinadas por variantes genéticas), diferente do painel de
-"Riscos Genéticos" que analisa predisposições poligênicas (PRS).
+Este painel verifica se Eric é PORTADOR de doenças genéticas
+hereditárias. Doenças recessivas precisam de 2 cópias do gene
+alterado para se manifestar. Portadores (1 cópia) não têm a
+doença mas podem transmitir aos filhos.
 
 LEGENDA:
-  ✅ Não portador — sem risco
-  ⚠️ Portador (heterozigoto) — pode transmitir aos filhos
-  🔴 Afetado — tem a condição
+  ✅ NÃO portador — sem risco, não transmite
+  ⚠️ Portador (heterozigoto) — saudável mas pode transmitir
+  🔴 Afetado (homozigoto) — tem a condição
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESULTADOS — ANÁLISE INDEPENDENTE (dados do chip GSA v3.0)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Aguardando dados do painel de Doenças Genéticas da Genera.
+1. FIBROSE CÍSTICA
+   Gene: CFTR (rs75527207)
+   Genótipo: GG
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença que causa muco espesso nos pulmões e
+   sistema digestivo. A variante F508del é a mais comum.
+   Eric NÃO tem essa variante.
+
+2. ANEMIA FALCIFORME (Traço Falciforme)
+   Gene: HBB (rs334)
+   Genótipo: TT
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença que deforma os glóbulos vermelhos,
+   causando anemia e dor. Eric NÃO carrega o gene.
+
+3. SÍNDROME DE GILBERT
+   Gene: UGT1A1 (rs4148323 G71R)
+   Genótipo: GG
+   Status: ✅ NORMAL
+   Descrição: Condição benigna que causa aumento leve da
+   bilirrubina (icterícia leve). Comum e inofensiva.
+   Eric NÃO tem essa variante.
+
+4. DEFICIÊNCIA DE ALFA-1 ANTITRIPSINA (variante S)
+   Gene: SERPINA1 (rs17580)
+   Genótipo: TT
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença que pode causar enfisema pulmonar e
+   doença hepática. A variante S é mais leve que a Z.
+   Eric NÃO carrega a variante S.
+
+5. DEFICIÊNCIA DE ALFA-1 ANTITRIPSINA (variante Z)
+   Gene: SERPINA1 (rs28929474)
+   Genótipo: CC
+   Status: ✅ NÃO PORTADOR
+   Descrição: A variante Z é a mais grave. Portadores ZZ
+   têm alto risco de enfisema e cirrose.
+   Eric NÃO carrega a variante Z.
+
+6. FENILCETONÚRIA
+   Gene: PAH (rs5030858 R408W)
+   Genótipo: GG
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença metabólica que impede o processamento
+   do aminoácido fenilalanina. Se não tratada na infância,
+   causa retardo mental. Detectada no teste do pezinho.
+   Eric NÃO carrega a variante principal.
+
+7. DOENÇA DE WILSON
+   Gene: ATP7B (rs76151636 H1069Q)
+   Genótipo: GG
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença que causa acúmulo de cobre no fígado
+   e cérebro. Pode causar cirrose e problemas neurológicos.
+   Eric NÃO carrega a variante principal europeia.
+
+8. DOENÇA DE GAUCHER
+   Gene: GBA (rs76763715 N370S)
+   Genótipo: TT
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença que causa acúmulo de gordura em órgãos.
+   Mais comum em Judeus Ashkenazim (Eric tem 5% Ashkenazim).
+   Eric NÃO carrega essa variante.
+   ★ Relevante: verificado por causa da ancestralidade Ashkenazim.
+
+9. DOENÇA DE TAY-SACHS
+   Gene: HEXA (rs28940868)
+   Genótipo: CC
+   Status: ✅ NÃO PORTADOR
+   Descrição: Doença neurológica grave que afeta bebês.
+   Mais comum em Judeus Ashkenazim (Eric tem 5% Ashkenazim).
+   Eric NÃO carrega essa variante.
+   ★ Relevante: verificado por causa da ancestralidade Ashkenazim.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESUMO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Eric NÃO É PORTADOR de nenhuma das 9 doenças testadas!
+
+Isso significa que:
+• Ele não tem nenhuma dessas doenças
+• Ele provavelmente NÃO transmitirá essas doenças aos filhos
+  (para as variantes testadas)
+• Os testes de Gaucher e Tay-Sachs são especialmente relevantes
+  por causa dos 5% de ancestralidade Ashkenazim
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LIMITAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• O chip testa apenas as variantes MAIS COMUNS de cada doença
+• Existem variantes raras que NÃO são detectadas por chip
+• Para certeza completa: painel de sequenciamento por NGS
+• Doenças NÃO cobertas pelo chip: Galactosemia (GALT),
+  Surdez hereditária (GJB2 35delG), Atrofia Muscular Espinhal
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DADOS DA GENERA (quando disponíveis)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aguardando dados do painel de Doenças Genéticas da Genera para
+cruzamento e complementação.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
