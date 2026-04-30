@@ -6,8 +6,45 @@
 PACIENTE: Eric Machado Fressatto
 DATA NASC: 23/03/2010
 ANCESTRALIDADE: Europeia 92% (Ibérica 51%)
+DIAGNÓSTICOS: TEA + hEDS (Ehlers-Danlos Hipermóvel) + TDAH
 ANÁLISE: 232 medicamentos × 61 genes (Genera GSA v3.0, abril/2026)
 GUIDELINES: CPIC / DPWG / PharmGKB
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️⚠️ EHLERS-DANLOS HIPERMÓVEL (hEDS) — INFORMAR SEMPRE! ⚠️⚠️
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DIAGNÓSTICO CLÍNICO CONFIRMADO: hEDS (Ehlers-Danlos Hipermóvel)
++ Portador heterozigoto de Deficiência de Fator XII (F12 A,G)
++ Histórico: epistaxe grave com cauterização
+
+IMPLICAÇÕES PARA PROCEDIMENTOS:
+• Vasos sanguíneos FRÁGEIS → sangramento pode ser difícil de controlar
+• Pele FINA e TRANSPARENTE → cicatrização mais lenta
+• Tecidos FRÁGEIS → suturas podem abrir (deiscência)
+• Hipermobilidade → cuidado com posicionamento cirúrgico
+
+PARA A CIRURGIA MAXILAR:
+★ Hemostasia METICULOSA (vasos frágeis!)
+★ Suturas DELICADAS (mais pontos, menor tensão)
+★ Considerar ácido tranexâmico pré-operatório
+★ Considerar DDAVP (desmopressina) se sangramento prolongado
+★ Recuperação pode ser MAIS LONGA
+★ Risco aumentado de hematomas
+
+EXAMES PRÉ-OPERATÓRIOS ADICIONAIS:
+→ Fator de von Willebrand (antígeno + atividade)
+→ Tempo de sangramento
+→ Dosagem de Fator XII (confirmar nível)
+→ Coagulograma completo
+
+GENES DE COLÁGENO TESTADOS:
+• TNXB (tenascina X): rs1063320 CG — heterozigoto
+  (Tenascina X está associada a formas de hipermobilidade)
+• COL12A1 (colágeno XII): rs12488457 AC — heterozigoto
+  (Colágeno XII associado a doenças do tecido conjuntivo)
+• COL1A1: normal ✅
+• COL3A1: normal ✅ (sem EDS vascular)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🔴 ALERTAS CRÍTICOS (informar SEMPRE ao médico/emergência)
