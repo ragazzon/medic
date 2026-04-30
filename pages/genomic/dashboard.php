@@ -156,6 +156,30 @@ require_once __DIR__ . '/../../includes/header.php';
                 </div>
             </div>
 
+            <!-- Investigação Prioritária -->
+            <div class="col-12">
+                <div class="card border-info">
+                    <div class="card-header bg-info text-white py-2">
+                        <strong><i class="bi bi-search me-1"></i>Investigação Prioritária (riscos genéticos + sintomas)</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="small mb-1"><strong>🔴 Lactose:</strong> CONFIRMADA geneticamente (consome leite + dor abdominal)</p>
+                                <p class="small mb-1"><strong>🔴 Celíaca:</strong> HLA-DQ8+ (come massa + baixo peso + dor)</p>
+                                <p class="small mb-0"><strong>🟡 Crohn/DII:</strong> ATG16L1 AA + IL23R (perfil intestinal)</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="small mb-1">→ Anti-transglutaminase IgA + IgA total</p>
+                                <p class="small mb-1">→ Calprotectina fecal</p>
+                                <p class="small mb-1">→ Teste de lactose (suspender 2 semanas)</p>
+                                <p class="small mb-0">→ Hemograma + ferritina + B12 + folato</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center mt-3">
                 <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>" class="btn btn-primary">
                     <i class="bi bi-file-earmark-medical me-1"></i>Ver Relatório Completo para Médicos
@@ -216,29 +240,103 @@ require_once __DIR__ . '/../../includes/header.php';
 
 <!-- ===== SEÇÃO: RISCOS GENÉTICOS ===== -->
 <div id="section-risks" class="dashboard-section" style="display:none;">
-    <div class="card mb-4">
+    <!-- Riscos ALTOS (ação necessária) -->
+    <div class="card mb-4 border-start border-4 border-danger">
         <div class="card-header bg-danger text-white">
-            <h5 class="mb-0"><i class="bi bi-shield-exclamation me-2"></i>Riscos Genéticos para Doenças</h5>
+            <h5 class="mb-0"><i class="bi bi-exclamation-triangle me-2"></i>Riscos que Precisam de Investigação</h5>
         </div>
         <div class="card-body">
-            <p class="text-muted mb-3">Predisposições genéticas identificadas. <strong>NÃO</strong> significam que a doença vai ocorrer — são apenas tendências que merecem acompanhamento.</p>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card border-danger h-100">
+                        <div class="card-body">
+                            <h6 class="text-danger">🔴 Intolerância à Lactose — CONFIRMADA</h6>
+                            <p class="small mb-1">Gene MCM6/LCT: GG = sem persistência da lactase</p>
+                            <p class="small mb-0"><strong>Ação:</strong> Suspender lactose 2 semanas como teste</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-danger h-100">
+                        <div class="card-body">
+                            <h6 class="text-danger">🔴 Doença Celíaca — HLA-DQ8 positivo</h6>
+                            <p class="small mb-1">Come massa + dor abdominal + baixo peso</p>
+                            <p class="small mb-0"><strong>Ação:</strong> Anti-transglutaminase IgA URGENTE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Riscos MODERADOS (monitorar) -->
+    <div class="card mb-4 border-start border-4 border-warning">
+        <div class="card-header bg-warning text-dark">
+            <h5 class="mb-0"><i class="bi bi-exclamation-circle me-2"></i>Riscos que Merecem Monitoramento</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered mb-0">
+                    <thead class="table-light"><tr><th>Condição</th><th>Evidência</th><th>Contexto</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Doença de Crohn</strong></td><td>ATG16L1 AA (2x risco)</td><td>Sintomas GI atuais</td></tr>
+                        <tr><td><strong>Psoríase / Art. Psoriásica</strong></td><td>HLA-C CT</td><td>Pai tem!</td></tr>
+                        <tr><td><strong>Asma</strong></td><td>17q21 + ADRB2 GA</td><td>Avó materna tem</td></tr>
+                        <tr><td><strong>Colite Ulcerativa</strong></td><td>PRS aumentado</td><td>Perfil autoimune</td></tr>
+                        <tr><td><strong>Fibrilação Atrial</strong></td><td>PRS 20,55%</td><td>Doença de idosos (futuro)</td></tr>
+                        <tr><td><strong>Melanoma</strong></td><td>SLC45A2 GG (pele clara)</td><td>Avô teve CA pele!</td></tr>
+                        <tr><td><strong>Doença Coronariana</strong></td><td>PRS reduzido MAS</td><td>Avô infarto + avó AVC</td></tr>
+                        <tr><td><strong>Diabetes Tipo 1</strong></td><td>IL2RA + CTLA4 + HLA-DQ8</td><td>Tio tem DM1</td></tr>
+                        <tr><td><strong>Basocelular</strong></td><td>PRS padrão</td><td>Avô CA pele + pele clara</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Riscos BAIXOS/Normais -->
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0"><i class="bi bi-check-circle me-2"></i>Riscos Normais ou Reduzidos (sem preocupação)</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Trombofilia (F5 + F2 normais)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Hemocromatose (normal)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Obesidade (FTO + MC4R normais)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Diabetes Tipo 2 (reduzido)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Alzheimer (reduzido)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Dupuytren (reduzido)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Câncer Próstata (reduzido)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Câncer Hereditário (normais)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Linfoma Hodgkin (padrão)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> LLC (padrão)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Gota (padrão)</div>
+                <div class="col-md-4"><span class="badge bg-success me-1">✅</span> Câncer Bexiga (padrão)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Painéis do sistema (legado) -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h6 class="mb-0"><i class="bi bi-grid me-2"></i>Painéis Detalhados por Área</h6>
+        </div>
+        <div class="card-body">
             <div class="row g-3">
                 <?php foreach ($riskPanels as $pnl): ?>
                 <div class="col-md-6 col-lg-4">
                     <a href="<?= baseUrl('pages/genomic/panel.php?patient_id=' . $patientId . '&panel=' . $pnl['code']) ?>" class="text-decoration-none">
                         <div class="card h-100 drug-card-link">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-2">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width:40px;height:40px;background:<?= $pnl['color'] ?>20;">
-                                        <i class="bi <?= $pnl['icon'] ?>" style="color:<?= $pnl['color'] ?>"></i>
-                                    </div>
-                                    <h6 class="mb-0"><?= sanitize($pnl['name']) ?></h6>
+                            <div class="card-body py-2">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi <?= $pnl['icon'] ?> me-2" style="color:<?= $pnl['color'] ?>"></i>
+                                    <span><?= sanitize($pnl['name']) ?></span>
                                 </div>
-                                <p class="text-muted small mb-2"><?= sanitize($pnl['description'] ?? 'Análise de predisposições genéticas nesta área.') ?></p>
-                                <div class="d-flex gap-2">
-                                    <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?> risco</span><?php endif; ?>
-                                    <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?> atenção</span><?php endif; ?>
-                                    <span class="badge bg-success"><?= $pnl['normal_count'] ?> normal</span>
+                                <div class="d-flex gap-1 mt-1">
+                                    <?php if ($pnl['risk_count']): ?><span class="badge bg-danger"><?= $pnl['risk_count'] ?></span><?php endif; ?>
+                                    <?php if ($pnl['attention_count']): ?><span class="badge bg-warning text-dark"><?= $pnl['attention_count'] ?></span><?php endif; ?>
+                                    <span class="badge bg-success"><?= $pnl['normal_count'] ?></span>
                                 </div>
                             </div>
                         </div>
