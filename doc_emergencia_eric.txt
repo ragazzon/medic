@@ -4,7 +4,7 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 PACIENTE: Eric Machado Fressatto
-DATA NASC: [preencher]
+DATA NASC: 23/03/2010
 ANCESTRALIDADE: Europeia 92% (Ibérica 51%)
 ANÁLISE: 232 medicamentos × 61 genes (Genera GSA v3.0, abril/2026)
 GUIDELINES: CPIC / DPWG / PharmGKB
@@ -149,4 +149,4 @@ clínica. Decisões devem ser tomadas pelo médico considerando o
 quadro clínico completo.
 
 Gerado em: Abril/2026
-Contato: [preencher telefone/email do responsável]
+Contato responsável: Márcia — (51) 99919-2124
