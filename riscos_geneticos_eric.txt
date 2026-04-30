@@ -1,4 +1,4 @@
-╔══════════════════════════════════════════════════════════════╗
+﻿╔══════════════════════════════════════════════════════════════╗
 ║   ANÁLISE DE RISCOS GENÉTICOS — Eric Machado Fressatto       ║
 ║   Baseado em: Genera (GSA v3.0) + Análise independente       ║
 ║   Atualizado em: Abril/2026                                  ║
@@ -418,6 +418,69 @@ CONFIANÇA: ALTA para o PRS. Risco absoluto baixo MAS clinicamente
 relevante dado o contexto GI + perfil autoimune do Eric.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+16. FIBRILAÇÃO ATRIAL (PRS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLASSIFICAÇÃO: 🟡 MODERADO (risco elevado MAS adolescente saudável)
+SNPs: 5 variantes analisadas
+Fonte: Genera PRS
+
+DESCRIÇÃO DA DOENÇA:
+A fibrilação atrial (FA) é a atividade descoordenada do coração.
+Em repouso, o coração bate ~60 vezes/min, mas na FA pode atingir
+400-600 vezes/min. Sua ocorrência aumenta com a idade. Pode
+aumentar risco de AVC, trombose, insuficiência cardíaca. O
+diagnóstico é desafiador pois muitos são assintomáticos.
+
+RESULTADO GENERA:
+• Risco até 95 anos: 20,55% (11,19% - 31,33%)
+• Classificação Genera: "Risco aumentado"
+• Contribuição genética analisada: 4,06%
+• Outros fatores genéticos: 57,94%
+• Fatores ambientais: 38%
+
+VARIANTES COM MAIOR CONTRIBUIÇÃO NO ERIC:
+• rs2220427 (LINC01438): score 1.069 — MUITO ALTO! (homozigoto TT)
+• rs3853445 (intergênico): score 0.285 (heterozigoto TC)
+• rs4766566 (CUX2): score 0.104 (heterozigoto CT)
+
+GENES RELEVANTES:
+• LINC01438 — RNA não-codificante com associação MUITO forte (p=2E-134!)
+• KCND3 — Canal de potássio cardíaco (Eric GG = normal neste)
+• ZFHX3 — Fator de transcrição (Eric CC = normal neste)
+• CUX2 — Regulador de desenvolvimento
+
+MINHAS OBSERVAÇÕES:
+1. O risco de 20,55% é ALTO mas refere-se ao risco ATÉ 95 ANOS.
+   FA é predominantemente doença de IDOSOS (>65 anos).
+2. Para um adolescente de 16 anos, esse risco não se materializa
+   por décadas. É uma predisposição de LONGO PRAZO.
+3. O score do rs2220427 (1.069) é o MAIS ALTO de todos os PRS
+   que vi até agora. Variante homozigota com efeito grande.
+4. IMPORTANTE: Eric tem NOS1AP CT (risco QTc) que também afeta
+   ritmo cardíaco. Combinação NOS1AP + FA = monitorar.
+5. Eric é magro (sem obesidade), jovem e não bebe álcool =
+   fatores ambientais protetores por agora.
+
+AÇÃO RECOMENDADA:
+• NÃO é emergência para um adolescente de 16 anos
+• Monitorar palpitações, falta de ar, tontura
+• ECG de rotina anual a partir dos 30-35 anos
+• Evitar estimulantes em excesso (cafeína concentrada)
+• Se palpitações: Holter 24h para documentar
+• NOS1AP CT: CUIDADO com medicamentos QT-prolongadores
+  (já documentado na farmacogenética)
+• Se desenvolver FA no futuro: anticoagulação preferir
+  DOACs (VKORC1 TT = não usar varfarina!)
+
+CONEXÃO COM FARMACOGENÉTICA:
+• VKORC1 TT → Se FA + anticoagulação = DOAC (não varfarina)
+• NOS1AP CT → Risco QTc + FA = evitar antiarrítmicos QT-prolongadores
+• Amiodarona: NOS1AP CT = cautela (já documentado)
+
+CONFIANÇA: ALTA para o PRS. Clinicamente relevante para FUTURO
+(>40-50 anos), não para decisões imediatas em adolescente.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GENES NÃO ENCONTRADOS NO CHIP (não testáveis)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -439,3 +502,4 @@ Aguardando resultados da Genera para cruzamento e complementação.
 
 Gerado em: Abril/2026
 Analista: IA (Claude) com supervisão da responsável
+
