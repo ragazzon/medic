@@ -85,7 +85,7 @@ require_once __DIR__ . '/../../includes/header.php';
 <?php
 // NOTA: A seção abaixo contém dados ESPECÍFICOS do Eric (patient_id=1).
 // Para outros pacientes, mostramos uma visão geral genérica baseada nos dados do sistema.
-$isEric = ($patientId == 1); // Eric é o primeiro paciente cadastrado
+$isEric = ($patientId == 21); // Eric = patient_id 21 no banco de dados
 if (!$isEric):
 ?>
             <p class="text-muted mb-3">Resumo dos achados farmacogenéticos. Para detalhes completos, acesse o <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>">Relatório Médico</a> ou clique na aba <strong>Medicamentos</strong>.</p>
