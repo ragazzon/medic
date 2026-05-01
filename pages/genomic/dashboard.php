@@ -82,6 +82,42 @@ require_once __DIR__ . '/../../includes/header.php';
             <h5 class="mb-0"><i class="bi bi-speedometer2 me-2"></i>Visão Geral — Achados Principais</h5>
         </div>
         <div class="card-body">
+<?php
+// NOTA: A seção abaixo contém dados ESPECÍFICOS do Eric (patient_id=1).
+// Para outros pacientes, mostramos uma visão geral genérica baseada nos dados do sistema.
+$isEric = ($patientId == 1); // Eric é o primeiro paciente cadastrado
+if (!$isEric):
+?>
+            <p class="text-muted mb-3">Resumo dos achados farmacogenéticos. Para detalhes completos, acesse o <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>">Relatório Médico</a> ou clique na aba <strong>Medicamentos</strong>.</p>
+            
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle me-2"></i>
+                <strong>Dados genéticos importados com sucesso!</strong><br>
+                Use as abas acima para navegar entre:<br>
+                • <strong>Medicamentos</strong> — como o corpo processa cada remédio<br>
+                • <strong>Riscos Genéticos</strong> — predisposições identificadas<br>
+                • <strong>Análise por Gene</strong> — detalhes de cada gene/enzima
+            </div>
+            
+            <div class="row g-3">
+                <?php foreach ($drugsByClass as $className => $classDrugs): ?>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body py-2">
+                            <h6 class="mb-1"><i class="bi bi-tag me-1 text-primary"></i><?= sanitize($className) ?></h6>
+                            <small class="text-muted"><?= count($classDrugs) ?> medicamento(s) analisado(s)</small>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            
+            <div class="text-center mt-3">
+                <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>" class="btn btn-primary">
+                    <i class="bi bi-file-earmark-medical me-1"></i>Ver Relatório Completo para Médicos
+                </a>
+            </div>
+<?php else: ?>
             <p class="text-muted mb-3">Resumo dos achados farmacogenéticos mais importantes. Para detalhes completos, acesse o <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>">Relatório Médico</a>.</p>
             
             <div class="row g-3">
@@ -192,6 +228,7 @@ require_once __DIR__ . '/../../includes/header.php';
                     <i class="bi bi-file-earmark-medical me-1"></i>Ver Relatório Completo para Médicos
                 </a>
             </div>
+<?php endif; // fim do if ($isEric) ?>
         </div>
     </div>
 </div>
