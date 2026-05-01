@@ -42,6 +42,7 @@ require_once __DIR__ . '/../../includes/header.php';
     <h1><i class="bi bi-dna me-2"></i>Análise Genética — <?= sanitize($patient['name']) ?></h1>
     <div>
         <a href="<?= baseUrl('pages/genomic/report.php?patient_id=' . $patientId) ?>" class="btn btn-primary btn-sm"><i class="bi bi-file-earmark-medical me-1"></i>Relatório Médico</a>
+        <a href="<?= baseUrl('pages/genomic/documents.php?patient_id=' . $patientId) ?>" class="btn btn-outline-success btn-sm"><i class="bi bi-folder2-open me-1"></i>Documentos</a>
         <a href="<?= baseUrl('pages/genomic/argue.php?patient_id=' . $patientId) ?>" class="btn btn-outline-danger btn-sm"><i class="bi bi-chat-left-quote me-1"></i>Argumente com o Médico</a>
         <a href="<?= baseUrl('pages/genomic/ancestry.php?patient_id=' . $patientId) ?>" class="btn btn-outline-info btn-sm"><i class="bi bi-globe-americas me-1"></i>Ancestralidade</a>
         <a href="<?= baseUrl('pages/genomic/upload.php?patient_id=' . $patientId) ?>" class="btn btn-outline-secondary btn-sm"><i class="bi bi-upload me-1"></i>Re-importar</a>
@@ -167,13 +168,19 @@ require_once __DIR__ . '/../../includes/header.php';
                             <div class="col-md-6">
                                 <p class="small mb-1"><strong>🔴 Lactose:</strong> CONFIRMADA geneticamente (consome leite + dor abdominal)</p>
                                 <p class="small mb-1"><strong>🔴 Celíaca:</strong> HLA-DQ8+ (come massa + baixo peso + dor)</p>
-                                <p class="small mb-0"><strong>🟡 Crohn/DII:</strong> ATG16L1 AA + IL23R (perfil intestinal)</p>
+                                <p class="small mb-1"><strong>🟡 Crohn/DII:</strong> ATG16L1 AA + IL23R (perfil intestinal)</p>
+                                <p class="small mb-0"><strong>🟡 B12 funcional:</strong> MTRR het + B12 sérica ALTA (pode não estar funcionando)</p>
                             </div>
                             <div class="col-md-6">
                                 <p class="small mb-1">→ Anti-transglutaminase IgA + IgA total</p>
                                 <p class="small mb-1">→ Calprotectina fecal</p>
                                 <p class="small mb-1">→ Teste de lactose (suspender 2 semanas)</p>
-                                <p class="small mb-0">→ Hemograma + ferritina + B12 + folato</p>
+                                <p class="small mb-1">→ Hemograma + ferritina + folato</p>
+                                <p class="small mb-1">→ Ácido metilmalônico (B12 funcional)</p>
+                                <p class="small mb-1">→ Homocisteína (ciclo folato/B12)</p>
+                                <p class="small mb-1">→ Holotranscobalamina (B12 ativa)</p>
+                                <p class="small mb-1">→ <strong>Perfil lipídico completo</strong> (colesterol total, LDL, HDL, triglicerídeos)</p>
+                                <p class="small mb-0">→ <strong>Painel genético hipercolesterolemia familiar</strong> (LDLR + APOB + PCSK9)</p>
                             </div>
                         </div>
                     </div>
@@ -434,12 +441,10 @@ function showSection(section) {
     localStorage.setItem('genomic_dashboard_tab', section);
 }
 
-// Restaurar última aba visitada
+// Sempre começar na Visão Geral ao abrir o dashboard
 document.addEventListener('DOMContentLoaded', function() {
-    var lastTab = localStorage.getItem('genomic_dashboard_tab');
-    if (lastTab && document.getElementById('section-' + lastTab)) {
-        showSection(lastTab);
-    }
+    // Não restaurar última aba - sempre começa em "overview"
+    showSection('overview');
 });
 </script>
 

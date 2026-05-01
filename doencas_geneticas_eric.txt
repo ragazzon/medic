@@ -68,11 +68,12 @@ RESULTADOS — ANÁLISE INDEPENDENTE (dados do chip GSA v3.0)
 
 7. DOENÇA DE WILSON
    Gene: ATP7B (rs76151636 H1069Q)
-   Genótipo: GG
+   Genótipo: TT
    Status: ✅ NÃO PORTADOR
    Descrição: Doença que causa acúmulo de cobre no fígado
    e cérebro. Pode causar cirrose e problemas neurológicos.
    Eric NÃO carrega a variante principal europeia.
+   NOTA: TT é o genótipo de referência neste SNP (GRCh37).
 
 8. DOENÇA DE GAUCHER
    Gene: GBA (rs76763715 N370S)
@@ -91,29 +92,6 @@ RESULTADOS — ANÁLISE INDEPENDENTE (dados do chip GSA v3.0)
    Mais comum em Judeus Ashkenazim (Eric tem 5% Ashkenazim).
    Eric NÃO carrega essa variante.
    ★ Relevante: verificado por causa da ancestralidade Ashkenazim.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RESUMO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-✅ Eric NÃO É PORTADOR de nenhuma das 9 doenças testadas!
-
-Isso significa que:
-• Ele não tem nenhuma dessas doenças
-• Ele provavelmente NÃO transmitirá essas doenças aos filhos
-  (para as variantes testadas)
-• Os testes de Gaucher e Tay-Sachs são especialmente relevantes
-  por causa dos 5% de ancestralidade Ashkenazim
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-LIMITAÇÕES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-• O chip testa apenas as variantes MAIS COMUNS de cada doença
-• Existem variantes raras que NÃO são detectadas por chip
-• Para certeza completa: painel de sequenciamento por NGS
-• Doenças NÃO cobertas pelo chip: Galactosemia (GALT),
-  Surdez hereditária (GJB2 35delG), Atrofia Muscular Espinhal
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DADOS DA GENERA — Painel de Doenças Genéticas
@@ -160,6 +138,790 @@ DADOS DA GENERA — Painel de Doenças Genéticas
     • Informar futura parceira sobre status de portador
     • Se parceira for portadora: 25% chance de filho afetado
     • Para cirurgia: SEM restrição (coagulação normal como het)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DOENÇAS ADICIONAIS — VERIFICADAS NO CSV (Abril/2026)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+11. HEMOCROMATOSE HEREDITÁRIA (variante C282Y)
+    Gene: HFE (rs1800562) — cromossomo 6
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera + CSV confirmado
+    Descrição: A hemocromatose tipo 1 causa acúmulo de ferro
+    em todo o corpo (fígado, coração, pâncreas, articulações).
+    O gene HFE produz uma proteína que controla quanto ferro
+    entra no sangue pelo intestino. Quando essa proteína não
+    funciona bem, o corpo absorve ferro demais.
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • G,A = portador (1 cópia alterada)
+    • A,A = risco de desenvolver hemocromatose
+    ★ No contexto do Eric: se a ferritina aparecer ALTA nos
+    exames, NÃO será por hemocromatose genética. Seria mais
+    provável indicar inflamação (relevante pelo perfil autoimune).
+    Se aparecer BAIXA, indica deficiência por dieta restrita
+    ou possível celíaca impedindo absorção.
+
+12. HEMOCROMATOSE HEREDITÁRIA (variante H63D)
+    Gene: HFE (rs1799945) — cromossomo 6
+    Genótipo: C,C
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera + CSV confirmado
+    Descrição: Segunda variante do gene HFE. Tem efeito
+    independente da C282Y — ou seja, uma pessoa pode ter
+    uma variante sem ter a outra.
+    • C,C = variante de risco NÃO detectada (é o caso do Eric)
+    • C,G = portador (1 cópia alterada)
+    • G,G = risco de desenvolver hemocromatose
+    Eric não carrega nenhuma das variantes principais.
+
+12b. HEMOCROMATOSE HEREDITÁRIA (variante S65C)
+    Gene: HFE (rs1800730) — cromossomo 6
+    Genótipo: A,A
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Terceira variante do gene HFE testada pela Genera.
+    Também tem efeito independente das outras duas variantes.
+    • A,A = variante de risco NÃO detectada (é o caso do Eric)
+    • A,T = portador (1 cópia alterada)
+    • T,T = risco de desenvolver hemocromatose
+
+    ★ CONCLUSÃO HEMOCROMATOSE (todas as 3 variantes testadas):
+    C282Y = Normal ✅ | H63D = Normal ✅ | S65C = Normal ✅
+    → Hemocromatose hereditária tipo 1 DESCARTADA geneticamente.
+    → Absorção de ferro pelo intestino funciona normalmente.
+
+13. TROMBOFILIA — FATOR V LEIDEN
+    Gene: F5 (rs6025)
+    Genótipo: CC
+    Status: ✅ NÃO PORTADOR
+    Descrição: Mutação que aumenta risco de trombose venosa
+    profunda e embolia pulmonar. Muito comum em europeus (~5%).
+    Eric CC = genótipo normal, SEM Fator V Leiden.
+
+14. TROMBOFILIA — PROTROMBINA G20210A
+    Gene: F2 (rs1799963)
+    Genótipo: GG
+    Status: ✅ NÃO PORTADOR
+    Descrição: Mutação que eleva níveis de protrombina,
+    aumentando risco de coágulos. ~2-3% dos europeus portam.
+    Eric GG = normal, sem mutação da protrombina.
+
+15. DEFICIÊNCIA DE TPMT (azatioprina/mercaptopurina)
+    Gene: TPMT (rs1800460 *3B)
+    Genótipo: CC
+    Status: ✅ NORMAL
+    Descrição: Enzima que metaboliza tiopurinas (azatioprina,
+    mercaptopurina, tioguanina). Deficiência causa toxicidade
+    grave. Eric CC = atividade enzimática NORMAL.
+    ★ Relevante: se precisar de azatioprina para DII (Crohn),
+    pode usar dose padrão.
+
+16. DEFICIÊNCIA DE DPYD (fluoropirimidinas)
+    Gene: DPYD (rs3918290 *2A)
+    Genótipo: CC
+    Status: ✅ NORMAL
+    Descrição: Enzima que metaboliza 5-fluorouracil e
+    capecitabina (quimioterapia). Deficiência causa
+    toxicidade potencialmente fatal.
+    Eric CC = metabolizador normal.
+
+17. DEFICIÊNCIA DE DPYD (variante D949V)
+    Gene: DPYD (rs67376798)
+    Genótipo: TT
+    Status: ✅ NORMAL
+    Descrição: Segunda variante de risco para toxicidade com
+    fluoropirimidinas. TT = referência = normal.
+
+18. DEFICIÊNCIA DE DPYD (variante HapB3)
+    Gene: DPYD (rs56038477)
+    Genótipo: CC
+    Status: ✅ NORMAL
+    Descrição: Terceira variante de DPYD associada a
+    metabolismo reduzido. CC = normal.
+
+19. DOENÇA DE CROHN — NOD2/CARD15 (variante L1007fs)
+    Gene: NOD2 (rs2066847 — frameshift 1007fs)
+    Genótipo: NÃO ENCONTRADO NO CHIP
+    Status: ❓ NÃO TESTÁVEL
+    Descrição: A inserção 3020insC no NOD2 é a variante
+    mais forte para Doença de Crohn (OR ~3 para het, ~17 homo).
+    Infelizmente NÃO está disponível no chip GSA v3.0.
+    NOTA: rs2066845 (G908R) foi encontrado como GG = NORMAL.
+
+20. DOENÇA DE CROHN — NOD2/CARD15 (variante G908R)
+    Gene: NOD2 (rs2066845)
+    Genótipo: GG
+    Status: ✅ NÃO PORTADOR
+    Descrição: Segunda variante mais comum do NOD2 para
+    Doença de Crohn. GG = referência = normal.
+    ★ PORÉM: Eric já é HOMOZIGOTO AA no ATG16L1 (rs2241880)
+    que confere 2x risco para Crohn por outra via.
+
+21. SÍNDROME DE LYNCH (Câncer Colorretal Hereditário)
+    Gene: MLH1 (rs1800734)
+    Genótipo: GG
+    Status: ✅ NORMAL
+    Descrição: Variante no promotor do MLH1 associada a
+    câncer colorretal hereditário (HNPCC). GG = referência,
+    sem metilação aberrante do promotor.
+
+22. CÂNCER HEREDITÁRIO — BRCA1
+    Gene: BRCA1 (rs80357906 — 5382insC)
+    Genótipo: DD
+    Status: ✅ NÃO PORTADOR
+    Descrição: Mutação fundadora em Judeus Ashkenazim.
+    DD = deleção homozigota da inserção = NORMAL (sem a
+    inserção patogênica). Eric NÃO carrega esta variante.
+    ★ NOTA: Chip testa apenas SNPs pontuais, NÃO substitui
+    sequenciamento completo de BRCA1/2.
+
+23. CÂNCER HEREDITÁRIO — BRCA2
+    Gene: BRCA2 (rs28897696 + rs80358981)
+    Genótipos: GG + CC
+    Status: ✅ NÃO PORTADOR
+    Descrição: Duas variantes de BRCA2 testadas no chip.
+    Ambas normais. Eric NÃO carrega estas variantes de BRCA2.
+
+24. CÂNCER HEREDITÁRIO — CHEK2 (1100delC)
+    Gene: CHEK2 (rs555607708)
+    Genótipo: II
+    Status: ✅ NÃO PORTADOR
+    Descrição: Variante truncante do CHEK2 que aumenta risco
+    de câncer de mama (~2-3x) e outros cânceres. II = inserção
+    intacta (normal) = sem a deleção patogênica.
+
+25. CÂNCER HEREDITÁRIO — CHEK2 (I157T)
+    Gene: CHEK2 (rs17879961)
+    Genótipo: AA
+    Status: ✅ NÃO PORTADOR
+    Descrição: Variante missense do CHEK2 associada a risco
+    moderado de câncer de mama e colorretal. AA = referência
+    = normal.
+
+26. POLIPOSE ASSOCIADA AO GENE MUTYH (variante G396D / Y179C)
+    Gene: MUTYH (rs36053993) — cromossomo 1
+    Genótipo: C,C
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera + CSV confirmado
+    Descrição: O gene MUTYH produz uma proteína que repara
+    erros no DNA. Quando esse reparo falha, aumenta o risco
+    de câncer, especialmente no intestino grosso (colorretal).
+    
+    A polipose associada ao MUTYH causa formação de múltiplos
+    tumores (pólipos) no intestino e aumenta muito o risco de
+    câncer colorretal. Também pode causar câncer de bexiga,
+    ovários, mamas e endométrio.
+    
+    Sintomas (quando se manifestam): sangue nas fezes, anemia,
+    perda de peso, diarreia e dor abdominal.
+    
+    IMPORTANTE: Essa doença é RECESSIVA — precisa de 2 cópias
+    alteradas para manifestar. Portadores (1 cópia) geralmente
+    não têm problema, mas têm risco levemente aumentado.
+    
+    • C,C = variante de risco NÃO detectada (é o caso do Eric)
+    • C,T = portador (1 cópia — risco leve)
+    • T,T = 2 cópias (risco alto de polipose/câncer colorretal)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — sem predisposição a polipose por MUTYH.
+    • Relevante porque Eric tem perfil inflamatório intestinal
+      (ATG16L1 homozigoto, possível Crohn). Inflamação crônica
+      do intestino já aumenta risco de câncer colorretal.
+      Felizmente NÃO tem essa predisposição genética ADICIONAL.
+    • Os sintomas de polipose (dor abdominal, diarreia) são
+      parecidos com os do Eric, mas a causa não é MUTYH.
+
+27. SENSIBILIDADE A ANTRACICLINAS — RARG
+    Gene: RARG (rs2229109)
+    Genótipo: CT
+    Status: ⚠️ PORTADOR (heterozigoto)
+    Descrição: Variante associada a risco AUMENTADO de
+    cardiotoxicidade com antraciclinas (doxorrubicina,
+    daunorrubicina). CT = heterozigoto.
+    ★ IMPORTANTE: Se antraciclinas forem necessárias,
+    ecocardiograma obrigatório pré e durante tratamento.
+    Monitoramento cardíaco rigoroso.
+    (Já documentado na farmacogenética como alerta crítico)
+
+28. DOENÇA DE NIEMANN-PICK TIPO A/B
+    Gene: SMPD1 (rs28933693)
+    Genótipo: CC
+    Status: ✅ NÃO PORTADOR
+    Descrição: Doença lisossômica que causa acúmulo de
+    esfingomielina nos órgãos. Tipo A é grave (neurológico,
+    fatal na infância). Tipo B é mais leve (visceral).
+    Mais comum em Ashkenazim. Eric CC = normal.
+
+29. DISTROFIA MUSCULAR DE DUCHENNE/BECKER
+    Gene: DMD (rs76723693)
+    Genótipo: AA
+    Status: ✅ NORMAL (gene ligado ao X)
+    Descrição: Doença neuromuscular ligada ao X que causa
+    fraqueza muscular progressiva. Como Eric é homem (XY),
+    tem apenas 1 cópia. AA = referência = normal.
+    NOTA: Chip testa apenas SNPs pontuais; distrofia muscular
+    geralmente requer análise de deleções/duplicações por MLPA.
+
+30. DEFICIÊNCIA DE G6PD (Favismo)
+    Gene: G6PD (rs76723693)
+    Genótipo: AA (verificado acima no cromossomo X)
+    Status: ✅ NORMAL
+    Descrição: Deficiência enzimática ligada ao X que causa
+    anemia hemolítica com certos medicamentos (sulfonamidas,
+    primaquina, dapsona) ou alimentos (favas). Eric NORMAL.
+    ★ Confirmado: NÃO há contraindicação de AINEs ou
+    anestésicos por esta via.
+
+31. DOENÇA DE POMPE (variante GAA c.-32-13T>G)
+    Gene: GAA (rs386834236)
+    Genótipo: NÃO ENCONTRADO NO CHIP
+    Status: ❓ NÃO TESTÁVEL
+    Descrição: Doença de depósito de glicogênio tipo II.
+    A variante IVS1 é a mais comum na forma tardia (adulta).
+    Não disponível no chip GSA v3.0.
+
+32. GALACTOSEMIA
+    Gene: GALT (principal variante Q188R)
+    Genótipo: NÃO ENCONTRADO NO CHIP
+    Status: ❓ NÃO TESTÁVEL
+    Descrição: Incapacidade de metabolizar galactose (açúcar
+    do leite). Se não tratada na infância, causa danos graves.
+    Detectada no teste do pezinho. Variante principal NÃO
+    está no chip GSA v3.0.
+
+33. SURDEZ HEREDITÁRIA (Conexina 26)
+    Gene: GJB2 (35delG — principal variante)
+    Genótipo: NÃO ENCONTRADO NO CHIP
+    Status: ❓ NÃO TESTÁVEL
+    Descrição: Causa mais comum de surdez hereditária
+    não-sindrômica. A deleção 35delG no gene GJB2 não é
+    detectável por chip de SNPs. Requer sequenciamento.
+
+34. ATROFIA MUSCULAR ESPINHAL (AME)
+    Gene: SMN1 (deleções)
+    Genótipo: NÃO TESTÁVEL POR CHIP
+    Status: ❓ NÃO TESTÁVEL
+    Descrição: Doença neuromuscular grave causada por
+    deleções no gene SMN1. Requer MLPA ou qPCR específico
+    para detecção de cópias. Chip de SNPs NÃO detecta.
+
+35. MTHFR — FOLATO (já documentado nos riscos genéticos)
+    Gene: MTHFR (rs1801133 C677T + rs1801131 A1298C)
+    Genótipos: GG (C677T normal) + TG (A1298C heterozigoto)
+    Status: ✅ NORMAL para C677T / ⚠️ HET para A1298C
+    Descrição: MTHFR C677T GG = atividade normal.
+    A1298C TG = heterozigoto (atividade ~80%).
+    Já documentado no riscos_geneticos_eric.txt.
+    Combinação NÃO clinicamente significativa.
+
+36. MTRR — RECICLAGEM DE VITAMINA B12
+    Gene: MTRR (rs1801394 A66G)
+    Genótipo: AG
+    Status: ⚠️ PORTADOR (heterozigoto)
+    Descrição: Variante que reduz a atividade de uma enzima
+    que recicla a vitamina B12 para ela poder ser reutilizada.
+    AG = heterozigoto, atividade levemente reduzida (~80%).
+
+    ★ OBSERVAÇÃO CLÍNICA IMPORTANTE:
+    Eric tem vitamina B12 ALTA no sangue (sempre elevada nos exames).
+    Isso pode parecer bom, mas combinado com MTRR heterozigoto
+    pode significar que:
+    • A B12 está ACUMULANDO no sangue porque o corpo tem
+      dificuldade em UTILIZAR ela dentro das células
+    • É como ter dinheiro no banco mas não conseguir sacar:
+      o nível no sangue está alto, mas as células podem
+      não estar recebendo B12 suficiente para funcionar
+    • Isso se chama "B12 funcional baixa com B12 sérica alta"
+
+    EXAMES RECOMENDADOS para verificar se a B12 está FUNCIONANDO:
+    → Ácido metilmalônico (se elevado = B12 funcional BAIXA)
+    → Homocisteína (se elevada = ciclo do folato/B12 comprometido)
+    → Holotranscobalamina (B12 ativa — a fração que realmente entra nas células)
+
+    SE CONFIRMADO B12 funcional baixa:
+    • Considerar suplementação com METILCOBALAMINA (forma ativa)
+      ao invés de cianocobalamina (forma comum que precisa ser convertida)
+    • A forma metilada "pula" a etapa enzimática reduzida pelo MTRR
+
+    NOTA: B12 sérica elevada sem suplementação também pode indicar
+    problemas hepáticos ou inflamatórios. Investigar se não houver
+    causa óbvia (como suplementação).
+
+37. IL-1β (INFLAMAÇÃO)
+    Gene: IL1B (rs1143634)
+    Genótipo: AA
+    Status: ✅ NORMAL (genótipo de referência)
+    Descrição: Variante que modula produção da citocina
+    inflamatória IL-1β. AA = referência = produção normal.
+    Não eleva risco inflamatório por esta via.
+
+38. IL-6 (INFLAMAÇÃO)
+    Gene: IL6 (rs1800795 -174G/C)
+    Genótipo: CG
+    Status: ⚠️ HETEROZIGOTO
+    Descrição: Variante no promotor da IL-6 que modula
+    produção desta citocina inflamatória. CG = heterozigoto.
+    O alelo C está associado a níveis MENORES de IL-6.
+    Impacto clínico: LEVE. Pode ter resposta inflamatória
+    levemente modulada. Relevante no contexto autoimune do Eric.
+
+39. SLC22A4 — DOENÇA DE CROHN (transportador de carnitina)
+    Gene: SLC22A4 (rs1050152/rs104894396)
+    Genótipo: CC (rs104894396)
+    Status: ✅ NORMAL
+    Descrição: Variante L503F no transportador de carnitina
+    orgânica OCTN1, associada a Doença de Crohn e artrite
+    reumatoide. CC = referência = normal.
+
+40. DPYD — VARIANTE ADICIONAL (rs55886062)
+    Gene: DPYD (rs55886062 — I560S)
+    Genótipo: AA
+    Status: ✅ NORMAL
+    Descrição: Quarta variante DPYD verificada. AA = referência
+    = metabolismo normal de fluoropirimidinas.
+
+41. DOENÇAS MIELOPROLIFERATIVAS (JAK2 V617F)
+    Gene: JAK2 (rs77375493) — cromossomo 9
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: As doenças mieloproliferativas afetam a medula
+    óssea, fazendo com que as células que originam as células
+    do sangue (glóbulos vermelhos, brancos e plaquetas) cresçam
+    de forma descontrolada. Podem causar:
+    • Policitemia vera (sangue muito grosso/espesso)
+    • Trombocitemia essencial (plaquetas em excesso)
+    • Mielofibrose (cicatrização da medula óssea)
+    • Leucemia mieloide crônica
+
+    O gene JAK2 produz uma proteína que controla a formação
+    e amadurecimento das células do sangue. A variante V617F
+    (alelo T) faz essa proteína ficar sempre "ligada", causando
+    produção descontrolada de células.
+
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • G,T = variante detectada em 1 cópia
+    • T,T = variante detectada em 2 cópias
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — sem predisposição a cânceres do sangue
+      por essa via genética.
+    • NOTA IMPORTANTE da Genera: pequenas quantidades de células
+      com a variante podem não ser detectadas pelo chip (é um
+      teste de triagem, não diagnóstico). A variante JAK2 V617F
+      é geralmente ADQUIRIDA ao longo da vida (mutação somática),
+      não herdada. Então mesmo com resultado normal agora, não
+      exclui 100% a possibilidade no futuro.
+    • Para o Eric (16 anos, saudável): risco praticamente ZERO.
+      Essas doenças são típicas de adultos mais velhos (>50 anos).
+
+42. AMILOIDOSE HEREDITÁRIA (variante V122I)
+    Gene: TTR (rs76992529) — cromossomo 18
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: As amiloidoses hereditárias são doenças causadas
+    pelo acúmulo de uma proteína anormal em órgãos e tecidos.
+    A variante V122I afeta principalmente o CORAÇÃO (causa
+    inflamação e enrijecimento do músculo cardíaco).
+    
+    O gene TTR produz uma proteína que transporta substâncias
+    pelo corpo. Quando alterada, essa proteína se acumula nos
+    tecidos ao invés de ser eliminada.
+
+    Sintomas podem incluir: dormência nos pés, fraqueza muscular,
+    problemas intestinais (prisão de ventre ou diarreia), 
+    problemas cardíacos, problemas de visão.
+
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • G,A = portador (1 cópia — risco de desenvolver)
+    • A,A = 2 cópias (risco maior)
+
+    A Genera testa 3 variantes do TTR independentes:
+    V122I (esta), V50M e T80A. Eric é normal nesta.
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — sem predisposição a amiloidose cardíaca
+      por esta variante.
+    • Relevante porque Eric tem risco futuro de fibrilação atrial
+      (pelo PRS de riscos genéticos). A amiloidose cardíaca TAMBÉM
+      causa arritmias. Descartar essa causa genética é positivo.
+    • A V122I é mais comum em pessoas de ascendência africana
+      (~3-4%). Em europeus é rara. Eric sendo 92% europeu, o
+      resultado era esperado.
+
+42b. AMILOIDOSE HEREDITÁRIA (variante V50M)
+    Gene: TTR (rs28933979) — cromossomo 18
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Segunda variante do TTR testada. A V50M afeta
+    principalmente os NERVOS (causa neuropatia — dormência,
+    formigamento, fraqueza muscular, começando pelos pés e
+    subindo para as pernas e mãos).
+
+    Também conhecida como "Polineuropatia Amiloidótica Familiar"
+    (PAF) ou "Doença dos Pezinhos" — é relativamente comum em
+    Portugal e no norte da Suécia.
+
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • G,A = portador (1 cópia — risco de desenvolver)
+    • A,A = 2 cópias (risco maior)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — sem predisposição a neuropatia amiloidótica.
+    • Interessante para Eric porque a ancestralidade IBÉRICA dele
+      (51%) inclui Portugal, onde essa variante é endêmica em
+      algumas regiões. Felizmente NÃO carrega.
+    • Ehlers-Danlos já causa alguns sintomas neurológicos
+      (dormência, formigamento por hipermobilidade comprimindo
+      nervos). Bom saber que NÃO é amiloidose contribuindo.
+
+42c. AMILOIDOSE HEREDITÁRIA (variante T80A)
+    Gene: TTR (rs121918070) — cromossomo 18
+    Genótipo: A,A
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Terceira e última variante do TTR testada.
+    A T80A afeta tanto os NERVOS quanto o CORAÇÃO (é mista).
+
+    • A,A = variante de risco NÃO detectada (é o caso do Eric)
+    • A,G = portador (1 cópia — risco de desenvolver)
+    • G,G = 2 cópias (risco maior)
+
+    ★ CONCLUSÃO AMILOIDOSE (todas as 3 variantes testadas):
+    V122I (coração) = Normal ✅
+    V50M (nervos) = Normal ✅
+    T80A (nervos + coração) = Normal ✅
+    → Amiloidose hereditária por TTR DESCARTADA geneticamente.
+    → NÃO há acúmulo de proteína amiloide por essa via.
+    → Sintomas neurológicos ou cardíacos do Eric (se houver)
+      NÃO são causados por amiloidose hereditária.
+
+43. ABETALIPOPROTEINEMIA
+    Gene: MTTP (rs146064714) — cromossomo 4
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Doença genética RARA que afeta a capacidade
+    do corpo de absorver gorduras (colesterol, triglicerídeos)
+    e vitaminas lipossolúveis (A, D, E e K).
+    
+    Sintomas aparecem nos primeiros anos de vida:
+    • Diarreia e vômitos frequentes
+    • Desnutrição e baixo peso
+    • Problemas no fígado
+    • Anemia
+    • Alterações na coagulação do sangue
+    • Problemas de visão
+    • Atraso no desenvolvimento
+    • Dificuldade de equilíbrio e fraqueza muscular
+    
+    O gene MTTP produz uma proteína que processa e armazena
+    gorduras e vitaminas no corpo.
+
+    IMPORTANTE: Doença RECESSIVA — precisa de 2 cópias.
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • T,G = portador (1 cópia)
+    • T,T = afetado (2 cópias = doença)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — NÃO tem abetalipoproteinemia.
+    • PORÉM, vale observar: Eric tem BAIXO PESO (IMC 16.3),
+      dor abdominal e dieta restrita. Esses sintomas PARECEM
+      com abetalipoproteinemia, mas NÃO é essa a causa.
+    • A causa do baixo peso/sintomas intestinais do Eric continua
+      apontando para: intolerância à lactose + possível celíaca
+      + seletividade alimentar do autismo.
+    • Variante mais comum em Ashkenazim e asiáticos. Eric tem
+      5% Ashkenazim — era bom verificar. Normal.
+    • Descarta mais uma causa possível para a má absorção
+      de nutrientes e baixo peso do Eric.
+
+44. TIROSINEMIA TIPO I
+    Gene: FAH (rs80338895) — cromossomo 15
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Doença genética rara causada pelo acúmulo de
+    tirosina (um aminoácido) em todo o corpo. A tirosina é
+    produzida naturalmente pelo corpo e também vem dos alimentos.
+    Quando o gene FAH não funciona, o corpo não consegue
+    quebrar a tirosina e ela se acumula.
+    
+    Sintomas aparecem nos primeiros meses de vida:
+    • Diarreia e vômitos
+    • Baixo crescimento e dificuldade de ganhar peso
+    • Pele amarelada (icterícia)
+    • Sangramentos por problemas de coagulação
+    • Problemas nos rins e fígado
+    • Problemas neurológicos
+    
+    IMPORTANTE: Doença RECESSIVA — precisa de 2 cópias.
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • T,G = portador (1 cópia — saudável mas transmite)
+    • T,T = afetado (2 cópias = doença)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — NÃO tem tirosinemia.
+    • Novamente, sintomas parecidos com os do Eric (baixo peso,
+      dor abdominal, possíveis problemas de coagulação pelo
+      Fator XII). Mas NÃO é tirosinemia.
+    • Tirosinemia tipo I se manifesta nos PRIMEIROS MESES de vida.
+      Eric tem 16 anos — se tivesse, já teria sido diagnosticado
+      há muito tempo. Esse teste é mais relevante para
+      planejamento familiar (verificar se é portador).
+    • Eric NÃO é portador — não transmitirá para filhos.
+
+45. SÍNDROME DE PENDRED (surdez + tireoide)
+    Gene: SLC26A4 (rs121908362) — cromossomo 7
+    Genótipo: A,A
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Doença genética rara que causa perda de audição
+    em ambos os ouvidos (geralmente desde o nascimento ou
+    infância). Pode ser leve ou profunda. Também pode causar:
+    • Problemas de equilíbrio (alteração no ouvido interno)
+    • Aumento da tireoide durante a adolescência (bócio)
+      — geralmente sem causar mau funcionamento da tireoide
+    
+    O gene SLC26A4 produz uma proteína importante para o
+    desenvolvimento do ouvido interno e funcionamento da tireoide.
+
+    IMPORTANTE: Doença RECESSIVA — precisa de 2 cópias.
+    • A,A = variante de risco NÃO detectada (é o caso do Eric)
+    • A,G = portador (1 cópia — saudável)
+    • G,G = afetado (2 cópias = síndrome)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — NÃO tem Síndrome de Pendred.
+    • Eric não tem problemas de audição — resultado esperado.
+    • A menção à tireoide é interessante: o risco genético de
+      câncer de tireoide (no documento de riscos) NÃO tem
+      relação com Pendred. São vias completamente diferentes.
+    • Variante mais estudada em asiáticos. Em europeus é rara.
+    • Eric NÃO é portador — não transmitirá para filhos.
+
+46. RETINITE PIGMENTOSA (gene DHDDS)
+    Gene: DHDDS (rs147394623) — cromossomo 1
+    Genótipo: A,A
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: A retinite pigmentosa é uma doença que afeta
+    a retina (parte de trás do olho que detecta a luz), causando
+    degeneração progressiva das suas células.
+    
+    Sintomas começam na infância e progridem ao longo da vida:
+    • Primeiro: perda da visão no escuro (cegueira noturna)
+    • Depois: perda da visão lateral (campo visual estreito)
+    • Por volta dos 40 anos: visão central afetada
+    • Pode levar à cegueira total
+    
+    IMPORTANTE: Doença RECESSIVA — precisa de 2 cópias.
+    • A,A = variante de risco NÃO detectada (é o caso do Eric)
+    • A,G = portador (1 cópia — saudável)
+    • G,G = afetado (2 cópias = doença)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — NÃO tem retinite pigmentosa por DHDDS.
+    • Variante estudada especificamente em Judeus Ashkenazim.
+      Eric tem 5% Ashkenazim — verificação pertinente. Normal.
+    • Eric não tem problemas de visão noturna — resultado esperado.
+    • NÃO é portador — não transmitirá para filhos.
+
+47. HIPERINSULINISMO FAMILIAR
+    Gene: ABCC8 / SUR1 (rs151344623) — cromossomo 11
+    Genótipo: C,C
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: Doença genética rara em que o pâncreas libera
+    insulina de forma descontrolada, causando queda perigosa
+    do açúcar no sangue (hipoglicemia).
+    
+    Sintomas geralmente aparecem logo após o nascimento:
+    • Baixos níveis de açúcar no sangue (hipoglicemia)
+    • Falta de energia, irritabilidade
+    • Dificuldade para se alimentar
+    • Peso ao nascer maior que o normal
+    • Em casos graves: convulsões, coma, problemas respiratórios
+    
+    O gene ABCC8 (também chamado SUR1) produz uma proteína
+    que controla a liberação de insulina pelo pâncreas.
+
+    IMPORTANTE: Doença RECESSIVA — precisa de 2 cópias.
+    • C,C = variante de risco NÃO detectada (é o caso do Eric)
+    • C,T = portador (1 cópia — saudável)
+    • T,T = afetado (2 cópias = doença)
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — NÃO tem hiperinsulinismo familiar.
+    • Variante estudada em Judeus Ashkenazim. Eric 5% Ashkenazim.
+    • Eric é MAGRO (IMC 16.3) — o oposto do que se esperaria
+      com excesso de insulina (que geralmente causa ganho de peso).
+      Resultado coerente com o fenótipo dele.
+    • Importante: o risco genético de diabetes tipo 2 do Eric
+      é REDUZIDO (já documentado nos riscos genéticos). TCF7L2 normal.
+      Esse resultado confirma: metabolismo de insulina/açúcar
+      geneticamente normal por todas as vias testadas.
+    • NÃO é portador — não transmitirá para filhos.
+
+48. HIPERCOLESTEROLEMIA FAMILIAR (APOB R3500Q)
+    Gene: APOB (rs5742904) — cromossomo 2
+    Genótipo: C,C
+    Status: ✅ NÃO PORTADOR (para ESTA variante específica)
+    Fonte: Genera
+    Descrição: A hipercolesterolemia familiar causa níveis
+    MUITO altos de colesterol "ruim" (LDL) no sangue, mesmo
+    em pessoas magras e que comem bem. Isso leva ao acúmulo
+    de gordura nas artérias (aterosclerose) e doença cardíaca
+    precoce (infarto jovem).
+
+    O gene APOB produz a proteína que transporta o colesterol
+    pelo sangue. Quando alterada, o corpo não consegue remover
+    o colesterol ruim do sangue de forma eficiente.
+
+    • C,C = variante APOB R3500Q NÃO detectada (é o caso do Eric)
+    • C,T = portador/afetado (1 cópia já causa colesterol alto)
+    • T,T = 2 cópias (muito grave)
+
+    ⚠️⚠️ OBSERVAÇÃO CLÍNICA MUITO IMPORTANTE: ⚠️⚠️
+    
+    A MÃE RELATA que ela, o pai, os irmãos E o Eric TODOS
+    têm colesterol SEMPRE ALTO nos exames — mesmo sendo MAGROS.
+    
+    Isso é EXATAMENTE o quadro clínico de hipercolesterolemia
+    familiar! O padrão "colesterol alto + magro + família toda
+    afetada" é o sinal clássico dessa doença.
+    
+    PORÉM: O chip testou apenas UMA variante (APOB R3500Q) e deu
+    negativa. MAS existem CENTENAS de variantes que causam
+    hipercolesterolemia familiar em 3 genes diferentes:
+    • LDLR (gene do receptor de LDL) — ~80% dos casos
+    • APOB (gene testado aqui) — ~5% dos casos  
+    • PCSK9 — ~1% dos casos
+    
+    O chip da Genera testa APENAS 1 variante do APOB!
+    NÃO testa LDLR nem PCSK9!
+    
+    ★ AÇÃO RECOMENDADA:
+    → INVESTIGAR hipercolesterolemia familiar com painel genético
+      COMPLETO (sequenciamento dos genes LDLR, APOB e PCSK9)
+    → Pedir perfil lipídico completo do Eric (colesterol total,
+      LDL, HDL, triglicerídeos)
+    → Se LDL > 160 mg/dL em criança/adolescente = altamente
+      sugestivo de hipercolesterolemia familiar
+    → O histórico familiar (pai, mãe, irmãos todos com colesterol
+      alto + pai morreu de doença cardíaca? + avô teve infarto)
+      REFORÇA MUITO a suspeita
+    → Tratamento precoce com estatinas pode prevenir infarto
+      prematuro (mas Eric tem SLCO1B1 TC = evitar sinvastatina,
+      preferir rosuvastatina — já documentado na farmacogenética!)
+    
+    ★ CONEXÃO COM FARMACOGENÉTICA:
+    • SLCO1B1 TC → Se precisar de estatina, NÃO usar sinvastatina
+      (risco de miopatia). Usar ROSUVASTATINA ou PRAVASTATINA.
+    • Isso já estava no cartão de emergência!
+
+49. PROTEÇÃO CONTRA EVENTOS TROMBOEMBÓLICOS (F13A1)
+    Gene: F13A1 (rs5985) — cromossomo 6
+    Genótipo: C,C
+    Status: ⚠️ SEM proteção adicional
+    Fonte: Genera
+    Descrição: Este é um teste DIFERENTE dos outros — aqui
+    se busca uma variante PROTETORA (não de risco).
+    
+    O gene F13A1 produz uma enzima que liga moléculas de
+    fibrina (proteína que forma coágulos). A variante (alelo A)
+    faz os coágulos ficarem MENOS firmes, o que pode PROTEGER
+    contra trombose (coágulos que entopem vasos sanguíneos).
+    
+    • C,C = variante protetora NÃO detectada (é o caso do Eric)
+    • C,A = proteção parcial (coágulos um pouco menos firmes)
+    • A,A = proteção máxima (coágulos menos firmes)
+
+    ★ No contexto do Eric:
+    • Eric NÃO tem essa proteção adicional contra trombose.
+    • PORÉM: ele também NÃO tem Fator V Leiden nem Protrombina
+      (itens 13-14), então o risco basal de trombose é NORMAL.
+    • Significa apenas que ele não tem um "bônus" de proteção.
+      Não é preocupante — a maioria das pessoas é C,C.
+    • Para a cirurgia maxilar: sem impacto. O risco de trombose
+      do Eric é NORMAL (nem aumentado nem diminuído).
+    • Reforça a importância de: não ficar parado muito tempo
+      após cirurgia, usar meias de compressão se indicado,
+      se movimentar assim que possível no pós-operatório.
+
+50. DOENÇA DE PARKINSON (LRRK2 G2019S)
+    Gene: LRRK2 (rs34637584) — cromossomo 12
+    Genótipo: G,G
+    Status: ✅ NÃO PORTADOR
+    Fonte: Genera
+    Descrição: A doença de Parkinson causa degeneração
+    progressiva de áreas do cérebro que controlam movimento
+    e equilíbrio. Sintomas: tremor nas mãos (em repouso),
+    lentidão dos movimentos, rigidez muscular, desequilíbrio.
+    Pode também causar depressão e alucinações visuais.
+
+    O gene LRRK2 produz uma proteína que participa da
+    comunicação entre neurônios do cérebro. A variante G2019S
+    (alelo A) é a causa genética MAIS COMUM de Parkinson
+    hereditário, especialmente em Judeus Ashkenazim (~1-2%)
+    e norte-africanos.
+
+    • G,G = variante de risco NÃO detectada (é o caso do Eric)
+    • G,A = portador (risco aumentado de desenvolver)
+    • A,A = risco muito alto
+
+    ★ No contexto do Eric:
+    • Resultado NORMAL — sem predisposição genética a Parkinson
+      por esta variante.
+    • Eric tem 5% de ancestralidade Ashkenazim, onde essa
+      variante é mais comum. Felizmente NÃO carrega.
+    • Parkinson é doença que geralmente aparece após 60 anos.
+      Para um adolescente de 16 anos, é completamente irrelevante
+      no momento atual.
+    • Fatores ambientais (pesticidas, metais pesados) são mais
+      importantes que genética na maioria dos casos de Parkinson.
+      Evitar exposição prolongada a esses produtos é a melhor
+      prevenção (independente do resultado genético).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESUMO ATUALIZADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ NORMAIS (sem variante de risco): 33 condições testadas
+⚠️ PORTADOR: 4 condições
+   • Deficiência de Fator XII (rs1801020 AG) — sem impacto clínico
+   • RARG cardiotoxicidade (rs2229109 CT) — relevante se antraciclinas
+   • MTRR B12 (rs1801394 AG) — reciclagem B12 leve↓
+   • IL-6 promotor (rs1800795 CG) — modulação inflamatória leve
+❓ NÃO TESTÁVEIS (chip não cobre): 4 condições
+   • NOD2 1007fs (Crohn), Galactosemia, Surdez GJB2, AME
+
+ACHADOS MAIS RELEVANTES PARA O ERIC:
+1. RARG CT → Se precisar de quimioterapia com antraciclinas,
+   monitorar coração (ecocardiograma obrigatório)
+2. MTRR AG → No contexto de dieta restrita, suplementar B12
+3. TPMT + DPYD normais → Pode usar azatioprina e 5-FU sem
+   risco de toxicidade genética (relevante se DII confirmada)
+4. Sem trombofilia → Seguro para cirurgia maxilar
+5. Sem hemocromatose → Absorção de ferro normal
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LIMITAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• O chip testa apenas as variantes MAIS COMUNS de cada doença
+• Existem variantes raras que NÃO são detectadas por chip
+• Para certeza completa: painel de sequenciamento por NGS
+• Doenças NÃO cobertas pelo chip: Galactosemia (GALT),
+  Surdez hereditária (GJB2 35delG), Atrofia Muscular Espinhal,
+  Doença de Pompe (GAA IVS1)
+• BRCA1/2: apenas variantes pontuais testadas; sequenciamento
+  completo necessário para exclusão definitiva
+• NOD2 L1007fs: principal variante de Crohn não coberta
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
